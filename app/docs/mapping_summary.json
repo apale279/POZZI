@@ -1,0 +1,43 @@
+{
+  "total_column_cells": 864,
+  "ecmo_columns": 440,
+  "acc_columns": 424,
+  "ecmo_sheets": [
+    "ANAGRAFICA",
+    "RUN",
+    "EQUIPMENT",
+    "DIAGNOSI",
+    "CANNULA",
+    "PROCEDURES",
+    "PRE-ECLS ASSESSMENT",
+    "PRE-ECLS SUPPORT",
+    "ECLS CARE",
+    "24HRS ECLS ASSESSMENT",
+    "COMPLICANZE",
+    "INFEZIONI",
+    "OUTCOME",
+    "CARDIAC SURGERY PROCEDURES",
+    "CARDIAC",
+    "CATH DURING ECMO",
+    "ECPR_ANAMNESI",
+    "ECPR ACC",
+    "ECPR INCANULAMENTO",
+    "ECPR 24HRS",
+    "TENDINE SLIM"
+  ],
+  "acc_sheets": [
+    "Anagrafica",
+    "Anamnesi",
+    "Pre-H",
+    "PS",
+    "Ammissione",
+    "6 - 12H",
+    "DAY 1",
+    "DAY 2",
+    "DAY 3",
+    "Outcome",
+    "PIVOT"
+  ],
+  "unique_canonical_concepts": 362,
+  "overlapping_concepts_ecmo_acc": 36
+}

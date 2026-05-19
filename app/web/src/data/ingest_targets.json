@@ -1,0 +1,121 @@
+[
+  {
+    "id": "acc_ammissione",
+    "label": "ACC — Ammissione in TI",
+    "study": "acc",
+    "sheet": "Ammissione",
+    "description": "Primo accesso TI post-arresto"
+  },
+  {
+    "id": "acc_h6_12",
+    "label": "ACC — 6–12 ore (giorno 0)",
+    "study": "acc",
+    "sheet": "6 - 12H",
+    "clinicalDay": 0
+  },
+  {
+    "id": "clinical_day1_both",
+    "label": "Giorno 1 clinico — ACC DAY 1 + ECMO «24h» (giorno dopo)",
+    "study": "acc",
+    "sheet": "DAY 1",
+    "description": "Un inserimento → due database. Per te 24h ECMO = giorno dopo arresto, non 24 ore dal cannulamento.",
+    "requiresRun": true,
+    "requiresBothStudies": true,
+    "linkedWrites": [
+      { "study": "acc", "sheet": "DAY 1", "parseTargetId": "acc_day1" },
+      { "study": "ecmo", "sheet": "24HRS ECLS ASSESSMENT", "parseTargetId": "ecmo_24h", "requiresRun": true }
+    ]
+  },
+  {
+    "id": "acc_day1",
+    "label": "ACC — DAY 1 (solo ACC)",
+    "study": "acc",
+    "sheet": "DAY 1",
+    "clinicalDay": 1
+  },
+  {
+    "id": "acc_day2",
+    "label": "ACC — DAY 2",
+    "study": "acc",
+    "sheet": "DAY 2",
+    "clinicalDay": 2
+  },
+  {
+    "id": "acc_day3",
+    "label": "ACC — DAY 3",
+    "study": "acc",
+    "sheet": "DAY 3",
+    "clinicalDay": 3
+  },
+  {
+    "id": "clinical_day2_both",
+    "label": "Giorno 2 clinico — ACC DAY 2 (+ ECMO se serve)",
+    "study": "acc",
+    "sheet": "DAY 2",
+    "requiresRun": true,
+    "requiresBothStudies": true,
+    "linkedWrites": [
+      { "study": "acc", "sheet": "DAY 2", "parseTargetId": "acc_day2" },
+      { "study": "ecmo", "sheet": "24HRS ECLS ASSESSMENT", "parseTargetId": "ecmo_24h", "requiresRun": true }
+    ]
+  },
+  {
+    "id": "acc_ps",
+    "label": "ACC — Pronto soccorso (PS)",
+    "study": "acc",
+    "sheet": "PS"
+  },
+  {
+    "id": "acc_preh",
+    "label": "ACC — Pre-ospedalizzazione (Pre-H)",
+    "study": "acc",
+    "sheet": "Pre-H"
+  },
+  {
+    "id": "acc_anamnesi",
+    "label": "ACC — Anamnesi",
+    "study": "acc",
+    "sheet": "Anamnesi"
+  },
+  {
+    "id": "acc_outcome",
+    "label": "ACC — Outcome",
+    "study": "acc",
+    "sheet": "Outcome"
+  },
+  {
+    "id": "ecmo_pre_ecls",
+    "label": "ECMO — Pre-ECLS (prima del supporto)",
+    "study": "ecmo",
+    "sheet": "PRE-ECLS ASSESSMENT",
+    "requiresRun": true
+  },
+  {
+    "id": "ecmo_24h",
+    "label": "ECMO — Valutazione 24h (solo ECMO)",
+    "study": "ecmo",
+    "sheet": "24HRS ECLS ASSESSMENT",
+    "requiresRun": true
+  },
+  {
+    "id": "ecmo_ecls_care",
+    "label": "ECMO — ECLS care",
+    "study": "ecmo",
+    "sheet": "ECLS CARE",
+    "requiresRun": true
+  },
+  {
+    "id": "ecmo_ecpr_incan",
+    "label": "ECMO — ECPR incanulamento",
+    "study": "ecmo",
+    "sheet": "ECPR INCANULAMENTO",
+    "requiresRun": true
+  },
+  {
+    "id": "ecmo_outcome",
+    "label": "ECMO — Outcome",
+    "study": "ecmo",
+    "sheet": "OUTCOME",
+    "requiresRun": true
+  }
+]

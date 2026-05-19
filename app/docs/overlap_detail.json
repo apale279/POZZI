@@ -1,0 +1,557 @@
+[
+  {
+    "canonical_id": "patient.cognome",
+    "count": 30,
+    "ecmo_targets": [
+      "ECMO → ANAGRAFICA → COGNOME",
+      "ECMO → RUN → COGNOME",
+      "ECMO → EQUIPMENT → COGNOME",
+      "ECMO → DIAGNOSI → COGNOME",
+      "ECMO → CANNULA → COGNOME",
+      "ECMO → PROCEDURES → COGNOME",
+      "ECMO → PRE-ECLS ASSESSMENT → COGNOME",
+      "ECMO → PRE-ECLS SUPPORT → COGNOME",
+      "ECMO → ECLS CARE → COGNOME",
+      "ECMO → 24HRS ECLS ASSESSMENT → COGNOME",
+      "ECMO → COMPLICANZE → COGNOME",
+      "ECMO → INFEZIONI → COGNOME",
+      "ECMO → OUTCOME → COGNOME",
+      "ECMO → CARDIAC SURGERY PROCEDURES → COGNOME",
+      "ECMO → CARDIAC → COGNOME",
+      "ECMO → CATH DURING ECMO → COGNOME",
+      "ECMO → ECPR_ANAMNESI → COGNOME",
+      "ECMO → ECPR ACC → COGNOME",
+      "ECMO → ECPR INCANULAMENTO → COGNOME",
+      "ECMO → ECPR 24HRS → COGNOME"
+    ],
+    "acc_targets": [
+      "ACC → Anagrafica → COGNOME",
+      "ACC → Anamnesi → COGNOME",
+      "ACC → Pre-H → COGNOME",
+      "ACC → PS → COGNOME",
+      "ACC → Ammissione → COGNOME",
+      "ACC → 6 - 12H → COGNOME",
+      "ACC → DAY 1 → COGNOME",
+      "ACC → DAY 2 → COGNOME",
+      "ACC → DAY 3 → COGNOME",
+      "ACC → Outcome → COGNOME"
+    ]
+  },
+  {
+    "canonical_id": "patient.nome",
+    "count": 30,
+    "ecmo_targets": [
+      "ECMO → ANAGRAFICA → NOME",
+      "ECMO → RUN → NOME",
+      "ECMO → EQUIPMENT → NOME",
+      "ECMO → DIAGNOSI → NOME",
+      "ECMO → CANNULA → NOME",
+      "ECMO → PROCEDURES → NOME",
+      "ECMO → PRE-ECLS ASSESSMENT → NOME",
+      "ECMO → PRE-ECLS SUPPORT → NOME",
+      "ECMO → ECLS CARE → NOME",
+      "ECMO → 24HRS ECLS ASSESSMENT → NOME",
+      "ECMO → COMPLICANZE → NOME",
+      "ECMO → INFEZIONI → NOME",
+      "ECMO → OUTCOME → NOME",
+      "ECMO → CARDIAC SURGERY PROCEDURES → NOME",
+      "ECMO → CARDIAC → NOME",
+      "ECMO → CATH DURING ECMO → NOME",
+      "ECMO → ECPR_ANAMNESI → NOME",
+      "ECMO → ECPR ACC → NOME",
+      "ECMO → ECPR INCANULAMENTO → NOME",
+      "ECMO → ECPR 24HRS → NOME"
+    ],
+    "acc_targets": [
+      "ACC → Anagrafica → NOME",
+      "ACC → Anamnesi → NOME",
+      "ACC → Pre-H → NOME",
+      "ACC → PS → NOME",
+      "ACC → Ammissione → NOME",
+      "ACC → 6 - 12H → NOME",
+      "ACC → DAY 1 → NOME",
+      "ACC → DAY 2 → NOME",
+      "ACC → DAY 3 → NOME",
+      "ACC → Outcome → NOME"
+    ]
+  },
+  {
+    "canonical_id": "patient.sdo",
+    "count": 30,
+    "ecmo_targets": [
+      "ECMO → ANAGRAFICA → SDO",
+      "ECMO → RUN → SDO",
+      "ECMO → EQUIPMENT → SDO",
+      "ECMO → DIAGNOSI → SDO",
+      "ECMO → CANNULA → SDO",
+      "ECMO → PROCEDURES → SDO",
+      "ECMO → PRE-ECLS ASSESSMENT → SDO",
+      "ECMO → PRE-ECLS SUPPORT → SDO",
+      "ECMO → ECLS CARE → SDO",
+      "ECMO → 24HRS ECLS ASSESSMENT → SDO",
+      "ECMO → COMPLICANZE → SDO",
+      "ECMO → INFEZIONI → SDO",
+      "ECMO → OUTCOME → SDO",
+      "ECMO → CARDIAC SURGERY PROCEDURES → SDO",
+      "ECMO → CARDIAC → SDO",
+      "ECMO → CATH DURING ECMO → SDO",
+      "ECMO → ECPR_ANAMNESI → SDO",
+      "ECMO → ECPR ACC → SDO",
+      "ECMO → ECPR INCANULAMENTO → SDO",
+      "ECMO → ECPR 24HRS → SDO"
+    ],
+    "acc_targets": [
+      "ACC → Anagrafica → SDO",
+      "ACC → Anamnesi → SDO",
+      "ACC → Pre-H → SDO",
+      "ACC → PS → SDO",
+      "ACC → Ammissione → SDO",
+      "ACC → 6 - 12H → SDO",
+      "ACC → DAY 1 → SDO",
+      "ACC → DAY 2 → SDO",
+      "ACC → DAY 3 → SDO",
+      "ACC → Outcome → SDO"
+    ]
+  },
+  {
+    "canonical_id": "study.year",
+    "count": 21,
+    "ecmo_targets": [
+      "ECMO → ANAGRAFICA → ANNO",
+      "ECMO → RUN → ANNO",
+      "ECMO → EQUIPMENT → ANNO",
+      "ECMO → DIAGNOSI → ANNO",
+      "ECMO → CANNULA → ANNO",
+      "ECMO → PROCEDURES → ANNO",
+      "ECMO → PRE-ECLS ASSESSMENT → ANNO",
+      "ECMO → PRE-ECLS SUPPORT → ANNO",
+      "ECMO → ECLS CARE → ANNO",
+      "ECMO → 24HRS ECLS ASSESSMENT → ANNO",
+      "ECMO → COMPLICANZE → ANNO",
+      "ECMO → INFEZIONI → ANNO",
+      "ECMO → OUTCOME → ANNO",
+      "ECMO → CARDIAC SURGERY PROCEDURES → ANNO",
+      "ECMO → CARDIAC → ANNO",
+      "ECMO → CATH DURING ECMO → ANNO",
+      "ECMO → ECPR_ANAMNESI → ANNO",
+      "ECMO → ECPR ACC → ANNO",
+      "ECMO → ECPR INCANULAMENTO → ANNO",
+      "ECMO → ECPR 24HRS → ANNO"
+    ],
+    "acc_targets": [
+      "ACC → Anagrafica → ANNO"
+    ]
+  },
+  {
+    "canonical_id": "blood_gas.lactate",
+    "count": 9,
+    "ecmo_targets": [
+      "ECMO → PRE-ECLS ASSESSMENT → Lac",
+      "ECMO → 24HRS ECLS ASSESSMENT → Lac",
+      "ECMO → ECPR INCANULAMENTO → Lac"
+    ],
+    "acc_targets": [
+      "ACC → PS → LAC",
+      "ACC → Ammissione → LAC",
+      "ACC → 6 - 12H → LAC",
+      "ACC → DAY 1 → LAC",
+      "ACC → DAY 2 → LAC",
+      "ACC → DAY 3 → LAC"
+    ]
+  },
+  {
+    "canonical_id": "lab.hb",
+    "count": 9,
+    "ecmo_targets": [
+      "ECMO → PRE-ECLS ASSESSMENT → Hb",
+      "ECMO → 24HRS ECLS ASSESSMENT → Hb",
+      "ECMO → ECPR INCANULAMENTO → Hb"
+    ],
+    "acc_targets": [
+      "ACC → PS → HB",
+      "ACC → Ammissione → HB",
+      "ACC → 6 - 12H → HB",
+      "ACC → DAY 1 → Hb",
+      "ACC → DAY 2 → HB",
+      "ACC → DAY 3 → HB"
+    ]
+  },
+  {
+    "canonical_id": "blood_gas.be",
+    "count": 8,
+    "ecmo_targets": [
+      "ECMO → PRE-ECLS ASSESSMENT → BE",
+      "ECMO → 24HRS ECLS ASSESSMENT → BE",
+      "ECMO → ECPR INCANULAMENTO → BE"
+    ],
+    "acc_targets": [
+      "ACC → Ammissione → BE",
+      "ACC → 6 - 12H → BE",
+      "ACC → DAY 1 → BE",
+      "ACC → DAY 2 → BE",
+      "ACC → DAY 3 → BE"
+    ]
+  },
+  {
+    "canonical_id": "blood_gas.hco3",
+    "count": 8,
+    "ecmo_targets": [
+      "ECMO → PRE-ECLS ASSESSMENT → HCO3-",
+      "ECMO → 24HRS ECLS ASSESSMENT → HCO3-",
+      "ECMO → ECPR INCANULAMENTO → HCO3-"
+    ],
+    "acc_targets": [
+      "ACC → Ammissione → HCO3",
+      "ACC → 6 - 12H → HCO3",
+      "ACC → DAY 1 → HCO3",
+      "ACC → DAY 2 → HCO3",
+      "ACC → DAY 3 → HCO3"
+    ]
+  },
+  {
+    "canonical_id": "blood_gas.paco2",
+    "count": 8,
+    "ecmo_targets": [
+      "ECMO → PRE-ECLS ASSESSMENT → pCO2",
+      "ECMO → 24HRS ECLS ASSESSMENT → pCO2",
+      "ECMO → ECPR INCANULAMENTO → pCO2"
+    ],
+    "acc_targets": [
+      "ACC → Ammissione → EGA - PaCO2",
+      "ACC → 6 - 12H → EGA - PaCO2",
+      "ACC → DAY 1 → EGA - PaCO2",
+      "ACC → DAY 2 → EGA - PaCO2",
+      "ACC → DAY 3 → EGA - PaCO2"
+    ]
+  },
+  {
+    "canonical_id": "blood_gas.pao2",
+    "count": 8,
+    "ecmo_targets": [
+      "ECMO → PRE-ECLS ASSESSMENT → pO2",
+      "ECMO → 24HRS ECLS ASSESSMENT → pO2",
+      "ECMO → ECPR INCANULAMENTO → pO2"
+    ],
+    "acc_targets": [
+      "ACC → Ammissione → EGA - PaO2",
+      "ACC → 6 - 12H → EGA - PaO2",
+      "ACC → DAY 1 → EGA - PaO2",
+      "ACC → DAY 2 → EGA - PaO2",
+      "ACC → DAY 3 → EGA - PaO2"
+    ]
+  },
+  {
+    "canonical_id": "blood_gas.ph",
+    "count": 8,
+    "ecmo_targets": [
+      "ECMO → PRE-ECLS ASSESSMENT → pH",
+      "ECMO → 24HRS ECLS ASSESSMENT → pH",
+      "ECMO → ECPR INCANULAMENTO → pH"
+    ],
+    "acc_targets": [
+      "ACC → Ammissione → EGA - pH",
+      "ACC → 6 - 12H → EGA - pH",
+      "ACC → DAY 1 → EGA - pH",
+      "ACC → DAY 2 → EGA - pH",
+      "ACC → DAY 3 → EGA - pH"
+    ]
+  },
+  {
+    "canonical_id": "blood_gas.sao2",
+    "count": 8,
+    "ecmo_targets": [
+      "ECMO → PRE-ECLS ASSESSMENT → O2Hb",
+      "ECMO → 24HRS ECLS ASSESSMENT → O2Hb",
+      "ECMO → ECPR INCANULAMENTO → O2Hb"
+    ],
+    "acc_targets": [
+      "ACC → Ammissione → EGA - SO2",
+      "ACC → 6 - 12H → SO2",
+      "ACC → DAY 1 → SO2",
+      "ACC → DAY 2 → SO2",
+      "ACC → DAY 3 → SO2"
+    ]
+  },
+  {
+    "canonical_id": "lab.ht",
+    "count": 8,
+    "ecmo_targets": [
+      "ECMO → PRE-ECLS ASSESSMENT → HT",
+      "ECMO → 24HRS ECLS ASSESSMENT → HT",
+      "ECMO → ECPR INCANULAMENTO → HT"
+    ],
+    "acc_targets": [
+      "ACC → Ammissione → Ht",
+      "ACC → 6 - 12H → HT",
+      "ACC → DAY 1 → HT",
+      "ACC → DAY 2 → HT",
+      "ACC → DAY 3 → HT"
+    ]
+  },
+  {
+    "canonical_id": "vent.rr",
+    "count": 8,
+    "ecmo_targets": [
+      "ECMO → CANNULA → FR",
+      "ECMO → PRE-ECLS ASSESSMENT → RR",
+      "ECMO → 24HRS ECLS ASSESSMENT → RR"
+    ],
+    "acc_targets": [
+      "ACC → Ammissione → FR",
+      "ACC → 6 - 12H → FR",
+      "ACC → DAY 1 → FR",
+      "ACC → DAY 2 → FR",
+      "ACC → DAY 3 → FR"
+    ]
+  },
+  {
+    "canonical_id": "vent.mode",
+    "count": 7,
+    "ecmo_targets": [
+      "ECMO → PRE-ECLS ASSESSMENT → TYPE",
+      "ECMO → 24HRS ECLS ASSESSMENT → TYPE"
+    ],
+    "acc_targets": [
+      "ACC → Ammissione → MOD VENT",
+      "ACC → 6 - 12H → MOD VENT",
+      "ACC → DAY 1 → MOD VENT",
+      "ACC → DAY 2 → MOD VENT",
+      "ACC → DAY 3 → MOD VENT"
+    ]
+  },
+  {
+    "canonical_id": "vent.peep",
+    "count": 7,
+    "ecmo_targets": [
+      "ECMO → PRE-ECLS ASSESSMENT → PEEP",
+      "ECMO → 24HRS ECLS ASSESSMENT → PEEP"
+    ],
+    "acc_targets": [
+      "ACC → Ammissione → PEEP",
+      "ACC → 6 - 12H → PEEP",
+      "ACC → DAY 1 → PEEP",
+      "ACC → DAY 2 → PEEP",
+      "ACC → DAY 3 → PEEP"
+    ]
+  },
+  {
+    "canonical_id": "vent.pplat",
+    "count": 7,
+    "ecmo_targets": [
+      "ECMO → PRE-ECLS ASSESSMENT → Pplat",
+      "ECMO → 24HRS ECLS ASSESSMENT → Pplat"
+    ],
+    "acc_targets": [
+      "ACC → Ammissione → PLAT",
+      "ACC → 6 - 12H → PLAT",
+      "ACC → DAY 1 → Plateau",
+      "ACC → DAY 2 → PLAT",
+      "ACC → DAY 3 → PLAT"
+    ]
+  },
+  {
+    "canonical_id": "vent.tv",
+    "count": 7,
+    "ecmo_targets": [
+      "ECMO → PRE-ECLS ASSESSMENT → TV",
+      "ECMO → 24HRS ECLS ASSESSMENT → TV"
+    ],
+    "acc_targets": [
+      "ACC → Ammissione → VT",
+      "ACC → 6 - 12H → VT",
+      "ACC → DAY 1 → VT",
+      "ACC → DAY 2 → VT",
+      "ACC → DAY 3 → VT"
+    ]
+  },
+  {
+    "canonical_id": "blood_gas.fio2",
+    "count": 6,
+    "ecmo_targets": [
+      "ECMO → 24HRS ECLS ASSESSMENT → FiO2"
+    ],
+    "acc_targets": [
+      "ACC → Ammissione → EGA -FIO2",
+      "ACC → 6 - 12H → EGA -FIO2",
+      "ACC → DAY 1 → EGA -FIO2",
+      "ACC → DAY 2 → EGA -FIO2",
+      "ACC → DAY 3 → EGA -FIO2"
+    ]
+  },
+  {
+    "canonical_id": "outcome.icu_discharge",
+    "count": 5,
+    "ecmo_targets": [
+      "ECMO → OUTCOME → DATA DIMISSIONE ICU",
+      "ECMO → OUTCOME → TIME DIMISSIONE ICU",
+      "ECMO → OUTCOME → DIMISSIONE ICU LOCATION"
+    ],
+    "acc_targets": [
+      "ACC → Outcome → ALIVE AT ICU DISCHARGE",
+      "ACC → Outcome → ICU DISCHARGE DATE"
+    ]
+  },
+  {
+    "canonical_id": "outcome.donation",
+    "count": 4,
+    "ecmo_targets": [
+      "ECMO → OUTCOME → DONAZIONE ORGANI",
+      "ECMO → OUTCOME → TIPO DONAZIONE ORGANI",
+      "ECMO → OUTCOME → DONAZIONE TESSUTI"
+    ],
+    "acc_targets": [
+      "ACC → Outcome → DONATION"
+    ]
+  },
+  {
+    "canonical_id": "patient.dn",
+    "count": 3,
+    "ecmo_targets": [
+      "ECMO → ANAGRAFICA → DN"
+    ],
+    "acc_targets": [
+      "ACC → Anagrafica → DN",
+      "ACC → Outcome → DN"
+    ]
+  },
+  {
+    "canonical_id": "outcome.cpc_discharge",
+    "count": 2,
+    "ecmo_targets": [
+      "ECMO → OUTCOME → CPC DISCHARGE"
+    ],
+    "acc_targets": [
+      "ACC → Outcome → CPC AT DISCHARGE"
+    ]
+  },
+  {
+    "canonical_id": "outcome.death_date",
+    "count": 2,
+    "ecmo_targets": [
+      "ECMO → OUTCOME → DATA DECESSO"
+    ],
+    "acc_targets": [
+      "ACC → Outcome → DATE OF DEATH"
+    ]
+  },
+  {
+    "canonical_id": "patient.age",
+    "count": 2,
+    "ecmo_targets": [
+      "ECMO → ANAGRAFICA → ANNI"
+    ],
+    "acc_targets": [
+      "ACC → Anagrafica → AGE"
+    ]
+  },
+  {
+    "canonical_id": "patient.email",
+    "count": 2,
+    "ecmo_targets": [
+      "ECMO → ANAGRAFICA → MAIL"
+    ],
+    "acc_targets": [
+      "ACC → Anagrafica → MAIL"
+    ]
+  },
+  {
+    "canonical_id": "patient.height",
+    "count": 2,
+    "ecmo_targets": [
+      "ECMO → ANAGRAFICA → ALTEZZA"
+    ],
+    "acc_targets": [
+      "ACC → Anagrafica → ALTEZZA "
+    ]
+  },
+  {
+    "canonical_id": "patient.phone",
+    "count": 2,
+    "ecmo_targets": [
+      "ECMO → ANAGRAFICA → TEL"
+    ],
+    "acc_targets": [
+      "ACC → Anagrafica → TEL"
+    ]
+  },
+  {
+    "canonical_id": "patient.sex",
+    "count": 2,
+    "ecmo_targets": [
+      "ECMO → ANAGRAFICA → SEX"
+    ],
+    "acc_targets": [
+      "ACC → Anagrafica → GENDER"
+    ]
+  },
+  {
+    "canonical_id": "patient.weight",
+    "count": 2,
+    "ecmo_targets": [
+      "ECMO → ANAGRAFICA → PESO"
+    ],
+    "acc_targets": [
+      "ACC → Anagrafica → PESO"
+    ]
+  },
+  {
+    "canonical_id": "unique.CITTA",
+    "count": 2,
+    "ecmo_targets": [
+      "ECMO → ECPR ACC → CITTA'"
+    ],
+    "acc_targets": [
+      "ACC → Pre-H → CITTA"
+    ]
+  },
+  {
+    "canonical_id": "unique.INDIRIZZO",
+    "count": 2,
+    "ecmo_targets": [
+      "ECMO → ECPR ACC → INDIRIZZO"
+    ],
+    "acc_targets": [
+      "ACC → Pre-H → INDIRIZZO"
+    ]
+  },
+  {
+    "canonical_id": "unique.PIANO",
+    "count": 2,
+    "ecmo_targets": [
+      "ECMO → ECPR ACC → PIANO"
+    ],
+    "acc_targets": [
+      "ACC → Pre-H → PIANO"
+    ]
+  },
+  {
+    "canonical_id": "unique.RITMO",
+    "count": 2,
+    "ecmo_targets": [
+      "ECMO → ECPR ACC → RITMO"
+    ],
+    "acc_targets": [
+      "ACC → Pre-H → RITMO"
+    ]
+  },
+  {
+    "canonical_id": "unique.TESTIMONIATO",
+    "count": 2,
+    "ecmo_targets": [
+      "ECMO → ECPR ACC → TESTIMONIATO"
+    ],
+    "acc_targets": [
+      "ACC → Pre-H → TESTIMONIATO"
+    ]
+  },
+  {
+    "canonical_id": "unique.TRASPORTO",
+    "count": 2,
+    "ecmo_targets": [
+      "ECMO → ECPR ACC → TRASPORTO"
+    ],
+    "acc_targets": [
+      "ACC → Pre-H → TRASPORTO"
+    ]
+  }
+]

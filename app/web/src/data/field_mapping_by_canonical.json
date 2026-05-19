@@ -1,0 +1,6774 @@
+{
+  "unique.VERIFICATO": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "VERIFICATO",
+      "db_target": "ECMO → ANAGRAFICA → VERIFICATO",
+      "granularity": "patient_once"
+    }
+  ],
+  "patient.sdo": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "SDO",
+      "db_target": "ECMO → ANAGRAFICA → SDO",
+      "granularity": "patient_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "RUN",
+      "column": "SDO",
+      "db_target": "ECMO → RUN → SDO",
+      "granularity": "ecmo_run_header"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "EQUIPMENT",
+      "column": "SDO",
+      "db_target": "ECMO → EQUIPMENT → SDO",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "DIAGNOSI",
+      "column": "SDO",
+      "db_target": "ECMO → DIAGNOSI → SDO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CANNULA",
+      "column": "SDO",
+      "db_target": "ECMO → CANNULA → SDO",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PROCEDURES",
+      "column": "SDO",
+      "db_target": "ECMO → PROCEDURES → SDO",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "SDO",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → SDO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS SUPPORT",
+      "column": "SDO",
+      "db_target": "ECMO → PRE-ECLS SUPPORT → SDO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECLS CARE",
+      "column": "SDO",
+      "db_target": "ECMO → ECLS CARE → SDO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "SDO",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → SDO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "COMPLICANZE",
+      "column": "SDO",
+      "db_target": "ECMO → COMPLICANZE → SDO",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "INFEZIONI",
+      "column": "SDO",
+      "db_target": "ECMO → INFEZIONI → SDO",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "SDO",
+      "db_target": "ECMO → OUTCOME → SDO",
+      "granularity": "study_outcome"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC SURGERY PROCEDURES",
+      "column": "SDO",
+      "db_target": "ECMO → CARDIAC SURGERY PROCEDURES → SDO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "SDO",
+      "db_target": "ECMO → CARDIAC → SDO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CATH DURING ECMO",
+      "column": "SDO",
+      "db_target": "ECMO → CATH DURING ECMO → SDO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR_ANAMNESI",
+      "column": "SDO",
+      "db_target": "ECMO → ECPR_ANAMNESI → SDO",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "SDO",
+      "db_target": "ECMO → ECPR ACC → SDO",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "SDO",
+      "db_target": "ECMO → ECPR INCANULAMENTO → SDO",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR 24HRS",
+      "column": "SDO",
+      "db_target": "ECMO → ECPR 24HRS → SDO",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Anagrafica",
+      "column": "SDO",
+      "db_target": "ACC → Anagrafica → SDO",
+      "granularity": "patient_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "SDO",
+      "db_target": "ACC → Anamnesi → SDO",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Pre-H",
+      "column": "SDO",
+      "db_target": "ACC → Pre-H → SDO",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "SDO",
+      "db_target": "ACC → PS → SDO",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "SDO",
+      "db_target": "ACC → Ammissione → SDO",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "SDO",
+      "db_target": "ACC → 6 - 12H → SDO",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "SDO",
+      "db_target": "ACC → DAY 1 → SDO",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "SDO",
+      "db_target": "ACC → DAY 2 → SDO",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "SDO",
+      "db_target": "ACC → DAY 3 → SDO",
+      "granularity": "acc_timepoint_day_3"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "SDO",
+      "db_target": "ACC → Outcome → SDO",
+      "granularity": "study_outcome"
+    }
+  ],
+  "patient.cognome": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "COGNOME",
+      "db_target": "ECMO → ANAGRAFICA → COGNOME",
+      "granularity": "patient_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "RUN",
+      "column": "COGNOME",
+      "db_target": "ECMO → RUN → COGNOME",
+      "granularity": "ecmo_run_header"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "EQUIPMENT",
+      "column": "COGNOME",
+      "db_target": "ECMO → EQUIPMENT → COGNOME",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "DIAGNOSI",
+      "column": "COGNOME",
+      "db_target": "ECMO → DIAGNOSI → COGNOME",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CANNULA",
+      "column": "COGNOME",
+      "db_target": "ECMO → CANNULA → COGNOME",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PROCEDURES",
+      "column": "COGNOME",
+      "db_target": "ECMO → PROCEDURES → COGNOME",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "COGNOME",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → COGNOME",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS SUPPORT",
+      "column": "COGNOME",
+      "db_target": "ECMO → PRE-ECLS SUPPORT → COGNOME",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECLS CARE",
+      "column": "COGNOME",
+      "db_target": "ECMO → ECLS CARE → COGNOME",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "COGNOME",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → COGNOME",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "COMPLICANZE",
+      "column": "COGNOME",
+      "db_target": "ECMO → COMPLICANZE → COGNOME",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "INFEZIONI",
+      "column": "COGNOME",
+      "db_target": "ECMO → INFEZIONI → COGNOME",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "COGNOME",
+      "db_target": "ECMO → OUTCOME → COGNOME",
+      "granularity": "study_outcome"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC SURGERY PROCEDURES",
+      "column": "COGNOME",
+      "db_target": "ECMO → CARDIAC SURGERY PROCEDURES → COGNOME",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "COGNOME",
+      "db_target": "ECMO → CARDIAC → COGNOME",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CATH DURING ECMO",
+      "column": "COGNOME",
+      "db_target": "ECMO → CATH DURING ECMO → COGNOME",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR_ANAMNESI",
+      "column": "COGNOME",
+      "db_target": "ECMO → ECPR_ANAMNESI → COGNOME",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "COGNOME",
+      "db_target": "ECMO → ECPR ACC → COGNOME",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "COGNOME",
+      "db_target": "ECMO → ECPR INCANULAMENTO → COGNOME",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR 24HRS",
+      "column": "COGNOME",
+      "db_target": "ECMO → ECPR 24HRS → COGNOME",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Anagrafica",
+      "column": "COGNOME",
+      "db_target": "ACC → Anagrafica → COGNOME",
+      "granularity": "patient_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "COGNOME",
+      "db_target": "ACC → Anamnesi → COGNOME",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Pre-H",
+      "column": "COGNOME",
+      "db_target": "ACC → Pre-H → COGNOME",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "COGNOME",
+      "db_target": "ACC → PS → COGNOME",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "COGNOME",
+      "db_target": "ACC → Ammissione → COGNOME",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "COGNOME",
+      "db_target": "ACC → 6 - 12H → COGNOME",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "COGNOME",
+      "db_target": "ACC → DAY 1 → COGNOME",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "COGNOME",
+      "db_target": "ACC → DAY 2 → COGNOME",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "COGNOME",
+      "db_target": "ACC → DAY 3 → COGNOME",
+      "granularity": "acc_timepoint_day_3"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "COGNOME",
+      "db_target": "ACC → Outcome → COGNOME",
+      "granularity": "study_outcome"
+    }
+  ],
+  "patient.nome": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "NOME",
+      "db_target": "ECMO → ANAGRAFICA → NOME",
+      "granularity": "patient_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "RUN",
+      "column": "NOME",
+      "db_target": "ECMO → RUN → NOME",
+      "granularity": "ecmo_run_header"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "EQUIPMENT",
+      "column": "NOME",
+      "db_target": "ECMO → EQUIPMENT → NOME",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "DIAGNOSI",
+      "column": "NOME",
+      "db_target": "ECMO → DIAGNOSI → NOME",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CANNULA",
+      "column": "NOME",
+      "db_target": "ECMO → CANNULA → NOME",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PROCEDURES",
+      "column": "NOME",
+      "db_target": "ECMO → PROCEDURES → NOME",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "NOME",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → NOME",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS SUPPORT",
+      "column": "NOME",
+      "db_target": "ECMO → PRE-ECLS SUPPORT → NOME",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECLS CARE",
+      "column": "NOME",
+      "db_target": "ECMO → ECLS CARE → NOME",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "NOME",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → NOME",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "COMPLICANZE",
+      "column": "NOME",
+      "db_target": "ECMO → COMPLICANZE → NOME",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "INFEZIONI",
+      "column": "NOME",
+      "db_target": "ECMO → INFEZIONI → NOME",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "NOME",
+      "db_target": "ECMO → OUTCOME → NOME",
+      "granularity": "study_outcome"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC SURGERY PROCEDURES",
+      "column": "NOME",
+      "db_target": "ECMO → CARDIAC SURGERY PROCEDURES → NOME",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "NOME",
+      "db_target": "ECMO → CARDIAC → NOME",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CATH DURING ECMO",
+      "column": "NOME",
+      "db_target": "ECMO → CATH DURING ECMO → NOME",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR_ANAMNESI",
+      "column": "NOME",
+      "db_target": "ECMO → ECPR_ANAMNESI → NOME",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "NOME",
+      "db_target": "ECMO → ECPR ACC → NOME",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "NOME",
+      "db_target": "ECMO → ECPR INCANULAMENTO → NOME",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR 24HRS",
+      "column": "NOME",
+      "db_target": "ECMO → ECPR 24HRS → NOME",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Anagrafica",
+      "column": "NOME",
+      "db_target": "ACC → Anagrafica → NOME",
+      "granularity": "patient_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "NOME",
+      "db_target": "ACC → Anamnesi → NOME",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Pre-H",
+      "column": "NOME",
+      "db_target": "ACC → Pre-H → NOME",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "NOME",
+      "db_target": "ACC → PS → NOME",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "NOME",
+      "db_target": "ACC → Ammissione → NOME",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "NOME",
+      "db_target": "ACC → 6 - 12H → NOME",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "NOME",
+      "db_target": "ACC → DAY 1 → NOME",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "NOME",
+      "db_target": "ACC → DAY 2 → NOME",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "NOME",
+      "db_target": "ACC → DAY 3 → NOME",
+      "granularity": "acc_timepoint_day_3"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "NOME",
+      "db_target": "ACC → Outcome → NOME",
+      "granularity": "study_outcome"
+    }
+  ],
+  "ecmo.lens_id": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "ECMO LENS",
+      "db_target": "ECMO → ANAGRAFICA → ECMO LENS",
+      "granularity": "patient_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "RUN",
+      "column": "ECMO LENS",
+      "db_target": "ECMO → RUN → ECMO LENS",
+      "granularity": "ecmo_run_header"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "EQUIPMENT",
+      "column": "ECMO LENS",
+      "db_target": "ECMO → EQUIPMENT → ECMO LENS",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "DIAGNOSI",
+      "column": "ECMO LENS",
+      "db_target": "ECMO → DIAGNOSI → ECMO LENS",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CANNULA",
+      "column": "ECMO LENS",
+      "db_target": "ECMO → CANNULA → ECMO LENS",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PROCEDURES",
+      "column": "ECMO LENS",
+      "db_target": "ECMO → PROCEDURES → ECMO LENS",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "ECMO LENS",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → ECMO LENS",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS SUPPORT",
+      "column": "ECMO LENS",
+      "db_target": "ECMO → PRE-ECLS SUPPORT → ECMO LENS",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECLS CARE",
+      "column": "ECMO LENS",
+      "db_target": "ECMO → ECLS CARE → ECMO LENS",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "ECMO LENS",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → ECMO LENS",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "COMPLICANZE",
+      "column": "ECMO LENS",
+      "db_target": "ECMO → COMPLICANZE → ECMO LENS",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "INFEZIONI",
+      "column": "ECMO LENS",
+      "db_target": "ECMO → INFEZIONI → ECMO LENS",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "ECMO LENS",
+      "db_target": "ECMO → OUTCOME → ECMO LENS",
+      "granularity": "study_outcome"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC SURGERY PROCEDURES",
+      "column": "ECMO LENS",
+      "db_target": "ECMO → CARDIAC SURGERY PROCEDURES → ECMO LENS",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "ECMO LENS",
+      "db_target": "ECMO → CARDIAC → ECMO LENS",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CATH DURING ECMO",
+      "column": "ECMO LENS",
+      "db_target": "ECMO → CATH DURING ECMO → ECMO LENS",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR_ANAMNESI",
+      "column": "ECMO LENS",
+      "db_target": "ECMO → ECPR_ANAMNESI → ECMO LENS",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "ECMO LENS",
+      "db_target": "ECMO → ECPR ACC → ECMO LENS",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "ECMO LENS",
+      "db_target": "ECMO → ECPR INCANULAMENTO → ECMO LENS",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR 24HRS",
+      "column": "ECMO LENS",
+      "db_target": "ECMO → ECPR 24HRS → ECMO LENS",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "ecmo.elso_id": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "NUMERO ELSO",
+      "db_target": "ECMO → ANAGRAFICA → NUMERO ELSO",
+      "granularity": "patient_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "RUN",
+      "column": "ELSO",
+      "db_target": "ECMO → RUN → ELSO",
+      "granularity": "ecmo_run_header"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "EQUIPMENT",
+      "column": "ELSO",
+      "db_target": "ECMO → EQUIPMENT → ELSO",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "DIAGNOSI",
+      "column": "ELSO",
+      "db_target": "ECMO → DIAGNOSI → ELSO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CANNULA",
+      "column": "ELSO",
+      "db_target": "ECMO → CANNULA → ELSO",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PROCEDURES",
+      "column": "ELSO",
+      "db_target": "ECMO → PROCEDURES → ELSO",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "ELSO",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → ELSO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS SUPPORT",
+      "column": "ELSO",
+      "db_target": "ECMO → PRE-ECLS SUPPORT → ELSO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECLS CARE",
+      "column": "ELSO",
+      "db_target": "ECMO → ECLS CARE → ELSO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "ELSO",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → ELSO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "COMPLICANZE",
+      "column": "ELSO",
+      "db_target": "ECMO → COMPLICANZE → ELSO",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "INFEZIONI",
+      "column": "ELSO",
+      "db_target": "ECMO → INFEZIONI → ELSO",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "ELSO",
+      "db_target": "ECMO → OUTCOME → ELSO",
+      "granularity": "study_outcome"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC SURGERY PROCEDURES",
+      "column": "ELSO",
+      "db_target": "ECMO → CARDIAC SURGERY PROCEDURES → ELSO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "ELSO",
+      "db_target": "ECMO → CARDIAC → ELSO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CATH DURING ECMO",
+      "column": "ELSO",
+      "db_target": "ECMO → CATH DURING ECMO → ELSO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR_ANAMNESI",
+      "column": "ELSO",
+      "db_target": "ECMO → ECPR_ANAMNESI → ELSO",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "ELSO",
+      "db_target": "ECMO → ECPR ACC → ELSO",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "ELSO",
+      "db_target": "ECMO → ECPR INCANULAMENTO → ELSO",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR 24HRS",
+      "column": "ELSO",
+      "db_target": "ECMO → ECPR 24HRS → ELSO",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "study.year": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "ANNO",
+      "db_target": "ECMO → ANAGRAFICA → ANNO",
+      "granularity": "patient_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "RUN",
+      "column": "ANNO",
+      "db_target": "ECMO → RUN → ANNO",
+      "granularity": "ecmo_run_header"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "EQUIPMENT",
+      "column": "ANNO",
+      "db_target": "ECMO → EQUIPMENT → ANNO",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "DIAGNOSI",
+      "column": "ANNO",
+      "db_target": "ECMO → DIAGNOSI → ANNO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CANNULA",
+      "column": "ANNO",
+      "db_target": "ECMO → CANNULA → ANNO",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PROCEDURES",
+      "column": "ANNO",
+      "db_target": "ECMO → PROCEDURES → ANNO",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "ANNO",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → ANNO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS SUPPORT",
+      "column": "ANNO",
+      "db_target": "ECMO → PRE-ECLS SUPPORT → ANNO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECLS CARE",
+      "column": "ANNO",
+      "db_target": "ECMO → ECLS CARE → ANNO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "ANNO",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → ANNO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "COMPLICANZE",
+      "column": "ANNO",
+      "db_target": "ECMO → COMPLICANZE → ANNO",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "INFEZIONI",
+      "column": "ANNO",
+      "db_target": "ECMO → INFEZIONI → ANNO",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "ANNO",
+      "db_target": "ECMO → OUTCOME → ANNO",
+      "granularity": "study_outcome"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC SURGERY PROCEDURES",
+      "column": "ANNO",
+      "db_target": "ECMO → CARDIAC SURGERY PROCEDURES → ANNO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "ANNO",
+      "db_target": "ECMO → CARDIAC → ANNO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CATH DURING ECMO",
+      "column": "ANNO",
+      "db_target": "ECMO → CATH DURING ECMO → ANNO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR_ANAMNESI",
+      "column": "ANNO",
+      "db_target": "ECMO → ECPR_ANAMNESI → ANNO",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "ANNO",
+      "db_target": "ECMO → ECPR ACC → ANNO",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "ANNO",
+      "db_target": "ECMO → ECPR INCANULAMENTO → ANNO",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR 24HRS",
+      "column": "ANNO",
+      "db_target": "ECMO → ECPR 24HRS → ANNO",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Anagrafica",
+      "column": "ANNO",
+      "db_target": "ACC → Anagrafica → ANNO",
+      "granularity": "patient_once"
+    }
+  ],
+  "patient.dn": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "DN",
+      "db_target": "ECMO → ANAGRAFICA → DN",
+      "granularity": "patient_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Anagrafica",
+      "column": "DN",
+      "db_target": "ACC → Anagrafica → DN",
+      "granularity": "patient_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "DN",
+      "db_target": "ACC → Outcome → DN",
+      "granularity": "study_outcome"
+    }
+  ],
+  "patient.sex": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "SEX",
+      "db_target": "ECMO → ANAGRAFICA → SEX",
+      "granularity": "patient_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Anagrafica",
+      "column": "GENDER",
+      "db_target": "ACC → Anagrafica → GENDER",
+      "granularity": "patient_once"
+    }
+  ],
+  "unique.DIAGNOSI": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "DIAGNOSI",
+      "db_target": "ECMO → ANAGRAFICA → DIAGNOSI",
+      "granularity": "patient_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "TENDINE SLIM",
+      "column": "Diagnosi",
+      "db_target": "ECMO → TENDINE SLIM → Diagnosi",
+      "granularity": "ecmo_auxiliary"
+    }
+  ],
+  "unique.POSTCARDIOTOMICO": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "POSTCARDIOTOMICO",
+      "db_target": "ECMO → ANAGRAFICA → POSTCARDIOTOMICO",
+      "granularity": "patient_once"
+    }
+  ],
+  "patient.weight": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "PESO",
+      "db_target": "ECMO → ANAGRAFICA → PESO",
+      "granularity": "patient_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Anagrafica",
+      "column": "PESO",
+      "db_target": "ACC → Anagrafica → PESO",
+      "granularity": "patient_once"
+    }
+  ],
+  "patient.height": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "ALTEZZA",
+      "db_target": "ECMO → ANAGRAFICA → ALTEZZA",
+      "granularity": "patient_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Anagrafica",
+      "column": "ALTEZZA ",
+      "db_target": "ACC → Anagrafica → ALTEZZA ",
+      "granularity": "patient_once"
+    }
+  ],
+  "unique.DATA_INGRESSO_H": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "DATA INGRESSO H",
+      "db_target": "ECMO → ANAGRAFICA → DATA INGRESSO H",
+      "granularity": "patient_once"
+    }
+  ],
+  "unique.ORA_INGRESSO_H": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "ORA INGRESSO H",
+      "db_target": "ECMO → ANAGRAFICA → ORA INGRESSO H",
+      "granularity": "patient_once"
+    }
+  ],
+  "unique.DATA_INGRESSO_ICU": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "DATA INGRESSO ICU",
+      "db_target": "ECMO → ANAGRAFICA → DATA INGRESSO ICU",
+      "granularity": "patient_once"
+    }
+  ],
+  "unique.ORA_INGRESSO_ICU": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "ORA INGRESSO ICU",
+      "db_target": "ECMO → ANAGRAFICA → ORA INGRESSO ICU",
+      "granularity": "patient_once"
+    }
+  ],
+  "unique.NOTE": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "NOTE",
+      "db_target": "ECMO → ANAGRAFICA → NOTE",
+      "granularity": "patient_once"
+    }
+  ],
+  "unique.N_RUN": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "N RUN",
+      "db_target": "ECMO → ANAGRAFICA → N RUN",
+      "granularity": "patient_once"
+    }
+  ],
+  "patient.phone": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "TEL",
+      "db_target": "ECMO → ANAGRAFICA → TEL",
+      "granularity": "patient_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Anagrafica",
+      "column": "TEL",
+      "db_target": "ACC → Anagrafica → TEL",
+      "granularity": "patient_once"
+    }
+  ],
+  "patient.email": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "MAIL",
+      "db_target": "ECMO → ANAGRAFICA → MAIL",
+      "granularity": "patient_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Anagrafica",
+      "column": "MAIL",
+      "db_target": "ACC → Anagrafica → MAIL",
+      "granularity": "patient_once"
+    }
+  ],
+  "unique.NOTE_1": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "NOTE.1",
+      "db_target": "ECMO → ANAGRAFICA → NOTE.1",
+      "granularity": "patient_once"
+    }
+  ],
+  "unique.CHI_HA_INSERITO": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "CHI HA INSERITO ",
+      "db_target": "ECMO → ANAGRAFICA → CHI HA INSERITO ",
+      "granularity": "patient_once"
+    }
+  ],
+  "unique.CALCOLO_ETA": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "CALCOLO ETA",
+      "db_target": "ECMO → ANAGRAFICA → CALCOLO ETA",
+      "granularity": "patient_once"
+    }
+  ],
+  "patient.age": [
+    {
+      "study": "ECMO",
+      "sheet": "ANAGRAFICA",
+      "column": "ANNI",
+      "db_target": "ECMO → ANAGRAFICA → ANNI",
+      "granularity": "patient_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Anagrafica",
+      "column": "AGE",
+      "db_target": "ACC → Anagrafica → AGE",
+      "granularity": "patient_once"
+    }
+  ],
+  "unique.18_41": [
+    {
+      "study": "ECMO",
+      "sheet": "RUN",
+      "column": "18:41",
+      "db_target": "ECMO → RUN → 18:41",
+      "granularity": "ecmo_run_header"
+    }
+  ],
+  "ecmo.run_number": [
+    {
+      "study": "ECMO",
+      "sheet": "RUN",
+      "column": "RUN",
+      "db_target": "ECMO → RUN → RUN",
+      "granularity": "ecmo_run_header"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "EQUIPMENT",
+      "column": "RUN",
+      "db_target": "ECMO → EQUIPMENT → RUN",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "DIAGNOSI",
+      "column": "RUN",
+      "db_target": "ECMO → DIAGNOSI → RUN",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CANNULA",
+      "column": "RUN",
+      "db_target": "ECMO → CANNULA → RUN",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PROCEDURES",
+      "column": "RUN",
+      "db_target": "ECMO → PROCEDURES → RUN",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "RUN",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → RUN",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS SUPPORT",
+      "column": "RUN",
+      "db_target": "ECMO → PRE-ECLS SUPPORT → RUN",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECLS CARE",
+      "column": "RUN",
+      "db_target": "ECMO → ECLS CARE → RUN",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "RUN",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → RUN",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "COMPLICANZE",
+      "column": "RUN",
+      "db_target": "ECMO → COMPLICANZE → RUN",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "INFEZIONI",
+      "column": "RUN",
+      "db_target": "ECMO → INFEZIONI → RUN",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "RUN",
+      "db_target": "ECMO → OUTCOME → RUN",
+      "granularity": "study_outcome"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC SURGERY PROCEDURES",
+      "column": "RUN",
+      "db_target": "ECMO → CARDIAC SURGERY PROCEDURES → RUN",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "RUN",
+      "db_target": "ECMO → CARDIAC → RUN",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CATH DURING ECMO",
+      "column": "RUN",
+      "db_target": "ECMO → CATH DURING ECMO → RUN",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR_ANAMNESI",
+      "column": "RUN",
+      "db_target": "ECMO → ECPR_ANAMNESI → RUN",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.START_DATE": [
+    {
+      "study": "ECMO",
+      "sheet": "RUN",
+      "column": "START DATE",
+      "db_target": "ECMO → RUN → START DATE",
+      "granularity": "ecmo_run_header"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "EQUIPMENT",
+      "column": "START DATE",
+      "db_target": "ECMO → EQUIPMENT → START DATE",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECLS CARE",
+      "column": "START DATE",
+      "db_target": "ECMO → ECLS CARE → START DATE",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.START_TIME": [
+    {
+      "study": "ECMO",
+      "sheet": "RUN",
+      "column": "START TIME",
+      "db_target": "ECMO → RUN → START TIME",
+      "granularity": "ecmo_run_header"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "EQUIPMENT",
+      "column": "START TIME",
+      "db_target": "ECMO → EQUIPMENT → START TIME",
+      "granularity": "ecmo_run_repeatable"
+    }
+  ],
+  "unique.END_DATE": [
+    {
+      "study": "ECMO",
+      "sheet": "RUN",
+      "column": "END DATE",
+      "db_target": "ECMO → RUN → END DATE",
+      "granularity": "ecmo_run_header"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "EQUIPMENT",
+      "column": "END DATE",
+      "db_target": "ECMO → EQUIPMENT → END DATE",
+      "granularity": "ecmo_run_repeatable"
+    }
+  ],
+  "unique.END_TIME": [
+    {
+      "study": "ECMO",
+      "sheet": "RUN",
+      "column": "END TIME",
+      "db_target": "ECMO → RUN → END TIME",
+      "granularity": "ecmo_run_header"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "EQUIPMENT",
+      "column": "END TIME",
+      "db_target": "ECMO → EQUIPMENT → END TIME",
+      "granularity": "ecmo_run_repeatable"
+    }
+  ],
+  "unique.MODE": [
+    {
+      "study": "ECMO",
+      "sheet": "RUN",
+      "column": "MODE",
+      "db_target": "ECMO → RUN → MODE",
+      "granularity": "ecmo_run_header"
+    }
+  ],
+  "unique.DATA_CONVERSIONE": [
+    {
+      "study": "ECMO",
+      "sheet": "RUN",
+      "column": "DATA CONVERSIONE",
+      "db_target": "ECMO → RUN → DATA CONVERSIONE",
+      "granularity": "ecmo_run_header"
+    }
+  ],
+  "unique.MODO_CONVERSIONE": [
+    {
+      "study": "ECMO",
+      "sheet": "RUN",
+      "column": "MODO CONVERSIONE",
+      "db_target": "ECMO → RUN → MODO CONVERSIONE",
+      "granularity": "ecmo_run_header"
+    }
+  ],
+  "unique.CIRCUIT_N": [
+    {
+      "study": "ECMO",
+      "sheet": "EQUIPMENT",
+      "column": "CIRCUIT N°",
+      "db_target": "ECMO → EQUIPMENT → CIRCUIT N°",
+      "granularity": "ecmo_run_repeatable"
+    }
+  ],
+  "unique.HEAT_EXCHANGER": [
+    {
+      "study": "ECMO",
+      "sheet": "EQUIPMENT",
+      "column": "HEAT EXCHANGER",
+      "db_target": "ECMO → EQUIPMENT → HEAT EXCHANGER",
+      "granularity": "ecmo_run_repeatable"
+    }
+  ],
+  "unique.MEMBRAN_LUNG": [
+    {
+      "study": "ECMO",
+      "sheet": "EQUIPMENT",
+      "column": "MEMBRAN LUNG",
+      "db_target": "ECMO → EQUIPMENT → MEMBRAN LUNG",
+      "granularity": "ecmo_run_repeatable"
+    }
+  ],
+  "unique.PUMP": [
+    {
+      "study": "ECMO",
+      "sheet": "EQUIPMENT",
+      "column": "PUMP",
+      "db_target": "ECMO → EQUIPMENT → PUMP",
+      "granularity": "ecmo_run_repeatable"
+    }
+  ],
+  "unique.REASON_FOR_CHANGE": [
+    {
+      "study": "ECMO",
+      "sheet": "EQUIPMENT",
+      "column": "REASON FOR CHANGE",
+      "db_target": "ECMO → EQUIPMENT → REASON FOR CHANGE",
+      "granularity": "ecmo_run_repeatable"
+    }
+  ],
+  "unique.DIAGNOSI_PRINCIPALE": [
+    {
+      "study": "ECMO",
+      "sheet": "DIAGNOSI",
+      "column": "DIAGNOSI PRINCIPALE",
+      "db_target": "ECMO → DIAGNOSI → DIAGNOSI PRINCIPALE",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.DIAGNOSI_2": [
+    {
+      "study": "ECMO",
+      "sheet": "DIAGNOSI",
+      "column": "DIAGNOSI 2",
+      "db_target": "ECMO → DIAGNOSI → DIAGNOSI 2",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.DIAGNOSI_3": [
+    {
+      "study": "ECMO",
+      "sheet": "DIAGNOSI",
+      "column": "DIAGNOSI 3",
+      "db_target": "ECMO → DIAGNOSI → DIAGNOSI 3",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.DIAGNOSI_4": [
+    {
+      "study": "ECMO",
+      "sheet": "DIAGNOSI",
+      "column": "DIAGNOSI 4",
+      "db_target": "ECMO → DIAGNOSI → DIAGNOSI 4",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.AIM": [
+    {
+      "study": "ECMO",
+      "sheet": "DIAGNOSI",
+      "column": "AIM",
+      "db_target": "ECMO → DIAGNOSI → AIM",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CANNULA",
+      "column": "AIM",
+      "db_target": "ECMO → CANNULA → AIM",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "AIM",
+      "db_target": "ECMO → CARDIAC → AIM",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CATH DURING ECMO",
+      "column": "AIM",
+      "db_target": "ECMO → CATH DURING ECMO → AIM",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.VASO": [
+    {
+      "study": "ECMO",
+      "sheet": "CANNULA",
+      "column": "VASO",
+      "db_target": "ECMO → CANNULA → VASO",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "TENDINE SLIM",
+      "column": "VASO",
+      "db_target": "ECMO → TENDINE SLIM → VASO",
+      "granularity": "ecmo_auxiliary"
+    }
+  ],
+  "vent.rr": [
+    {
+      "study": "ECMO",
+      "sheet": "CANNULA",
+      "column": "FR",
+      "db_target": "ECMO → CANNULA → FR",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "RR",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → RR",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "RR",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → RR",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "FR",
+      "db_target": "ACC → Ammissione → FR",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "FR",
+      "db_target": "ACC → 6 - 12H → FR",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "FR",
+      "db_target": "ACC → DAY 1 → FR",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "FR",
+      "db_target": "ACC → DAY 2 → FR",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "FR",
+      "db_target": "ACC → DAY 3 → FR",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.MANUFACTURER": [
+    {
+      "study": "ECMO",
+      "sheet": "CANNULA",
+      "column": "MANUFACTURER",
+      "db_target": "ECMO → CANNULA → MANUFACTURER",
+      "granularity": "ecmo_run_repeatable"
+    }
+  ],
+  "unique.CANNULA": [
+    {
+      "study": "ECMO",
+      "sheet": "CANNULA",
+      "column": "CANNULA",
+      "db_target": "ECMO → CANNULA → CANNULA",
+      "granularity": "ecmo_run_repeatable"
+    }
+  ],
+  "unique.PERCUTANEOUS": [
+    {
+      "study": "ECMO",
+      "sheet": "CANNULA",
+      "column": "PERCUTANEOUS",
+      "db_target": "ECMO → CANNULA → PERCUTANEOUS",
+      "granularity": "ecmo_run_repeatable"
+    }
+  ],
+  "unique.PRE_EXISTING": [
+    {
+      "study": "ECMO",
+      "sheet": "CANNULA",
+      "column": "PRE-EXISTING",
+      "db_target": "ECMO → CANNULA → PRE-EXISTING",
+      "granularity": "ecmo_run_repeatable"
+    }
+  ],
+  "unique.PROCEDURA": [
+    {
+      "study": "ECMO",
+      "sheet": "PROCEDURES",
+      "column": "PROCEDURA",
+      "db_target": "ECMO → PROCEDURES → PROCEDURA",
+      "granularity": "ecmo_run_repeatable"
+    }
+  ],
+  "unique.DATA": [
+    {
+      "study": "ECMO",
+      "sheet": "PROCEDURES",
+      "column": "DATA",
+      "db_target": "ECMO → PROCEDURES → DATA",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "COMPLICANZE",
+      "column": "DATA",
+      "db_target": "ECMO → COMPLICANZE → DATA",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "DATA",
+      "db_target": "ECMO → CARDIAC → DATA",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CATH DURING ECMO",
+      "column": "DATA",
+      "db_target": "ECMO → CATH DURING ECMO → DATA",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.ORA": [
+    {
+      "study": "ECMO",
+      "sheet": "PROCEDURES",
+      "column": "ORA",
+      "db_target": "ECMO → PROCEDURES → ORA",
+      "granularity": "ecmo_run_repeatable"
+    }
+  ],
+  "unique.TIMING_ESATTO": [
+    {
+      "study": "ECMO",
+      "sheet": "PROCEDURES",
+      "column": "TIMING ESATTO",
+      "db_target": "ECMO → PROCEDURES → TIMING ESATTO",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "COMPLICANZE",
+      "column": "TIMING ESATTO",
+      "db_target": "ECMO → COMPLICANZE → TIMING ESATTO",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "INFEZIONI",
+      "column": "TIMING ESATTO",
+      "db_target": "ECMO → INFEZIONI → TIMING ESATTO",
+      "granularity": "ecmo_run_repeatable"
+    }
+  ],
+  "unique.DATA_EGA": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "DATA EGA",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → DATA EGA",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "DATA EGA",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → DATA EGA",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.ORA_EGA": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "ORA EGA",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → ORA EGA",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "ORA EGA",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → ORA EGA",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "blood_gas.ph": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "pH",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → pH",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "pH",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → pH",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "pH",
+      "db_target": "ECMO → ECPR INCANULAMENTO → pH",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "EGA - pH",
+      "db_target": "ACC → Ammissione → EGA - pH",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "EGA - pH",
+      "db_target": "ACC → 6 - 12H → EGA - pH",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "EGA - pH",
+      "db_target": "ACC → DAY 1 → EGA - pH",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "EGA - pH",
+      "db_target": "ACC → DAY 2 → EGA - pH",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "EGA - pH",
+      "db_target": "ACC → DAY 3 → EGA - pH",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "blood_gas.pao2": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "pO2",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → pO2",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "pO2",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → pO2",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "pO2",
+      "db_target": "ECMO → ECPR INCANULAMENTO → pO2",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "EGA - PaO2",
+      "db_target": "ACC → Ammissione → EGA - PaO2",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "EGA - PaO2",
+      "db_target": "ACC → 6 - 12H → EGA - PaO2",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "EGA - PaO2",
+      "db_target": "ACC → DAY 1 → EGA - PaO2",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "EGA - PaO2",
+      "db_target": "ACC → DAY 2 → EGA - PaO2",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "EGA - PaO2",
+      "db_target": "ACC → DAY 3 → EGA - PaO2",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "blood_gas.paco2": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "pCO2",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → pCO2",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "pCO2",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → pCO2",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "pCO2",
+      "db_target": "ECMO → ECPR INCANULAMENTO → pCO2",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "EGA - PaCO2",
+      "db_target": "ACC → Ammissione → EGA - PaCO2",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "EGA - PaCO2",
+      "db_target": "ACC → 6 - 12H → EGA - PaCO2",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "EGA - PaCO2",
+      "db_target": "ACC → DAY 1 → EGA - PaCO2",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "EGA - PaCO2",
+      "db_target": "ACC → DAY 2 → EGA - PaCO2",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "EGA - PaCO2",
+      "db_target": "ACC → DAY 3 → EGA - PaCO2",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "blood_gas.hco3": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "HCO3-",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → HCO3-",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "HCO3-",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → HCO3-",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "HCO3-",
+      "db_target": "ECMO → ECPR INCANULAMENTO → HCO3-",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "HCO3",
+      "db_target": "ACC → Ammissione → HCO3",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "HCO3",
+      "db_target": "ACC → 6 - 12H → HCO3",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "HCO3",
+      "db_target": "ACC → DAY 1 → HCO3",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "HCO3",
+      "db_target": "ACC → DAY 2 → HCO3",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "HCO3",
+      "db_target": "ACC → DAY 3 → HCO3",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "blood_gas.lactate": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "Lac",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → Lac",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "Lac",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → Lac",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "Lac",
+      "db_target": "ECMO → ECPR INCANULAMENTO → Lac",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "LAC",
+      "db_target": "ACC → PS → LAC",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "LAC",
+      "db_target": "ACC → Ammissione → LAC",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "LAC",
+      "db_target": "ACC → 6 - 12H → LAC",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "LAC",
+      "db_target": "ACC → DAY 1 → LAC",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "LAC",
+      "db_target": "ACC → DAY 2 → LAC",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "LAC",
+      "db_target": "ACC → DAY 3 → LAC",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "blood_gas.be": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "BE",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → BE",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "BE",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → BE",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "BE",
+      "db_target": "ECMO → ECPR INCANULAMENTO → BE",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "BE",
+      "db_target": "ACC → Ammissione → BE",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "BE",
+      "db_target": "ACC → 6 - 12H → BE",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "BE",
+      "db_target": "ACC → DAY 1 → BE",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "BE",
+      "db_target": "ACC → DAY 2 → BE",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "BE",
+      "db_target": "ACC → DAY 3 → BE",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "lab.hb": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "Hb",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → Hb",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "Hb",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → Hb",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "Hb",
+      "db_target": "ECMO → ECPR INCANULAMENTO → Hb",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "HB",
+      "db_target": "ACC → PS → HB",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "HB",
+      "db_target": "ACC → Ammissione → HB",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "HB",
+      "db_target": "ACC → 6 - 12H → HB",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "Hb",
+      "db_target": "ACC → DAY 1 → Hb",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "HB",
+      "db_target": "ACC → DAY 2 → HB",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "HB",
+      "db_target": "ACC → DAY 3 → HB",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "lab.ht": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "HT",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → HT",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "HT",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → HT",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "HT",
+      "db_target": "ECMO → ECPR INCANULAMENTO → HT",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "Ht",
+      "db_target": "ACC → Ammissione → Ht",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "HT",
+      "db_target": "ACC → 6 - 12H → HT",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "HT",
+      "db_target": "ACC → DAY 1 → HT",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "HT",
+      "db_target": "ACC → DAY 2 → HT",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "HT",
+      "db_target": "ACC → DAY 3 → HT",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "blood_gas.sao2": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "O2Hb",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → O2Hb",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "O2Hb",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → O2Hb",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "O2Hb",
+      "db_target": "ECMO → ECPR INCANULAMENTO → O2Hb",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "EGA - SO2",
+      "db_target": "ACC → Ammissione → EGA - SO2",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "SO2",
+      "db_target": "ACC → 6 - 12H → SO2",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "SO2",
+      "db_target": "ACC → DAY 1 → SO2",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "SO2",
+      "db_target": "ACC → DAY 2 → SO2",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "SO2",
+      "db_target": "ACC → DAY 3 → SO2",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.DATA_VENT_SETTING": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "DATA VENT SETTING",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → DATA VENT SETTING",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "DATA VENT SETTING",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → DATA VENT SETTING",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.TIME_VENT_SETTING": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "TIME VENT SETTING",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → TIME VENT SETTING",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "TIME VENT SETTING",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → TIME VENT SETTING",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "vent.mode": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "TYPE",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → TYPE",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "TYPE",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → TYPE",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "MOD VENT",
+      "db_target": "ACC → Ammissione → MOD VENT",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "MOD VENT",
+      "db_target": "ACC → 6 - 12H → MOD VENT",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "MOD VENT",
+      "db_target": "ACC → DAY 1 → MOD VENT",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "MOD VENT",
+      "db_target": "ACC → DAY 2 → MOD VENT",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "MOD VENT",
+      "db_target": "ACC → DAY 3 → MOD VENT",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "vent.peep": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "PEEP",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → PEEP",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "PEEP",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → PEEP",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "PEEP",
+      "db_target": "ACC → Ammissione → PEEP",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "PEEP",
+      "db_target": "ACC → 6 - 12H → PEEP",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "PEEP",
+      "db_target": "ACC → DAY 1 → PEEP",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "PEEP",
+      "db_target": "ACC → DAY 2 → PEEP",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "PEEP",
+      "db_target": "ACC → DAY 3 → PEEP",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "vent.pmean": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "Pmedie",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → Pmedie",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "Pmedie",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → Pmedie",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.PPICCO": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "Ppicco",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → Ppicco",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "Ppicco",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → Ppicco",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "vent.pplat": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "Pplat",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → Pplat",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "Pplat",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → Pplat",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "PLAT",
+      "db_target": "ACC → Ammissione → PLAT",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "PLAT",
+      "db_target": "ACC → 6 - 12H → PLAT",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "Plateau",
+      "db_target": "ACC → DAY 1 → Plateau",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "PLAT",
+      "db_target": "ACC → DAY 2 → PLAT",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "PLAT",
+      "db_target": "ACC → DAY 3 → PLAT",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "vent.tv": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "TV",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → TV",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "TV",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → TV",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "VT",
+      "db_target": "ACC → Ammissione → VT",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "VT",
+      "db_target": "ACC → 6 - 12H → VT",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "VT",
+      "db_target": "ACC → DAY 1 → VT",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "VT",
+      "db_target": "ACC → DAY 2 → VT",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "VT",
+      "db_target": "ACC → DAY 3 → VT",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.HEMODINAMIC_DATE": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "HEMODINAMIC DATE",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → HEMODINAMIC DATE",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "HEMODINAMIC DATE",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → HEMODINAMIC DATE",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.HEMODINAMIC_TIME": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "HEMODINAMIC TIME",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → HEMODINAMIC TIME",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "HEMODINAMIC TIME",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → HEMODINAMIC TIME",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "hemo.pas": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "PAS",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → PAS",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "PAS",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → PAS",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "hemo.pad": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "PAD",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → PAD",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "PAD",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → PAD",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "hemo.pam": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "PAM",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → PAM",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "PAM",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → PAM",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "hemo.svo2": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "SVO2",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → SVO2",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "SVO2",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → SVO2",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "hemo.co": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "CO",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → CO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "CO",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → CO",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "hemo.paop": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "PAOP",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → PAOP",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "PAOP",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → PAOP",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "hemo.paps": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "PAPs",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → PAPs",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "PAPs",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → PAPs",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "hemo.papd": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "PAPd",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → PAPd",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "PAPd",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → PAPd",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "hemo.papm": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "PAPm",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → PAPm",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "PAPm",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → PAPm",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "hemo.ci": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS ASSESSMENT",
+      "column": "CI",
+      "db_target": "ECMO → PRE-ECLS ASSESSMENT → CI",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "CI",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → CI",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.SUPPORT": [
+    {
+      "study": "ECMO",
+      "sheet": "PRE-ECLS SUPPORT",
+      "column": "SUPPORT",
+      "db_target": "ECMO → PRE-ECLS SUPPORT → SUPPORT",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.UNITA_DOVE_AVVIENE_LA_MAGGIOR_PARTE_DELL_ASSISTENZA": [
+    {
+      "study": "ECMO",
+      "sheet": "ECLS CARE",
+      "column": "UNITA' DOVE AVVIENE LA MAGGIOR PARTE DELL'ASSISTENZA",
+      "db_target": "ECMO → ECLS CARE → UNITA' DOVE AVVIENE LA MAGGIOR PARTE DELL'ASSISTENZA",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.CONNESSIONE_IN_SO_CATH_LAB": [
+    {
+      "study": "ECMO",
+      "sheet": "ECLS CARE",
+      "column": "CONNESSIONE IN SO/CATH LAB",
+      "db_target": "ECMO → ECLS CARE → CONNESSIONE IN SO/CATH LAB",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.ENTERAL_FEEDING": [
+    {
+      "study": "ECMO",
+      "sheet": "ECLS CARE",
+      "column": "ENTERAL FEEDING",
+      "db_target": "ECMO → ECLS CARE → ENTERAL FEEDING",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.LEVEL_OF_MOBILIZATION_AT_DAY_7": [
+    {
+      "study": "ECMO",
+      "sheet": "ECLS CARE",
+      "column": "LEVEL OF MOBILIZATION (AT DAY 7)",
+      "db_target": "ECMO → ECLS CARE → LEVEL OF MOBILIZATION (AT DAY 7)",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.LEVEL_OF_MOBILIZATION_MAX": [
+    {
+      "study": "ECMO",
+      "sheet": "ECLS CARE",
+      "column": "LEVEL OF MOBILIZATION (MAX)",
+      "db_target": "ECMO → ECLS CARE → LEVEL OF MOBILIZATION (MAX)",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "blood_gas.fio2": [
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "FiO2",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → FiO2",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "EGA -FIO2",
+      "db_target": "ACC → Ammissione → EGA -FIO2",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "EGA -FIO2",
+      "db_target": "ACC → 6 - 12H → EGA -FIO2",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "EGA -FIO2",
+      "db_target": "ACC → DAY 1 → EGA -FIO2",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "EGA -FIO2",
+      "db_target": "ACC → DAY 2 → EGA -FIO2",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "EGA -FIO2",
+      "db_target": "ACC → DAY 3 → EGA -FIO2",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.BF_4HR": [
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "BF - 4HR",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → BF - 4HR",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.BF_24HR": [
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "BF - 24HR",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → BF - 24HR",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.UNIT": [
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "UNIT",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → UNIT",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.PROCEDURAL_ECLS": [
+    {
+      "study": "ECMO",
+      "sheet": "24HRS ECLS ASSESSMENT",
+      "column": "PROCEDURAL ECLS",
+      "db_target": "ECMO → 24HRS ECLS ASSESSMENT → PROCEDURAL ECLS",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.COMPLICATION": [
+    {
+      "study": "ECMO",
+      "sheet": "COMPLICANZE",
+      "column": "COMPLICATION",
+      "db_target": "ECMO → COMPLICANZE → COMPLICATION",
+      "granularity": "ecmo_run_repeatable"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "TENDINE SLIM",
+      "column": "COMPLICATION",
+      "db_target": "ECMO → TENDINE SLIM → COMPLICATION",
+      "granularity": "ecmo_auxiliary"
+    }
+  ],
+  "unique.DATA_INFEZIONE": [
+    {
+      "study": "ECMO",
+      "sheet": "INFEZIONI",
+      "column": "DATA INFEZIONE",
+      "db_target": "ECMO → INFEZIONI → DATA INFEZIONE",
+      "granularity": "ecmo_run_repeatable"
+    }
+  ],
+  "unique.SITO": [
+    {
+      "study": "ECMO",
+      "sheet": "INFEZIONI",
+      "column": "SITO",
+      "db_target": "ECMO → INFEZIONI → SITO",
+      "granularity": "ecmo_run_repeatable"
+    }
+  ],
+  "unique.TIPO_DI_ORGANISMO": [
+    {
+      "study": "ECMO",
+      "sheet": "INFEZIONI",
+      "column": "TIPO DI ORGANISMO",
+      "db_target": "ECMO → INFEZIONI → TIPO DI ORGANISMO",
+      "granularity": "ecmo_run_repeatable"
+    }
+  ],
+  "unique.ORGANISMO": [
+    {
+      "study": "ECMO",
+      "sheet": "INFEZIONI",
+      "column": "ORGANISMO",
+      "db_target": "ECMO → INFEZIONI → ORGANISMO",
+      "granularity": "ecmo_run_repeatable"
+    }
+  ],
+  "unique.DISCONTINUATION_REASON": [
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "DISCONTINUATION REASON",
+      "db_target": "ECMO → OUTCOME → DISCONTINUATION REASON",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.ESTUBATO": [
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "ESTUBATO",
+      "db_target": "ECMO → OUTCOME → ESTUBATO",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.DATA_ESTUBAZIONE": [
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "DATA ESTUBAZIONE",
+      "db_target": "ECMO → OUTCOME → DATA ESTUBAZIONE",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.ESTUBAZIONE": [
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "ESTUBAZIONE",
+      "db_target": "ECMO → OUTCOME → ESTUBAZIONE",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.DIMESSO_VIVO": [
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "DIMESSO VIVO",
+      "db_target": "ECMO → OUTCOME → DIMESSO VIVO",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.DIMESSO_IN_ECMO": [
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "DIMESSO IN ECMO",
+      "db_target": "ECMO → OUTCOME → DIMESSO IN ECMO",
+      "granularity": "study_outcome"
+    }
+  ],
+  "outcome.icu_discharge": [
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "DATA DIMISSIONE ICU",
+      "db_target": "ECMO → OUTCOME → DATA DIMISSIONE ICU",
+      "granularity": "study_outcome"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "TIME DIMISSIONE ICU",
+      "db_target": "ECMO → OUTCOME → TIME DIMISSIONE ICU",
+      "granularity": "study_outcome"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "DIMISSIONE ICU LOCATION",
+      "db_target": "ECMO → OUTCOME → DIMISSIONE ICU LOCATION",
+      "granularity": "study_outcome"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "ALIVE AT ICU DISCHARGE",
+      "db_target": "ACC → Outcome → ALIVE AT ICU DISCHARGE",
+      "granularity": "study_outcome"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "ICU DISCHARGE DATE",
+      "db_target": "ACC → Outcome → ICU DISCHARGE DATE",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.DATA_DIMISSIONE_OSPEDALIERA": [
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "DATA DIMISSIONE OSPEDALIERA",
+      "db_target": "ECMO → OUTCOME → DATA DIMISSIONE OSPEDALIERA",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.TIME_DIMISSIONE_OSPEDALIERA": [
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "TIME DIMISSIONE OSPEDALIERA",
+      "db_target": "ECMO → OUTCOME → TIME DIMISSIONE OSPEDALIERA",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.DIMISSIONE_OSPEDALIERA_LOCATION": [
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "DIMISSIONE OSPEDALIERA LOCATION",
+      "db_target": "ECMO → OUTCOME → DIMISSIONE OSPEDALIERA LOCATION",
+      "granularity": "study_outcome"
+    }
+  ],
+  "outcome.death_date": [
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "DATA DECESSO",
+      "db_target": "ECMO → OUTCOME → DATA DECESSO",
+      "granularity": "study_outcome"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "DATE OF DEATH",
+      "db_target": "ACC → Outcome → DATE OF DEATH",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.ORA_DECESSO": [
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "ORA DECESSO",
+      "db_target": "ECMO → OUTCOME → ORA DECESSO",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.BRAIN_DEATH": [
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "BRAIN DEATH",
+      "db_target": "ECMO → OUTCOME → BRAIN DEATH",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.SOSPENSIONE_CURE": [
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "SOSPENSIONE CURE",
+      "db_target": "ECMO → OUTCOME → SOSPENSIONE CURE",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.ALTRA_CAUSA": [
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "ALTRA CAUSA",
+      "db_target": "ECMO → OUTCOME → ALTRA CAUSA",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.ALTRO": [
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "ALTRO",
+      "db_target": "ECMO → OUTCOME → ALTRO",
+      "granularity": "study_outcome"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "ALTRO",
+      "db_target": "ECMO → ECPR ACC → ALTRO",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "outcome.donation": [
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "DONAZIONE ORGANI",
+      "db_target": "ECMO → OUTCOME → DONAZIONE ORGANI",
+      "granularity": "study_outcome"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "TIPO DONAZIONE ORGANI",
+      "db_target": "ECMO → OUTCOME → TIPO DONAZIONE ORGANI",
+      "granularity": "study_outcome"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "DONAZIONE TESSUTI",
+      "db_target": "ECMO → OUTCOME → DONAZIONE TESSUTI",
+      "granularity": "study_outcome"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "DONATION",
+      "db_target": "ACC → Outcome → DONATION",
+      "granularity": "study_outcome"
+    }
+  ],
+  "outcome.cpc_discharge": [
+    {
+      "study": "ECMO",
+      "sheet": "OUTCOME",
+      "column": "CPC DISCHARGE",
+      "db_target": "ECMO → OUTCOME → CPC DISCHARGE",
+      "granularity": "study_outcome"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "CPC AT DISCHARGE",
+      "db_target": "ACC → Outcome → CPC AT DISCHARGE",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.CARDIAC_SURGERY_PROCEDURE": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC SURGERY PROCEDURES",
+      "column": "CARDIAC SURGERY PROCEDURE",
+      "db_target": "ECMO → CARDIAC SURGERY PROCEDURES → CARDIAC SURGERY PROCEDURE",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.DATE": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC SURGERY PROCEDURES",
+      "column": "DATE",
+      "db_target": "ECMO → CARDIAC SURGERY PROCEDURES → DATE",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "DATE",
+      "db_target": "ECMO → CARDIAC → DATE",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.TIME": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC SURGERY PROCEDURES",
+      "column": "TIME",
+      "db_target": "ECMO → CARDIAC SURGERY PROCEDURES → TIME",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "TIME",
+      "db_target": "ECMO → CARDIAC → TIME",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CATH DURING ECMO",
+      "column": "TIME",
+      "db_target": "ECMO → CATH DURING ECMO → TIME",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.CPB": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC SURGERY PROCEDURES",
+      "column": "CPB",
+      "db_target": "ECMO → CARDIAC SURGERY PROCEDURES → CPB",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.CPB_RUNS": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC SURGERY PROCEDURES",
+      "column": "CPB RUNS",
+      "db_target": "ECMO → CARDIAC SURGERY PROCEDURES → CPB RUNS",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.TIME_CLAMP": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC SURGERY PROCEDURES",
+      "column": "TIME CLAMP",
+      "db_target": "ECMO → CARDIAC SURGERY PROCEDURES → TIME CLAMP",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.TIME_CPB": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC SURGERY PROCEDURES",
+      "column": "TIME CPB",
+      "db_target": "ECMO → CARDIAC SURGERY PROCEDURES → TIME CPB",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.OPEN_STERNUM": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC SURGERY PROCEDURES",
+      "column": "OPEN STERNUM",
+      "db_target": "ECMO → CARDIAC SURGERY PROCEDURES → OPEN STERNUM",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.NYHA_ADMISSION": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "NYHA ADMISSION",
+      "db_target": "ECMO → CARDIAC → NYHA ADMISSION",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.SCAI_ADMISSION": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "SCAI ADMISSION",
+      "db_target": "ECMO → CARDIAC → SCAI ADMISSION",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.SCAI_PRE_ECMO": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "SCAI PRE-ECMO",
+      "db_target": "ECMO → CARDIAC → SCAI PRE-ECMO",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.DOSE_DOPAMINA": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "DOSE DOPAMINA ",
+      "db_target": "ECMO → CARDIAC → DOSE DOPAMINA ",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.DOBUTAMIMNA": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "DOBUTAMIMNA",
+      "db_target": "ECMO → CARDIAC → DOBUTAMIMNA",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.DOSE_ADRENALINA": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "DOSE ADRENALINA",
+      "db_target": "ECMO → CARDIAC → DOSE ADRENALINA",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.DOSE_VASOPRESSINA_UI_KG_MIN": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "DOSE VASOPRESSINA (UI/KG/MIN)",
+      "db_target": "ECMO → CARDIAC → DOSE VASOPRESSINA (UI/KG/MIN)",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.DOSE_NORADRENALINA": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "DOSE NORADRENALINA",
+      "db_target": "ECMO → CARDIAC → DOSE NORADRENALINA",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.VIS_PRE_ECMO": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "VIS PRE-ECMO",
+      "db_target": "ECMO → CARDIAC → VIS PRE-ECMO",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.CARDIAC_CATH_PRE_ECMO": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "CARDIAC CATH PRE-ECMO",
+      "db_target": "ECMO → CARDIAC → CARDIAC CATH PRE-ECMO",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.LMCA": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "LMCA",
+      "db_target": "ECMO → CARDIAC → LMCA",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CATH DURING ECMO",
+      "column": "LMCA",
+      "db_target": "ECMO → CATH DURING ECMO → LMCA",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.LAD": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "LAD",
+      "db_target": "ECMO → CARDIAC → LAD",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CATH DURING ECMO",
+      "column": "LAD",
+      "db_target": "ECMO → CATH DURING ECMO → LAD",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.RCA": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "RCA",
+      "db_target": "ECMO → CARDIAC → RCA",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CATH DURING ECMO",
+      "column": "RCA",
+      "db_target": "ECMO → CATH DURING ECMO → RCA",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.CX": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "Cx",
+      "db_target": "ECMO → CARDIAC → Cx",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CATH DURING ECMO",
+      "column": "Cx",
+      "db_target": "ECMO → CATH DURING ECMO → Cx",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.DIAGONAL": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "DIAGONAL",
+      "db_target": "ECMO → CARDIAC → DIAGONAL",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CATH DURING ECMO",
+      "column": "DIAGONAL",
+      "db_target": "ECMO → CATH DURING ECMO → DIAGONAL",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.PDA": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "PDA",
+      "db_target": "ECMO → CARDIAC → PDA",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "CATH DURING ECMO",
+      "column": "PDA",
+      "db_target": "ECMO → CATH DURING ECMO → PDA",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.ECLS_CANNULATION": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "ECLS CANNULATION",
+      "db_target": "ECMO → CARDIAC → ECLS CANNULATION",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.EVENTO_PRECIPITANTE": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "EVENTO PRECIPITANTE",
+      "db_target": "ECMO → CARDIAC → EVENTO PRECIPITANTE",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.PULMONARY_EDEMA": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "PULMONARY EDEMA",
+      "db_target": "ECMO → CARDIAC → PULMONARY EDEMA",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.PULM_HYPERT": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "PULM HYPERT",
+      "db_target": "ECMO → CARDIAC → PULM HYPERT",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.PULM_EMBOLIS": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "PULM EMBOLIS",
+      "db_target": "ECMO → CARDIAC → PULM EMBOLIS",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.TAMPONADE": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "TAMPONADE",
+      "db_target": "ECMO → CARDIAC → TAMPONADE",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.IMA": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "IMA",
+      "db_target": "ECMO → CARDIAC → IMA",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.LOW_CO": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "LOW CO",
+      "db_target": "ECMO → CARDIAC → LOW CO",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.ARRHYTMIA": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "ARRHYTMIA",
+      "db_target": "ECMO → CARDIAC → ARRHYTMIA",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.HYPOXIA": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "HYPOXIA",
+      "db_target": "ECMO → CARDIAC → HYPOXIA",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.CARIOPATIA_ISCHEMICA": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "CARIOPATIA ISCHEMICA",
+      "db_target": "ECMO → CARDIAC → CARIOPATIA ISCHEMICA",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.CARDIOPATIA_NON_ISCHEMICA": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "CARDIOPATIA NON ISCHEMICA",
+      "db_target": "ECMO → CARDIAC → CARDIOPATIA NON ISCHEMICA",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.TIPO": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "TIPO",
+      "db_target": "ECMO → CARDIAC → TIPO",
+      "granularity": "ecmo_run_once"
+    },
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "TIPO",
+      "db_target": "ECMO → ECPR ACC → TIPO",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.ENDOCARDITE": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "ENDOCARDITE",
+      "db_target": "ECMO → CARDIAC → ENDOCARDITE",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.MIOCARDITE": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "MIOCARDITE",
+      "db_target": "ECMO → CARDIAC → MIOCARDITE",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.SCONOSCIUTA": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "SCONOSCIUTA",
+      "db_target": "ECMO → CARDIAC → SCONOSCIUTA",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.LOCATION": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "LOCATION",
+      "db_target": "ECMO → CARDIAC → LOCATION",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.UNLOADING_LV": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "UNLOADING LV",
+      "db_target": "ECMO → CARDIAC → UNLOADING LV",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.UNLOADING_PROCEDURE": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "UNLOADING PROCEDURE",
+      "db_target": "ECMO → CARDIAC → UNLOADING PROCEDURE",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.DATE_UNLOADING": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "DATE UNLOADING",
+      "db_target": "ECMO → CARDIAC → DATE UNLOADING",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.TIME_UNLOADING": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "TIME UNLOADING",
+      "db_target": "ECMO → CARDIAC → TIME UNLOADING",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.RATIONALE_UNLOADING": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "RATIONALE UNLOADING",
+      "db_target": "ECMO → CARDIAC → RATIONALE UNLOADING",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.CARDIAC_SURGERY": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "CARDIAC SURGERY",
+      "db_target": "ECMO → CARDIAC → CARDIAC SURGERY",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.TIME_1": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "TIME.1",
+      "db_target": "ECMO → CARDIAC → TIME.1",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.PROCEDURA_CATH_LAB": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "PROCEDURA CATH LAB",
+      "db_target": "ECMO → CARDIAC → PROCEDURA CATH LAB",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.DATE_1": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "DATE.1",
+      "db_target": "ECMO → CARDIAC → DATE.1",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.TIME_2": [
+    {
+      "study": "ECMO",
+      "sheet": "CARDIAC",
+      "column": "TIME.2",
+      "db_target": "ECMO → CARDIAC → TIME.2",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.CATH_DURING": [
+    {
+      "study": "ECMO",
+      "sheet": "CATH DURING ECMO",
+      "column": "CATH DURING",
+      "db_target": "ECMO → CATH DURING ECMO → CATH DURING",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.CATH_AFTER": [
+    {
+      "study": "ECMO",
+      "sheet": "CATH DURING ECMO",
+      "column": "CATH AFTER",
+      "db_target": "ECMO → CATH DURING ECMO → CATH AFTER",
+      "granularity": "ecmo_run_once"
+    }
+  ],
+  "unique.PRECIPITATING_EVENT_CARDIAC": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR_ANAMNESI",
+      "column": "PRECIPITATING EVENT_CARDIAC",
+      "db_target": "ECMO → ECPR_ANAMNESI → PRECIPITATING EVENT_CARDIAC",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.EVENTI_ANTECEDENTI_CARDIAC_4_ORE": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR_ANAMNESI",
+      "column": "EVENTI ANTECEDENTI CARDIAC (>4 ORE)",
+      "db_target": "ECMO → ECPR_ANAMNESI → EVENTI ANTECEDENTI CARDIAC (>4 ORE)",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.EVENTI_ANTECEDENTI_NON_CARDIAC_4_ORE": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR_ANAMNESI",
+      "column": "EVENTI ANTECEDENTI NON-CARDIAC (>4 ORE)",
+      "db_target": "ECMO → ECPR_ANAMNESI → EVENTI ANTECEDENTI NON-CARDIAC (>4 ORE)",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.EVENTI_ANTECEDENTI_NEURO_4_ORE": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR_ANAMNESI",
+      "column": "EVENTI ANTECEDENTI NEURO (>4 ORE)",
+      "db_target": "ECMO → ECPR_ANAMNESI → EVENTI ANTECEDENTI NEURO (>4 ORE)",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.EVENTI_ANTECEDENTI_TOXIC_4_ORE": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR_ANAMNESI",
+      "column": "EVENTI ANTECEDENTI TOXIC (>4 ORE)",
+      "db_target": "ECMO → ECPR_ANAMNESI → EVENTI ANTECEDENTI TOXIC (>4 ORE)",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.CO_MORBID_CONDITIONS_CARDIAC": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR_ANAMNESI",
+      "column": "CO-MORBID CONDITIONS_CARDIAC",
+      "db_target": "ECMO → ECPR_ANAMNESI → CO-MORBID CONDITIONS_CARDIAC",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.CO_MORBID_CONDITIONS_NON_CARDIAC": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR_ANAMNESI",
+      "column": "CO-MORBID CONDITIONS_NON-CARDIAC",
+      "db_target": "ECMO → ECPR_ANAMNESI → CO-MORBID CONDITIONS_NON-CARDIAC",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.CO_MORBID_CONDITION_NEUROLOGICAL": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR_ANAMNESI",
+      "column": "CO-MORBID CONDITION_NEUROLOGICAL",
+      "db_target": "ECMO → ECPR_ANAMNESI → CO-MORBID CONDITION_NEUROLOGICAL",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.CO_MORBID_CONDITION_TOXIC_METABOLIC": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR_ANAMNESI",
+      "column": "CO-MORBID CONDITION_TOXIC-METABOLIC",
+      "db_target": "ECMO → ECPR_ANAMNESI → CO-MORBID CONDITION_TOXIC-METABOLIC",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.CO_MORBID_CONDITION_INFECTION": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR_ANAMNESI",
+      "column": "CO-MORBID CONDITION_INFECTION",
+      "db_target": "ECMO → ECPR_ANAMNESI → CO-MORBID CONDITION_INFECTION",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.CO_MORBID_CONDITION_OTHER": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR_ANAMNESI",
+      "column": "CO-MORBID CONDITION_OTHER",
+      "db_target": "ECMO → ECPR_ANAMNESI → CO-MORBID CONDITION_OTHER",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.ALTRI_ARRESTI_NELLE_24_ORE_PRECEDENTI": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "ALTRI ARRESTI NELLE 24 ORE PRECEDENTI",
+      "db_target": "ECMO → ECPR ACC → ALTRI ARRESTI NELLE 24 ORE PRECEDENTI",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.TESTIMONIATO": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "TESTIMONIATO",
+      "db_target": "ECMO → ECPR ACC → TESTIMONIATO",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Pre-H",
+      "column": "TESTIMONIATO",
+      "db_target": "ACC → Pre-H → TESTIMONIATO",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.LOCATION_OHCA": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "LOCATION_OHCA",
+      "db_target": "ECMO → ECPR ACC → LOCATION_OHCA",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.LOCATION_IHCA": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "LOCATION_IHCA",
+      "db_target": "ECMO → ECPR ACC → LOCATION_IHCA",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.EMS_ON_SCENE": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "EMS ON SCENE",
+      "db_target": "ECMO → ECPR ACC → EMS ON SCENE",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.BYSTANDERS_CPR": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "BYSTANDERS CPR",
+      "db_target": "ECMO → ECPR ACC → BYSTANDERS CPR",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.BAYSTANDERS_PAD": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "BAYSTANDERS PAD",
+      "db_target": "ECMO → ECPR ACC → BAYSTANDERS PAD",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.CITTA": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "CITTA'",
+      "db_target": "ECMO → ECPR ACC → CITTA'",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Pre-H",
+      "column": "CITTA",
+      "db_target": "ACC → Pre-H → CITTA",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.INDIRIZZO": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "INDIRIZZO",
+      "db_target": "ECMO → ECPR ACC → INDIRIZZO",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Pre-H",
+      "column": "INDIRIZZO",
+      "db_target": "ACC → Pre-H → INDIRIZZO",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.PIANO": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "PIANO",
+      "db_target": "ECMO → ECPR ACC → PIANO",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Pre-H",
+      "column": "PIANO",
+      "db_target": "ACC → Pre-H → PIANO",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.DATA_ACC": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "DATA ACC",
+      "db_target": "ECMO → ECPR ACC → DATA ACC",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.ORA_ACC": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "ORA ACC",
+      "db_target": "ECMO → ECPR ACC → ORA ACC",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.OTA_ARRIVO_MSB": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "OTA ARRIVO MSB",
+      "db_target": "ECMO → ECPR ACC → OTA ARRIVO MSB",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.ARRIVO_MSA": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "ARRIVO MSA",
+      "db_target": "ECMO → ECPR ACC → ARRIVO MSA",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.INIZIO_CPR": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "INIZIO CPR",
+      "db_target": "ECMO → ECPR ACC → INIZIO CPR",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.RITMO_DI_PRESENTAZIONE_MSB": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "RITMO DI PRESENTAZIONE MSB",
+      "db_target": "ECMO → ECPR ACC → RITMO DI PRESENTAZIONE MSB",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.RITMO_DI_PRESENTAZIONE_MSA": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "RITMO DI PRESENTAZIONE MSA",
+      "db_target": "ECMO → ECPR ACC → RITMO DI PRESENTAZIONE MSA",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.RITMO": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "RITMO",
+      "db_target": "ECMO → ECPR ACC → RITMO",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Pre-H",
+      "column": "RITMO",
+      "db_target": "ACC → Pre-H → RITMO",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.IOT": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "IOT",
+      "db_target": "ECMO → ECPR ACC → IOT",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.SHOCK_DAE": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "SHOCK DAE",
+      "db_target": "ECMO → ECPR ACC → SHOCK DAE",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.SHOCK_MSA": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "SHOCK MSA",
+      "db_target": "ECMO → ECPR ACC → SHOCK MSA",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.ADRENALINA": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "ADRENALINA",
+      "db_target": "ECMO → ECPR ACC → ADRENALINA",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.AMIODARONE": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "AMIODARONE",
+      "db_target": "ECMO → ECPR ACC → AMIODARONE",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.ROSC_INTERCORRENTI": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "ROSC INTERCORRENTI",
+      "db_target": "ECMO → ECPR ACC → ROSC INTERCORRENTI",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.MCE_MECCANICO": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "MCE MECCANICO",
+      "db_target": "ECMO → ECPR ACC → MCE MECCANICO",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.TRASPORTO": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "TRASPORTO",
+      "db_target": "ECMO → ECPR ACC → TRASPORTO",
+      "granularity": "ecmo_ecpr_module"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Pre-H",
+      "column": "TRASPORTO",
+      "db_target": "ACC → Pre-H → TRASPORTO",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.ARRIVO_IN_PS": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR ACC",
+      "column": "ARRIVO IN PS",
+      "db_target": "ECMO → ECPR ACC → ARRIVO IN PS",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.ORA_INIZIO_INCANULAMENTO": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "ORA INIZIO INCANULAMENTO",
+      "db_target": "ECMO → ECPR INCANULAMENTO → ORA INIZIO INCANULAMENTO",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.RITMO_ALL_ARRIVO": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "RITMO ALL'ARRIVO",
+      "db_target": "ECMO → ECPR INCANULAMENTO → RITMO ALL'ARRIVO",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.ETCO2": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "ETCO2",
+      "db_target": "ECMO → ECPR INCANULAMENTO → ETCO2",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.MAP": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "MAP",
+      "db_target": "ECMO → ECPR INCANULAMENTO → MAP",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.NIRS": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "NIRS",
+      "db_target": "ECMO → ECPR INCANULAMENTO → NIRS",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.SIGN_OF_LIFE": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "SIGN OF LIFE",
+      "db_target": "ECMO → ECPR INCANULAMENTO → SIGN OF LIFE",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.LOCATION_CANNULATION": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "LOCATION CANNULATION",
+      "db_target": "ECMO → ECPR INCANULAMENTO → LOCATION CANNULATION",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.ECMO_START_TIME": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "ECMO START TIME",
+      "db_target": "ECMO → ECPR INCANULAMENTO → ECMO START TIME",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.ROSC_PRE_ECMO": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "ROSC PRE-ECMO",
+      "db_target": "ECMO → ECPR INCANULAMENTO → ROSC PRE-ECMO",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.PULSE_PRE_ECMO": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "PULSE PRE-ECMO",
+      "db_target": "ECMO → ECPR INCANULAMENTO → PULSE PRE-ECMO",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.FIRST_EGA_DATE": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "FIRST EGA DATE",
+      "db_target": "ECMO → ECPR INCANULAMENTO → FIRST EGA DATE",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.FIRST_EGA_TIME": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "FIRST EGA TIME",
+      "db_target": "ECMO → ECPR INCANULAMENTO → FIRST EGA TIME",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.EGA_VENOSA": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR INCANULAMENTO",
+      "column": "EGA VENOSA",
+      "db_target": "ECMO → ECPR INCANULAMENTO → EGA VENOSA",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.EEG_CONTINUO": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR 24HRS",
+      "column": "EEG CONTINUO",
+      "db_target": "ECMO → ECPR 24HRS → EEG CONTINUO",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.CT": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR 24HRS",
+      "column": "CT",
+      "db_target": "ECMO → ECPR 24HRS → CT",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.RM": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR 24HRS",
+      "column": "RM",
+      "db_target": "ECMO → ECPR 24HRS → RM",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.T_TARGET": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR 24HRS",
+      "column": "T TARGET",
+      "db_target": "ECMO → ECPR 24HRS → T TARGET",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.T_INGRESSO": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR 24HRS",
+      "column": "T INGRESSO",
+      "db_target": "ECMO → ECPR 24HRS → T INGRESSO",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.T_MAX": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR 24HRS",
+      "column": "T MAX",
+      "db_target": "ECMO → ECPR 24HRS → T MAX",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.T_MIN": [
+    {
+      "study": "ECMO",
+      "sheet": "ECPR 24HRS",
+      "column": "T MIN",
+      "db_target": "ECMO → ECPR 24HRS → T MIN",
+      "granularity": "ecmo_ecpr_module"
+    }
+  ],
+  "unique.PROCEDURE": [
+    {
+      "study": "ECMO",
+      "sheet": "TENDINE SLIM",
+      "column": "PROCEDURE",
+      "db_target": "ECMO → TENDINE SLIM → PROCEDURE",
+      "granularity": "ecmo_auxiliary"
+    }
+  ],
+  "unique.SUPPORTI": [
+    {
+      "study": "ECMO",
+      "sheet": "TENDINE SLIM",
+      "column": "SUPPORTI",
+      "db_target": "ECMO → TENDINE SLIM → SUPPORTI",
+      "granularity": "ecmo_auxiliary"
+    }
+  ],
+  "unique.MOBILIZATION": [
+    {
+      "study": "ECMO",
+      "sheet": "TENDINE SLIM",
+      "column": "MOBILIZATION",
+      "db_target": "ECMO → TENDINE SLIM → MOBILIZATION",
+      "granularity": "ecmo_auxiliary"
+    }
+  ],
+  "unique.SITE_INF": [
+    {
+      "study": "ECMO",
+      "sheet": "TENDINE SLIM",
+      "column": "SITE INF",
+      "db_target": "ECMO → TENDINE SLIM → SITE INF",
+      "granularity": "ecmo_auxiliary"
+    }
+  ],
+  "unique.TYPE_INF": [
+    {
+      "study": "ECMO",
+      "sheet": "TENDINE SLIM",
+      "column": "TYPE INF",
+      "db_target": "ECMO → TENDINE SLIM → TYPE INF",
+      "granularity": "ecmo_auxiliary"
+    }
+  ],
+  "unique.ORGANISM": [
+    {
+      "study": "ECMO",
+      "sheet": "TENDINE SLIM",
+      "column": "ORGANISM",
+      "db_target": "ECMO → TENDINE SLIM → ORGANISM",
+      "granularity": "ecmo_auxiliary"
+    }
+  ],
+  "unique.REASON_FOR_STOP": [
+    {
+      "study": "ECMO",
+      "sheet": "TENDINE SLIM",
+      "column": "REASON FOR STOP",
+      "db_target": "ECMO → TENDINE SLIM → REASON FOR STOP",
+      "granularity": "ecmo_auxiliary"
+    }
+  ],
+  "unique.CARDIAAC_SURGERY_PROCEDURES": [
+    {
+      "study": "ECMO",
+      "sheet": "TENDINE SLIM",
+      "column": "CARDIAAC SURGERY PROCEDURES",
+      "db_target": "ECMO → TENDINE SLIM → CARDIAAC SURGERY PROCEDURES",
+      "granularity": "ecmo_auxiliary"
+    }
+  ],
+  "patient.bmi": [
+    {
+      "study": "ACC",
+      "sheet": "Anagrafica",
+      "column": "BMI",
+      "db_target": "ACC → Anagrafica → BMI",
+      "granularity": "patient_once"
+    }
+  ],
+  "unique.PRIOR_MI": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "PRIOR MI",
+      "db_target": "ACC → Anamnesi → PRIOR MI",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.CHF": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "CHF",
+      "db_target": "ACC → Anamnesi → CHF",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.IRC": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "IRC",
+      "db_target": "ACC → Anamnesi → IRC",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.PERIPHERAL_VASC_DIS": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "PERIPHERAL VASC DIS",
+      "db_target": "ACC → Anamnesi → PERIPHERAL VASC DIS",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.CEREBROVASCULAR_DIS": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "CEREBROVASCULAR DIS",
+      "db_target": "ACC → Anamnesi → CEREBROVASCULAR DIS",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.DEMENTIA": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "DEMENTIA",
+      "db_target": "ACC → Anamnesi → DEMENTIA",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.COPD": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "COPD",
+      "db_target": "ACC → Anamnesi → COPD",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.CONNECTIVE_TISSUE_DIS": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "CONNECTIVE TISSUE DIS",
+      "db_target": "ACC → Anamnesi → CONNECTIVE TISSUE DIS",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.PEPTIC_DIS": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "PEPTIC DIS",
+      "db_target": "ACC → Anamnesi → PEPTIC DIS",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.LIVER_DISEASE012": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "LIVER DISEASE012",
+      "db_target": "ACC → Anamnesi → LIVER DISEASE012",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.DIABETE": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "DIABETE",
+      "db_target": "ACC → Anamnesi → DIABETE",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.HEMIPLEGIA": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "HEMIPLEGIA",
+      "db_target": "ACC → Anamnesi → HEMIPLEGIA",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.SOLID_TUMOR": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "SOLID TUMOR",
+      "db_target": "ACC → Anamnesi → SOLID TUMOR",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.LEUKEMIA": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "LEUKEMIA",
+      "db_target": "ACC → Anamnesi → LEUKEMIA",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.LINPHOMA": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "LINPHOMA",
+      "db_target": "ACC → Anamnesi → LINPHOMA",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.AIDS": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "AIDS",
+      "db_target": "ACC → Anamnesi → AIDS",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.FRAILTY_SCALE": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "FRAILTY SCALE",
+      "db_target": "ACC → Anamnesi → FRAILTY SCALE",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.ASA": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "ASA",
+      "db_target": "ACC → Anamnesi → ASA",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.P2Y12": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "P2Y12",
+      "db_target": "ACC → Anamnesi → P2Y12",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.BETABLOCK": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "BETABLOCK",
+      "db_target": "ACC → Anamnesi → BETABLOCK",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.ACEI": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "ACEi",
+      "db_target": "ACC → Anamnesi → ACEi",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.ARB": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "ARB",
+      "db_target": "ACC → Anamnesi → ARB",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.AED": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "AED",
+      "db_target": "ACC → Anamnesi → AED",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.IMMUNOSOP": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "IMMUNOSOP",
+      "db_target": "ACC → Anamnesi → IMMUNOSOP",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.ISTRUCTION_LEVEL": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "ISTRUCTION LEVEL",
+      "db_target": "ACC → Anamnesi → ISTRUCTION LEVEL",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.EMPLOYMENT": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "EMPLOYMENT",
+      "db_target": "ACC → Anamnesi → EMPLOYMENT",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.EMPLOYMENT_DISCORSIVO": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "EMPLOYMENT DISCORSIVO",
+      "db_target": "ACC → Anamnesi → EMPLOYMENT DISCORSIVO",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.LIVE_ALONE": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "LIVE ALONE",
+      "db_target": "ACC → Anamnesi → LIVE ALONE",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.ILLICIT_DRUG": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "ILLICIT DRUG",
+      "db_target": "ACC → Anamnesi → ILLICIT DRUG",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.SMOKE": [
+    {
+      "study": "ACC",
+      "sheet": "Anamnesi",
+      "column": "SMOKE",
+      "db_target": "ACC → Anamnesi → SMOKE",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.ACC_DATE": [
+    {
+      "study": "ACC",
+      "sheet": "Pre-H",
+      "column": "ACC DATE",
+      "db_target": "ACC → Pre-H → ACC DATE",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.ACC_ORA": [
+    {
+      "study": "ACC",
+      "sheet": "Pre-H",
+      "column": "ACC ORA",
+      "db_target": "ACC → Pre-H → ACC ORA",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.TYP0": [
+    {
+      "study": "ACC",
+      "sheet": "Pre-H",
+      "column": "TYP0",
+      "db_target": "ACC → Pre-H → TYP0",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.BS_CPR": [
+    {
+      "study": "ACC",
+      "sheet": "Pre-H",
+      "column": "BS-CPR",
+      "db_target": "ACC → Pre-H → BS-CPR",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.LUCAS": [
+    {
+      "study": "ACC",
+      "sheet": "Pre-H",
+      "column": "LUCAS",
+      "db_target": "ACC → Pre-H → LUCAS",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.NO_FLOW": [
+    {
+      "study": "ACC",
+      "sheet": "Pre-H",
+      "column": "NO FLOW",
+      "db_target": "ACC → Pre-H → NO FLOW",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.LOW_FLOW": [
+    {
+      "study": "ACC",
+      "sheet": "Pre-H",
+      "column": "LOW FLOW",
+      "db_target": "ACC → Pre-H → LOW FLOW",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.ROSC": [
+    {
+      "study": "ACC",
+      "sheet": "Pre-H",
+      "column": "ROSC",
+      "db_target": "ACC → Pre-H → ROSC",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.ACC_LOCATION": [
+    {
+      "study": "ACC",
+      "sheet": "Pre-H",
+      "column": "ACC LOCATION",
+      "db_target": "ACC → Pre-H → ACC LOCATION",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.CAUSA_ACC": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "CAUSA ACC",
+      "db_target": "ACC → PS → CAUSA ACC",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.CAUSA_ACC_DISCORSIVA": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "CAUSA ACC DISCORSIVA",
+      "db_target": "ACC → PS → CAUSA ACC DISCORSIVA",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.STEMI": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "STEMI",
+      "db_target": "ACC → PS → STEMI",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.NSTEMI": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "NSTEMI",
+      "db_target": "ACC → PS → NSTEMI",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.CACG": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "CACG",
+      "db_target": "ACC → PS → CACG",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "CACG",
+      "db_target": "ACC → 6 - 12H → CACG",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "CACG",
+      "db_target": "ACC → DAY 1 → CACG",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "CACG",
+      "db_target": "ACC → DAY 2 → CACG",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "CACG",
+      "db_target": "ACC → DAY 3 → CACG",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.ESITO": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "ESITO",
+      "db_target": "ACC → PS → ESITO",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "ESITO",
+      "db_target": "ACC → 6 - 12H → ESITO",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "ESITO",
+      "db_target": "ACC → DAY 1 → ESITO",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "ESITO",
+      "db_target": "ACC → DAY 3 → ESITO",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.PCI": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "PCI",
+      "db_target": "ACC → PS → PCI",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "PCI",
+      "db_target": "ACC → 6 - 12H → PCI",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "PCI",
+      "db_target": "ACC → DAY 1 → PCI",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "PCI",
+      "db_target": "ACC → DAY 2 → PCI",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "PCI",
+      "db_target": "ACC → DAY 3 → PCI",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.CCH": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "CCH",
+      "db_target": "ACC → PS → CCH",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "CCH",
+      "db_target": "ACC → 6 - 12H → CCH",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "CCH",
+      "db_target": "ACC → DAY 1 → CCH",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "CCH",
+      "db_target": "ACC → DAY 2 → CCH",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "CCH",
+      "db_target": "ACC → DAY 3 → CCH",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.DIMERO": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "DIMERO",
+      "db_target": "ACC → PS → DIMERO",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "DIMERO",
+      "db_target": "ACC → Ammissione → DIMERO",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "DIMERO",
+      "db_target": "ACC → 6 - 12H → DIMERO",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "DIMERO",
+      "db_target": "ACC → DAY 1 → DIMERO",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "DIMERO",
+      "db_target": "ACC → DAY 2 → DIMERO",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "DIMERO",
+      "db_target": "ACC → DAY 3 → DIMERO",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.FBG": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "FBG",
+      "db_target": "ACC → PS → FBG",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "FBG",
+      "db_target": "ACC → Ammissione → FBG",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "FBG",
+      "db_target": "ACC → 6 - 12H → FBG",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "FBG",
+      "db_target": "ACC → DAY 1 → FBG",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "FBG",
+      "db_target": "ACC → DAY 2 → FBG",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "FBG",
+      "db_target": "ACC → DAY 3 → FBG",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "lab.inr": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "INR",
+      "db_target": "ACC → PS → INR",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "INR",
+      "db_target": "ACC → Ammissione → INR",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "INR",
+      "db_target": "ACC → 6 - 12H → INR",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "INR",
+      "db_target": "ACC → DAY 1 → INR",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "INR",
+      "db_target": "ACC → DAY 2 → INR",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "INR",
+      "db_target": "ACC → DAY 3 → INR",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "lab.ptt": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "PTTr",
+      "db_target": "ACC → PS → PTTr",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "PTTr",
+      "db_target": "ACC → Ammissione → PTTr",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "PTTr",
+      "db_target": "ACC → 6 - 12H → PTTr",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "PTTr",
+      "db_target": "ACC → DAY 1 → PTTr",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "PTTr",
+      "db_target": "ACC → DAY 2 → PTTr",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "PTTr",
+      "db_target": "ACC → DAY 3 → PTTr",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "lab.wbc": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "WBC",
+      "db_target": "ACC → PS → WBC",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "WBC",
+      "db_target": "ACC → Ammissione → WBC",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "WBC",
+      "db_target": "ACC → 6 - 12H → WBC",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "WBC",
+      "db_target": "ACC → DAY 1 → WBC",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "WBC",
+      "db_target": "ACC → DAY 2 → WBC",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "WBC",
+      "db_target": "ACC → DAY 3 → WBC",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.N": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "N",
+      "db_target": "ACC → PS → N",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "N",
+      "db_target": "ACC → Ammissione → N",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "N",
+      "db_target": "ACC → 6 - 12H → N",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "N",
+      "db_target": "ACC → DAY 1 → N",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "N",
+      "db_target": "ACC → DAY 2 → N",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "N",
+      "db_target": "ACC → DAY 3 → N",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.L": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "L",
+      "db_target": "ACC → PS → L",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "L",
+      "db_target": "ACC → Ammissione → L",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "L",
+      "db_target": "ACC → 6 - 12H → L",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "L",
+      "db_target": "ACC → DAY 1 → L",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "L",
+      "db_target": "ACC → DAY 2 → L",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "L",
+      "db_target": "ACC → DAY 3 → L",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.MONO": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "MONO",
+      "db_target": "ACC → PS → MONO",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "MONO",
+      "db_target": "ACC → Ammissione → MONO",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "MONO",
+      "db_target": "ACC → 6 - 12H → MONO",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "MONO",
+      "db_target": "ACC → DAY 1 → MONO",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "MONO",
+      "db_target": "ACC → DAY 2 → MONO",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "MONO",
+      "db_target": "ACC → DAY 3 → MONO",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "lab.plt": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "PLT",
+      "db_target": "ACC → PS → PLT",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "PLT",
+      "db_target": "ACC → Ammissione → PLT",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "PLT",
+      "db_target": "ACC → 6 - 12H → PLT",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "PLT",
+      "db_target": "ACC → DAY 1 → PLT",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "PLT",
+      "db_target": "ACC → DAY 2 → PLT",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "PLT",
+      "db_target": "ACC → DAY 3 → PLT",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "lab.pcr": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "PCR",
+      "db_target": "ACC → PS → PCR",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "PCR",
+      "db_target": "ACC → Ammissione → PCR",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "PCR",
+      "db_target": "ACC → 6 - 12H → PCR",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "PCR",
+      "db_target": "ACC → DAY 1 → PCR",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "PCR",
+      "db_target": "ACC → DAY 2 → PCR",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "PCR",
+      "db_target": "ACC → DAY 3 → PCR",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "lab.pct": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "PCT",
+      "db_target": "ACC → PS → PCT",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "PCT",
+      "db_target": "ACC → Ammissione → PCT",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "PCT",
+      "db_target": "ACC → 6 - 12H → PCT",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "PCT",
+      "db_target": "ACC → DAY 1 → PCT",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "PCT",
+      "db_target": "ACC → DAY 2 → PCT",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "PCT",
+      "db_target": "ACC → DAY 3 → PCT",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "lab.creatinine": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "CREA",
+      "db_target": "ACC → PS → CREA",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "CREA",
+      "db_target": "ACC → Ammissione → CREA",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "CREA",
+      "db_target": "ACC → 6 - 12H → CREA",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "CREA",
+      "db_target": "ACC → DAY 1 → CREA",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "CREA",
+      "db_target": "ACC → DAY 2 → CREA",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "CREA",
+      "db_target": "ACC → DAY 3 → CREA",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.BILI": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "BILI",
+      "db_target": "ACC → PS → BILI",
+      "granularity": "acc_episode_once"
+    },
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "BILI",
+      "db_target": "ACC → Ammissione → BILI",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "BILI",
+      "db_target": "ACC → 6 - 12H → BILI",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "BILI",
+      "db_target": "ACC → DAY 1 → BILI",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "BILI",
+      "db_target": "ACC → DAY 2 → BILI",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "BILI",
+      "db_target": "ACC → DAY 3 → BILI",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.ECPR": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "eCPR",
+      "db_target": "ACC → PS → eCPR",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.IABP": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "IABP",
+      "db_target": "ACC → PS → IABP",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.LUOGO_POS_ECMO": [
+    {
+      "study": "ACC",
+      "sheet": "PS",
+      "column": "LUOGO POS ECMO",
+      "db_target": "ACC → PS → LUOGO POS ECMO",
+      "granularity": "acc_episode_once"
+    }
+  ],
+  "unique.ADMISSION_DATE": [
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "ADMISSION DATE",
+      "db_target": "ACC → Ammissione → ADMISSION DATE",
+      "granularity": "acc_timepoint_admission"
+    }
+  ],
+  "unique.ADMISSION_TIME": [
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "ADMISSION TIME",
+      "db_target": "ACC → Ammissione → ADMISSION TIME",
+      "granularity": "acc_timepoint_admission"
+    }
+  ],
+  "vitals.temp": [
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "TEMPERATURA CORPOREA",
+      "db_target": "ACC → Ammissione → TEMPERATURA CORPOREA",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "TEMPERATURA CORPOREA",
+      "db_target": "ACC → 6 - 12H → TEMPERATURA CORPOREA",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "TEMPERATURA CORPOREA",
+      "db_target": "ACC → DAY 1 → TEMPERATURA CORPOREA",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "TEMPERATURA CORPOREA",
+      "db_target": "ACC → DAY 2 → TEMPERATURA CORPOREA",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "TEMPERATURA CORPOREA",
+      "db_target": "ACC → DAY 3 → TEMPERATURA CORPOREA",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "blood_gas.pf_ratio": [
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "P/F",
+      "db_target": "ACC → Ammissione → P/F",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "P/F",
+      "db_target": "ACC → 6 - 12H → P/F",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "P/F",
+      "db_target": "ACC → DAY 1 → P/F",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "P/F",
+      "db_target": "ACC → DAY 2 → P/F",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "P/F",
+      "db_target": "ACC → DAY 3 → P/F",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.FO2_HB": [
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "FO2-HB",
+      "db_target": "ACC → Ammissione → FO2-HB",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "FO2-HB",
+      "db_target": "ACC → 6 - 12H → FO2-HB",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "FO2-HB",
+      "db_target": "ACC → DAY 1 → FO2-HB",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "FO2-HB",
+      "db_target": "ACC → DAY 2 → FO2-HB",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "FO2-HB",
+      "db_target": "ACC → DAY 3 → FO2-HB",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.FCO_HB": [
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "FCO-HB",
+      "db_target": "ACC → Ammissione → FCO-HB",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "FCO-HB",
+      "db_target": "ACC → 6 - 12H → FCO-HB",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "FCO-HB",
+      "db_target": "ACC → DAY 1 → FCO-HB",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "FCO-HB",
+      "db_target": "ACC → DAY 2 → FCO-HB",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "FCO-HB",
+      "db_target": "ACC → DAY 3 → FCO-HB",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.FMET_HB": [
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "FMET-HB",
+      "db_target": "ACC → Ammissione → FMET-HB",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "FMET-HB",
+      "db_target": "ACC → DAY 1 → FMET-HB",
+      "granularity": "acc_timepoint_day_1"
+    }
+  ],
+  "unique.FH_HB": [
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "FH-HB",
+      "db_target": "ACC → Ammissione → FH-HB",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "FH-HB",
+      "db_target": "ACC → 6 - 12H → FH-HB",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "FH-HB",
+      "db_target": "ACC → DAY 1 → FH-HB",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "FH-HB",
+      "db_target": "ACC → DAY 2 → FH-HB",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "FH-HB",
+      "db_target": "ACC → DAY 3 → FH-HB",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "lab.na": [
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "NA",
+      "db_target": "ACC → Ammissione → NA",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "NA",
+      "db_target": "ACC → 6 - 12H → NA",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "NA",
+      "db_target": "ACC → DAY 1 → NA",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "NA",
+      "db_target": "ACC → DAY 2 → NA",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "NA",
+      "db_target": "ACC → DAY 3 → NA",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "lab.k": [
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "K",
+      "db_target": "ACC → Ammissione → K",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "K",
+      "db_target": "ACC → 6 - 12H → K",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "K",
+      "db_target": "ACC → DAY 1 → K",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "K",
+      "db_target": "ACC → DAY 2 → K",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "K",
+      "db_target": "ACC → DAY 3 → K",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "lab.ca": [
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "CA",
+      "db_target": "ACC → Ammissione → CA",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "CA",
+      "db_target": "ACC → 6 - 12H → CA",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "CA",
+      "db_target": "ACC → DAY 1 → CA",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "CA",
+      "db_target": "ACC → DAY 2 → CA",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "CA",
+      "db_target": "ACC → DAY 3 → CA",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "lab.cl": [
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "CL",
+      "db_target": "ACC → Ammissione → CL",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "CL",
+      "db_target": "ACC → 6 - 12H → CL",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "CL",
+      "db_target": "ACC → DAY 1 → CL",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "CL",
+      "db_target": "ACC → DAY 2 → CL",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "CL",
+      "db_target": "ACC → DAY 3 → CL",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.ANION_GAP": [
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "ANION GAP",
+      "db_target": "ACC → Ammissione → ANION GAP",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "ANION GAP",
+      "db_target": "ACC → 6 - 12H → ANION GAP",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "ANION GAP",
+      "db_target": "ACC → DAY 1 → ANION GAP",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "ANION GAP",
+      "db_target": "ACC → DAY 2 → ANION GAP",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "ANION GAP",
+      "db_target": "ACC → DAY 3 → ANION GAP",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.OSM": [
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "OSM",
+      "db_target": "ACC → Ammissione → OSM",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "OSM",
+      "db_target": "ACC → 6 - 12H → OSM",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "OSM",
+      "db_target": "ACC → DAY 1 → OSM",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "OSM",
+      "db_target": "ACC → DAY 2 → OSM",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "OSM",
+      "db_target": "ACC → DAY 3 → OSM",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "lab.glucose": [
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "GLU",
+      "db_target": "ACC → Ammissione → GLU",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "GLU",
+      "db_target": "ACC → 6 - 12H → GLU",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "GLU",
+      "db_target": "ACC → DAY 1 → GLU",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "GLU",
+      "db_target": "ACC → DAY 2 → GLU",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "GLU",
+      "db_target": "ACC → DAY 3 → GLU",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.UREA": [
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "UREA",
+      "db_target": "ACC → Ammissione → UREA",
+      "granularity": "acc_timepoint_admission"
+    }
+  ],
+  "vent.ppeak": [
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "PICCO",
+      "db_target": "ACC → Ammissione → PICCO",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "Picco",
+      "db_target": "ACC → DAY 1 → Picco",
+      "granularity": "acc_timepoint_day_1"
+    }
+  ],
+  "vent.compliance": [
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "CRS",
+      "db_target": "ACC → Ammissione → CRS",
+      "granularity": "acc_timepoint_admission"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "CRS",
+      "db_target": "ACC → 6 - 12H → CRS",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "CRS",
+      "db_target": "ACC → DAY 1 → CRS",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "CRS",
+      "db_target": "ACC → DAY 2 → CRS",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "CRS",
+      "db_target": "ACC → DAY 3 → CRS",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.FIO2_ECMO": [
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "FiO2 ECMO",
+      "db_target": "ACC → Ammissione → FiO2 ECMO",
+      "granularity": "acc_timepoint_admission"
+    }
+  ],
+  "unique.GAS_FLOW_ECMO": [
+    {
+      "study": "ACC",
+      "sheet": "Ammissione",
+      "column": "GAS FLOW ECMO",
+      "db_target": "ACC → Ammissione → GAS FLOW ECMO",
+      "granularity": "acc_timepoint_admission"
+    }
+  ],
+  "outcome.exitus": [
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "EXITUS",
+      "db_target": "ACC → 6 - 12H → EXITUS",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "EXITUS",
+      "db_target": "ACC → DAY 1 → EXITUS",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "EXITUS",
+      "db_target": "ACC → DAY 2 → EXITUS",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "EXITUS",
+      "db_target": "ACC → DAY 3 → EXITUS",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.DISSEDAZIONE": [
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "DISSEDAZIONE",
+      "db_target": "ACC → 6 - 12H → DISSEDAZIONE",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "DISSEDAZIONE",
+      "db_target": "ACC → DAY 1 → DISSEDAZIONE",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "DISSEDAZIONE",
+      "db_target": "ACC → DAY 2 → DISSEDAZIONE",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "DISSEDAZIONE",
+      "db_target": "ACC → DAY 3 → DISSEDAZIONE",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "neuro.enolase": [
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "ENOLASI",
+      "db_target": "ACC → 6 - 12H → ENOLASI",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "ENOLASI",
+      "db_target": "ACC → DAY 1 → ENOLASI",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "ENOLASI",
+      "db_target": "ACC → DAY 2 → ENOLASI",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "ENOLASI",
+      "db_target": "ACC → DAY 3 → ENOLASI",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "neuro.npi": [
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "NPI DX",
+      "db_target": "ACC → 6 - 12H → NPI DX",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "NPI SX",
+      "db_target": "ACC → 6 - 12H → NPI SX",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "NPI DX",
+      "db_target": "ACC → DAY 1 → NPI DX",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "NPI SX",
+      "db_target": "ACC → DAY 1 → NPI SX",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "NPI DX",
+      "db_target": "ACC → DAY 2 → NPI DX",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "NPI SX",
+      "db_target": "ACC → DAY 2 → NPI SX",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "NPI DX",
+      "db_target": "ACC → DAY 3 → NPI DX",
+      "granularity": "acc_timepoint_day_3"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "NPI SX",
+      "db_target": "ACC → DAY 3 → NPI SX",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.CORNEALE": [
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "CORNEALE",
+      "db_target": "ACC → 6 - 12H → CORNEALE",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "CORNEALE",
+      "db_target": "ACC → DAY 1 → CORNEALE",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "CORNEALE",
+      "db_target": "ACC → DAY 2 → CORNEALE",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "CORNEALE",
+      "db_target": "ACC → DAY 3 → CORNEALE",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.CARENALE": [
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "CARENALE",
+      "db_target": "ACC → 6 - 12H → CARENALE",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "CARENALE",
+      "db_target": "ACC → DAY 1 → CARENALE",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "CARENALE",
+      "db_target": "ACC → DAY 2 → CARENALE",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "CARENALE",
+      "db_target": "ACC → DAY 3 → CARENALE",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.FMT": [
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "FMT",
+      "db_target": "ACC → 6 - 12H → FMT",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "FMT",
+      "db_target": "ACC → DAY 1 → FMT",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "FMT",
+      "db_target": "ACC → DAY 2 → FMT",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "FMT",
+      "db_target": "ACC → DAY 3 → FMT",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.N20": [
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "N20",
+      "db_target": "ACC → 6 - 12H → N20",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "N20",
+      "db_target": "ACC → DAY 1 → N20",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "N20",
+      "db_target": "ACC → DAY 2 → N20",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "N20",
+      "db_target": "ACC → DAY 3 → N20",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "neuro.gcs": [
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "GCS - E",
+      "db_target": "ACC → 6 - 12H → GCS - E",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "GCS - V",
+      "db_target": "ACC → 6 - 12H → GCS - V",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "6 - 12H",
+      "column": "GCS - M",
+      "db_target": "ACC → 6 - 12H → GCS - M",
+      "granularity": "acc_timepoint_h6_12"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "GCS - E",
+      "db_target": "ACC → DAY 1 → GCS - E",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "GCS - V",
+      "db_target": "ACC → DAY 1 → GCS - V",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "GCS - M",
+      "db_target": "ACC → DAY 1 → GCS - M",
+      "granularity": "acc_timepoint_day_1"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "GCS-E T1",
+      "db_target": "ACC → DAY 2 → GCS-E T1",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "GCS-V T1",
+      "db_target": "ACC → DAY 2 → GCS-V T1",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "GCS-M T1",
+      "db_target": "ACC → DAY 2 → GCS-M T1",
+      "granularity": "acc_timepoint_day_2"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "GCS - E",
+      "db_target": "ACC → DAY 3 → GCS - E",
+      "granularity": "acc_timepoint_day_3"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "GCS - V",
+      "db_target": "ACC → DAY 3 → GCS - V",
+      "granularity": "acc_timepoint_day_3"
+    },
+    {
+      "study": "ACC",
+      "sheet": "DAY 3",
+      "column": "GCS - M",
+      "db_target": "ACC → DAY 3 → GCS - M",
+      "granularity": "acc_timepoint_day_3"
+    }
+  ],
+  "unique.SAPS_II": [
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "SAPS-II",
+      "db_target": "ACC → DAY 1 → SAPS-II",
+      "granularity": "acc_timepoint_day_1"
+    }
+  ],
+  "unique.CT02": [
+    {
+      "study": "ACC",
+      "sheet": "DAY 1",
+      "column": "cT02",
+      "db_target": "ACC → DAY 1 → cT02",
+      "granularity": "acc_timepoint_day_1"
+    }
+  ],
+  "unique.ESITO_TESTUALE": [
+    {
+      "study": "ACC",
+      "sheet": "DAY 2",
+      "column": "ESITO TESTUALE",
+      "db_target": "ACC → DAY 2 → ESITO TESTUALE",
+      "granularity": "acc_timepoint_day_2"
+    }
+  ],
+  "unique.DAYS_IN_ICU": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "DAYS IN ICU",
+      "db_target": "ACC → Outcome → DAYS IN ICU",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.HOSPITAL_DISCHARGE_DATE": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "HOSPITAL DISCHARGE DATE",
+      "db_target": "ACC → Outcome → HOSPITAL DISCHARGE DATE",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.DAYS_IN_HOSPITAL": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "DAYS IN HOSPITAL",
+      "db_target": "ACC → Outcome → DAYS IN HOSPITAL",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.ESEGUITA_TC": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "Eseguita TC",
+      "db_target": "ACC → Outcome → Eseguita TC",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.PRIMA_TC_A_MENO_DI_24H": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "Prima TC a meno di 24h",
+      "db_target": "ACC → Outcome → Prima TC a meno di 24h",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.PRIMA_TC_A_MENO_DI_48H": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "Prima TC a meno di 48h",
+      "db_target": "ACC → Outcome → Prima TC a meno di 48h",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.DATA_PRIMA_TC": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "Data prima TC",
+      "db_target": "ACC → Outcome → Data prima TC",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.DATA_SECONDA_TC": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "Data seconda TC",
+      "db_target": "ACC → Outcome → Data seconda TC",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.ESITO_TC": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "Esito TC",
+      "db_target": "ACC → Outcome → Esito TC",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.ESEGUITA_RMN": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "Eseguita RMN",
+      "db_target": "ACC → Outcome → Eseguita RMN",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.DATA_PRIMA_RMN": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "Data prima RMN",
+      "db_target": "ACC → Outcome → Data prima RMN",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.ESITO_RMN": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "Esito RMN",
+      "db_target": "ACC → Outcome → Esito RMN",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.NSE_MAX": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "NSE MAX",
+      "db_target": "ACC → Outcome → NSE MAX",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.DEATH_PRE_PROGNOSTICATION": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "DEATH PRE PROGNOSTICATION",
+      "db_target": "ACC → Outcome → DEATH PRE PROGNOSTICATION",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.INCOMPLETE_PROGNOSTICATION": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "INCOMPLETE PROGNOSTICATION",
+      "db_target": "ACC → Outcome → INCOMPLETE PROGNOSTICATION",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.DEATH_AFTER_PROGNOSTICATION": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "DEATH AFTER PROGNOSTICATION",
+      "db_target": "ACC → Outcome → DEATH AFTER PROGNOSTICATION",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.DEATH_CAUSE": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "DEATH CAUSE",
+      "db_target": "ACC → Outcome → DEATH CAUSE",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.INFECTIONS": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "INFECTIONS",
+      "db_target": "ACC → Outcome → INFECTIONS",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.VAP": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "VAP",
+      "db_target": "ACC → Outcome → VAP",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.UTI": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "UTI",
+      "db_target": "ACC → Outcome → UTI",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.CRBS": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "CRBS",
+      "db_target": "ACC → Outcome → CRBS",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.CNS_INFECTION": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "CNS INFECTION",
+      "db_target": "ACC → Outcome → CNS INFECTION",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.SOFT_TISSUE_INFECTION": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "SOFT TISSUE INFECTION",
+      "db_target": "ACC → Outcome → SOFT TISSUE INFECTION",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.MDR_POS": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "MDR POS",
+      "db_target": "ACC → Outcome → MDR POS",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.CPC_AT_ONE_MONTH": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "CPC AT ONE MONTH",
+      "db_target": "ACC → Outcome → CPC AT ONE MONTH",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.CPC_AT_THREE_MONTHS": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "CPC AT THREE MONTHS",
+      "db_target": "ACC → Outcome → CPC AT THREE MONTHS",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.CPC_AT_SIX_MONTHS": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "CPC AT SIX MONTHS",
+      "db_target": "ACC → Outcome → CPC AT SIX MONTHS",
+      "granularity": "study_outcome"
+    }
+  ],
+  "unique.CPC_AT_TWELVE_MONTHS": [
+    {
+      "study": "ACC",
+      "sheet": "Outcome",
+      "column": "CPC AT TWELVE MONTHS",
+      "db_target": "ACC → Outcome → CPC AT TWELVE MONTHS",
+      "granularity": "study_outcome"
+    }
+  ]
+}

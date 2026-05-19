@@ -1,0 +1,146 @@
+{
+  "ph": {
+    "acc_ammissione": "EGA - pH",
+    "acc_h6_12": "EGA - pH",
+    "acc_day1": "EGA - pH",
+    "acc_day2": "EGA - pH",
+    "acc_day3": "EGA - pH",
+    "ecmo_pre_ecls": "pH",
+    "ecmo_24h": "pH",
+    "ecmo_ecpr_incan": "pH"
+  },
+  "pao2": {
+    "acc_ammissione": "EGA - PaO2",
+    "acc_h6_12": "EGA - PaO2",
+    "acc_day1": "EGA - PaO2",
+    "acc_day2": "EGA - PaO2",
+    "acc_day3": "EGA - PaO2",
+    "ecmo_pre_ecls": "pO2",
+    "ecmo_24h": "pO2",
+    "ecmo_ecpr_incan": "pO2"
+  },
+  "paco2": {
+    "acc_ammissione": "EGA - PaCO2",
+    "acc_h6_12": "EGA - PaCO2",
+    "acc_day1": "EGA - PaCO2",
+    "acc_day2": "EGA - PaCO2",
+    "acc_day3": "EGA - PaCO2",
+    "ecmo_pre_ecls": "pCO2",
+    "ecmo_24h": "pCO2",
+    "ecmo_ecpr_incan": "pCO2"
+  },
+  "fio2": {
+    "acc_ammissione": "EGA -FIO2",
+    "acc_h6_12": "EGA -FIO2",
+    "acc_day1": "EGA -FIO2",
+    "acc_day2": "EGA -FIO2",
+    "acc_day3": "EGA -FIO2",
+    "ecmo_24h": "FiO2"
+  },
+  "hco3": {
+    "acc_ammissione": "HCO3",
+    "acc_h6_12": "HCO3",
+    "acc_day1": "HCO3",
+    "acc_day2": "HCO3",
+    "acc_day3": "HCO3",
+    "ecmo_pre_ecls": "HCO3-",
+    "ecmo_24h": "HCO3-",
+    "ecmo_ecpr_incan": "HCO3-"
+  },
+  "be": {
+    "acc_ammissione": "BE",
+    "acc_h6_12": "BE",
+    "acc_day1": "BE",
+    "acc_day2": "BE",
+    "acc_day3": "BE",
+    "ecmo_pre_ecls": "BE",
+    "ecmo_24h": "BE",
+    "ecmo_ecpr_incan": "BE"
+  },
+  "lactate": {
+    "acc_ammissione": "LAC",
+    "acc_h6_12": "LAC",
+    "acc_day1": "LAC",
+    "acc_day2": "LAC",
+    "acc_day3": "LAC",
+    "acc_ps": "LAC",
+    "ecmo_pre_ecls": "Lac",
+    "ecmo_24h": "Lac",
+    "ecmo_ecpr_incan": "Lac"
+  },
+  "hb": {
+    "acc_ammissione": "HB",
+    "acc_h6_12": "HB",
+    "acc_day1": "Hb",
+    "acc_day2": "HB",
+    "acc_day3": "HB",
+    "acc_ps": "HB",
+    "ecmo_pre_ecls": "Hb",
+    "ecmo_24h": "Hb",
+    "ecmo_ecpr_incan": "Hb"
+  },
+  "ht": {
+    "acc_ammissione": "Ht",
+    "acc_h6_12": "HT",
+    "acc_day1": "HT",
+    "acc_day2": "HT",
+    "acc_day3": "HT",
+    "ecmo_pre_ecls": "HT",
+    "ecmo_24h": "HT",
+    "ecmo_ecpr_incan": "HT"
+  },
+  "sao2": {
+    "acc_ammissione": "EGA - SO2",
+    "acc_h6_12": "SO2",
+    "acc_day1": "SO2",
+    "acc_day2": "SO2",
+    "acc_day3": "SO2",
+    "ecmo_pre_ecls": "O2Hb",
+    "ecmo_24h": "O2Hb",
+    "ecmo_ecpr_incan": "O2Hb"
+  },
+  "peep": {
+    "acc_ammissione": "PEEP",
+    "acc_h6_12": "PEEP",
+    "acc_day1": "PEEP",
+    "acc_day2": "PEEP",
+    "acc_day3": "PEEP",
+    "ecmo_pre_ecls": "PEEP",
+    "ecmo_24h": "PEEP"
+  },
+  "tv": {
+    "acc_ammissione": "VT",
+    "acc_h6_12": "VT",
+    "acc_day1": "VT",
+    "acc_day2": "VT",
+    "acc_day3": "VT",
+    "ecmo_pre_ecls": "TV",
+    "ecmo_24h": "TV"
+  },
+  "rr": {
+    "acc_ammissione": "FR",
+    "acc_h6_12": "FR",
+    "acc_day1": "FR",
+    "acc_day2": "FR",
+    "acc_day3": "FR",
+    "ecmo_pre_ecls": "RR",
+    "ecmo_24h": "RR"
+  },
+  "temp": {
+    "acc_ammissione": "TEMPERATURA CORPOREA",
+    "acc_h6_12": "TEMPERATURA CORPOREA",
+    "acc_day1": "TEMPERATURA CORPOREA"
+  },
+  "creat": {
+    "acc_ps": "CREA"
+  },
+  "pam": {
+    "ecmo_24h": "PAM"
+  },
+  "pas": {
+    "ecmo_24h": "PAS"
+  },
+  "pad": {
+    "ecmo_24h": "PAD"
+  }
+}

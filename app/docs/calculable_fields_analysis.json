@@ -1,0 +1,533 @@
+{
+  "ECMO": {
+    "file": "DB VENOARTERIOSI CARDIO (1).xlsx",
+    "sheets": {
+      "ANAGRAFICA": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "VERIFICATO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "RUN": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "18:41"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "EQUIPMENT": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "DIAGNOSI": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "CANNULA": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "PROCEDURES": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "PRE-ECLS ASSESSMENT": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "PRE-ECLS SUPPORT": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "ECLS CARE": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "24HRS ECLS ASSESSMENT": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "COMPLICANZE": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "INFEZIONI": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "OUTCOME": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "CARDIAC SURGERY PROCEDURES": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "CARDIAC": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "CATH DURING ECMO": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "ECPR_ANAMNESI": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "ECPR ACC": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "ECPR INCANULAMENTO": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "ECPR 24HRS": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      }
+    },
+    "formula_summary": [],
+    "derived_columns": [],
+    "optimization_hints": [],
+    "formula_pattern_counts": {},
+    "recommended_rules": [
+      {
+        "id": "ecmo_bmi",
+        "targets": [
+          {
+            "sheet": "ANAGRAFICA",
+            "column": "BMI"
+          }
+        ],
+        "needs": [
+          "PESO",
+          "ALTEZZA"
+        ],
+        "formula": "peso_kg / (altezza_m)^2",
+        "priority": "high"
+      },
+      {
+        "id": "ecmo_age",
+        "targets": [
+          {
+            "sheet": "ANAGRAFICA",
+            "column": "CALCOLO ETA"
+          },
+          {
+            "sheet": "ANAGRAFICA",
+            "column": "ANNI"
+          }
+        ],
+        "needs": [
+          "DN"
+        ],
+        "formula": "eta da DN a data riferimento (ingresso ICU o arresto)",
+        "priority": "high"
+      },
+      {
+        "id": "ecmo_year_all_sheets",
+        "targets": "ANNO su quasi tutti i fogli (20×)",
+        "needs": [
+          "DATA INGRESSO H",
+          "DATA INGRESSO ICU",
+          "START DATE",
+          "DATA ARRESTO"
+        ],
+        "formula": "YEAR(data_riferimento_episodio)",
+        "priority": "high",
+        "optimization": "compilare 1× in anagrafica e propagare"
+      },
+      {
+        "id": "ecmo_pf_ratio",
+        "targets": [
+          {
+            "sheet": "24HRS ECLS ASSESSMENT",
+            "column": "P/F"
+          }
+        ],
+        "needs": [
+          "PaO2/PO2",
+          "FiO2"
+        ],
+        "formula": "PaO2 / (FiO2/100)",
+        "priority": "medium"
+      },
+      {
+        "id": "ecmo_identity_fanout",
+        "targets": "SDO, COGNOME, NOME, ELSO, RUN su ogni foglio",
+        "needs": [
+          "core patient"
+        ],
+        "formula": "copia da anagrafica",
+        "priority": "high",
+        "optimization": "già in app (autoFilled)"
+      }
+    ]
+  },
+  "ACC": {
+    "file": "Nuovo DB ACC (2).xlsx",
+    "sheets": {
+      "Anagrafica": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "Anamnesi": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "Pre-H": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "PS": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "Ammissione": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "6 - 12H": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "DAY 1": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "DAY 2": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "DAY 3": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      },
+      "Outcome": {
+        "header_row": 1,
+        "column_count": 1,
+        "headers_sample": [
+          "SDO"
+        ],
+        "formula_cells_sampled": 0,
+        "formulas_sample": [],
+        "derived_columns": [],
+        "date_columns": [],
+        "anthropometry": []
+      }
+    },
+    "formula_summary": [],
+    "derived_columns": [],
+    "optimization_hints": [],
+    "formula_pattern_counts": {},
+    "recommended_rules": [
+      {
+        "id": "acc_bmi",
+        "targets": [
+          {
+            "sheet": "Anagrafica",
+            "column": "BMI"
+          }
+        ],
+        "needs": [
+          "Peso",
+          "Altezza"
+        ],
+        "formula": "peso / altezza²",
+        "priority": "high"
+      },
+      {
+        "id": "acc_year",
+        "targets": [
+          {
+            "sheet": "Anagrafica",
+            "column": "Anno"
+          }
+        ],
+        "needs": [
+          "Data arresto",
+          "Data ammissione"
+        ],
+        "formula": "YEAR(data arresto)",
+        "priority": "high"
+      },
+      {
+        "id": "acc_age",
+        "targets": [
+          {
+            "sheet": "Anagrafica",
+            "column": "Età"
+          }
+        ],
+        "needs": [
+          "Data di nascita"
+        ],
+        "formula": "eta a data arresto",
+        "priority": "high"
+      },
+      {
+        "id": "acc_pf",
+        "targets": "P/F o equivalente su Ammissione, 6-12H, DAY 1-3",
+        "needs": [
+          "PaO2",
+          "FiO2 EGA"
+        ],
+        "formula": "PaO2/(FiO2/100)",
+        "priority": "medium"
+      },
+      {
+        "id": "acc_saps_sofa",
+        "targets": "SAPS-II, SOFA su timepoint",
+        "needs": "variabili componenti (se presenti come sub-score)",
+        "formula": "score composito — verificare se calcolati in Excel",
+        "priority": "low"
+      }
+    ]
+  },
+  "cross_study": {
+    "overlap_calculable": [
+      "patient.sdo/cognome/nome — fan-out (non calcolo ma ottimizzazione)",
+      "blood_gas.pf_ratio — PaO2 + FiO2",
+      "study.year (ANNO) — da date episodio",
+      "patient.bmi — peso + altezza",
+      "patient.age — DN + data riferimento"
+    ],
+    "ecmo_specific": [
+      "RUN ripetuto — propagare da selezione run",
+      "CALCOLO ETA / ANNI solo ANAGRAFICA ECMO"
+    ],
+    "acc_specific": [
+      "Timepoint DAY 1-3 — stesse colonne EGA/vent ripetute (estrazione 1 template)",
+      "CPC outcome — derivato da esame neurologico non automatico"
+    ]
+  }
+}
