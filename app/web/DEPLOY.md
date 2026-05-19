@@ -75,6 +75,28 @@ npm run dev
 
 Vite + API locale sulla porta 3001 (proxy `/api`).
 
+## Deploy su Vercel (alternativa)
+
+L’app React è in **`app/web`**. Su Vercel imposta:
+
+| Impostazione | Valore |
+|--------------|--------|
+| **Root Directory** | `app/web` (consigliato) |
+| Build Command | `npm run build` |
+| Output Directory | `dist` |
+| Framework Preset | Vite |
+
+Se colleghi il repo dalla root senza cambiare Root Directory, esiste anche `vercel.json` nella root del repository che punta a `app/web`.
+
+**Variabili d’ambiente su Vercel** (Project → Settings → Environment Variables):
+
+- Tutte le `VITE_FIREBASE_*` (come in `.env.example`)
+- `GEMINI_API_KEY` (analisi IA — obbligatoria per estrazione)
+
+Le route `/api/*` sono Serverless Functions in `app/web/api/` (stessa logica di Firebase Functions).
+
+Dopo il deploy, apri `https://TUO-DOMINIO/api/health` — deve rispondere `{"ok":true,"gemini":true,...}`.
+
 ## Note
 
 - I **screenshot non vengono salvati**: passano solo a Gemini in memoria.
