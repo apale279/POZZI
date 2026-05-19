@@ -1,4 +1,4 @@
-import { createClinicalApiHandler } from './_handler.mjs'
+import { createClinicalApiHandler } from './_handler.js'
 
 export const config = {
   api: {

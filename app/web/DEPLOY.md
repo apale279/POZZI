@@ -81,12 +81,12 @@ L’app React è in **`app/web`**. Su Vercel imposta:
 
 | Impostazione | Valore |
 |--------------|--------|
-| **Root Directory** | `app/web` (consigliato) |
-| Build Command | `npm run build` |
+| **Root Directory** | **`app/web`** (obbligatorio) |
+| Build Command | `npm run build` (default da `vercel.json`) |
 | Output Directory | `dist` |
 | Framework Preset | Vite |
 
-Se colleghi il repo dalla root senza cambiare Root Directory, esiste anche `vercel.json` nella root del repository che punta a `app/web`.
+Senza Root Directory `app/web`, il build e le API (`/api/*`) non funzionano. Il repo contiene anche Excel e script di supporto fuori da `app/web`: non servono al deploy.
 
 **Variabili d’ambiente su Vercel** (Project → Settings → Environment Variables):
 
