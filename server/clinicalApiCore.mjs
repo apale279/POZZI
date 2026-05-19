@@ -63,7 +63,7 @@ async function callGemini(parts, model = DEFAULT_MODEL) {
   const key = process.env.GEMINI_API_KEY
   if (!key) {
     throw new Error(
-      'GEMINI_API_KEY mancante. Impostala in Vercel (Environment Variables) o in app/web/.env.local per sviluppo.',
+      'GEMINI_API_KEY mancante. Impostala in Vercel (Environment Variables) o in .env.local per sviluppo.',
     )
   }
 

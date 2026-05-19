@@ -49,7 +49,7 @@ export function formatFirebaseError(err: unknown): string {
     return (
       'Permesso Firestore negato per Impostazioni (config/fieldHints). ' +
       'In Console Firebase → Firestore → Regole, verifica accesso in lettura/scrittura per utenti autenticati ' +
-      'sul path config/*. Da terminale: firebase deploy --only firestore:rules (cartella app/web). ' +
+      'sul path config/*. Da terminale: firebase deploy --only firestore:rules. ' +
       'Le modifiche restano salvate in questo browser anche se il cloud fallisce.'
     )
   }
@@ -74,7 +74,7 @@ let initPromise: Promise<void> | null = null
 export async function ensureFirebase(): Promise<{ db: Firestore; auth: Auth }> {
   if (!isFirebaseConfigured()) {
     throw new Error(
-      'Firebase non configurato. In app/web/.env.local servono almeno VITE_FIREBASE_API_KEY, ' +
+      'Firebase non configurato. In .env.local servono almeno VITE_FIREBASE_API_KEY, ' +
         'VITE_FIREBASE_PROJECT_ID e VITE_FIREBASE_APP_ID (copiali dalla config SDK Web in Console Firebase).',
     )
   }

@@ -1,22 +1,24 @@
-# P.O.Z.Z.I. (ECMO / ACC)
+# P.O.Z.Z.I. — ECMO / ACC
 
-Repository del progetto clinico. **L’app da deployare è solo in [`app/web`](app/web).**
+App per compilazione fogli database ECMO e ACC con estrazione IA (Gemini), impostazioni su Firebase e export Excel.
 
-## Deploy su Vercel
+## Sviluppo locale
 
-1. Collega questo repo a Vercel.
-2. **Settings → General → Root Directory** → imposta **`app/web`** (obbligatorio).
-3. Aggiungi le variabili d’ambiente (`VITE_FIREBASE_*`, `GEMINI_API_KEY`) — vedi [`app/web/DEPLOY.md`](app/web/DEPLOY.md).
+```bash
+npm install
+cp .env.example .env.local   # compila chiavi Firebase + GEMINI_API_KEY
+npm run dev
+```
 
-Non serve un `vercel.json` nella root del repo: la configurazione è in `app/web/vercel.json`.
+- Interfaccia: http://localhost:5173/
+- API analisi: http://localhost:3001/
 
-## Cosa c’è nelle altre cartelle
+## Deploy
 
-| Percorso | Serve al deploy? | Uso |
-|----------|------------------|-----|
-| **`app/web/`** | **Sì** | App React, API, Firebase |
-| `app/docs/`, `app/scripts/` | No | Mapping campi, script Python di supporto |
-| `app/File di prova_Local/` | No | File di test locali |
-| `*.xlsx` in root | No | Database Excel di riferimento (import in Impostazioni) |
+Vedi [DEPLOY.md](DEPLOY.md) (Firebase Hosting o **Vercel**).
 
-Per avere **solo l’app su GitHub** si può usare Root Directory `app/web` su Vercel senza spostare file, oppure creare un repo che contenga unicamente il contenuto di `app/web`.
+Su Vercel: collega questo repo, **Root Directory vuota** (la root è già l’app), variabili `VITE_FIREBASE_*` e `GEMINI_API_KEY`.
+
+## Cartella `reference/`
+
+File non usati in produzione: Excel DB di esempio, script Python di mapping, file di prova. Opzionale in locale.

@@ -11,7 +11,7 @@ L’app usa **Firebase Hosting** (interfaccia) + **Firestore** (pazienti) + **Cl
 
 ## 2. Variabili locali (build)
 
-In `app/web/.env.local`:
+In `.env.local`:
 
 ```env
 VITE_FIREBASE_API_KEY=...
@@ -29,7 +29,7 @@ GEMINI_API_KEY=...   # per sviluppo locale (npm run dev)
 ```bash
 npm install -g firebase-tools
 firebase login
-cd c:\App_mie\ECMO\app\web
+cd percorso-del-repo
 firebase use --add
 ```
 
@@ -54,7 +54,7 @@ firebase deploy --only firestore:rules
 ## 6. Build e deploy completo
 
 ```bash
-cd c:\App_mie\ECMO\app\web
+cd percorso-del-repo
 npm install
 cd functions && npm install && cd ..
 npm run build
@@ -77,23 +77,23 @@ Vite + API locale sulla porta 3001 (proxy `/api`).
 
 ## Deploy su Vercel (alternativa)
 
-L’app React è in **`app/web`**. Su Vercel imposta:
+La root del repository **è** l’app (Vite + `api/`).
 
 | Impostazione | Valore |
 |--------------|--------|
-| **Root Directory** | **`app/web`** (obbligatorio) |
-| Build Command | `npm run build` (default da `vercel.json`) |
+| **Root Directory** | *(lasciare vuoto)* |
+| Build Command | `npm run build` |
 | Output Directory | `dist` |
 | Framework Preset | Vite |
 
-Senza Root Directory `app/web`, il build e le API (`/api/*`) non funzionano. Il repo contiene anche Excel e script di supporto fuori da `app/web`: non servono al deploy.
+**Variabili d’ambiente** (Project → Settings → Environment Variables):
 
 **Variabili d’ambiente su Vercel** (Project → Settings → Environment Variables):
 
 - Tutte le `VITE_FIREBASE_*` (come in `.env.example`)
 - `GEMINI_API_KEY` (analisi IA — obbligatoria per estrazione)
 
-Le route `/api/*` sono Serverless Functions in `app/web/api/` (stessa logica di Firebase Functions).
+Le route `/api/*` sono Serverless Functions in `api/` (stessa logica di Firebase Functions).
 
 Dopo il deploy, apri `https://TUO-DOMINIO/api/health` — deve rispondere `{"ok":true,"gemini":true,...}`.
 
