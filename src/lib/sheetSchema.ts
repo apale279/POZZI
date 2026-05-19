@@ -64,8 +64,13 @@ export function sheetSchemaSource(): 'builtin' | 'uploaded' {
 /** Fogli ECMO solo elenco valori ammessi — non compaiono nel menu laterale. */
 const ECMO_NAV_HIDDEN = new Set(['TENDINE SLIM', 'TENDE SLIM'].map((s) => s.toUpperCase()))
 
+/** Foglio tecnico Excel ACC — non usato in compilazione. */
+const ACC_NAV_HIDDEN = new Set(['PIVOT'])
+
 export function isSheetHiddenFromNav(study: 'ecmo' | 'acc', sheetName: string): boolean {
-  return study === 'ecmo' && ECMO_NAV_HIDDEN.has(sheetName.trim().toUpperCase())
+  const key = sheetName.trim().toUpperCase()
+  if (study === 'ecmo') return ECMO_NAV_HIDDEN.has(key)
+  return ACC_NAV_HIDDEN.has(key)
 }
 
 /** Tutti i fogli dello schema (anche lookup nascosti al menu). */
