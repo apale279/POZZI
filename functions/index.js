@@ -26,8 +26,8 @@ Contesto valutazione: {{CONTEXT}}
 Estrai SOLO i dati esplicitamente presenti nel documento. Se un campo non è indicato, NON includerlo (nessun valore predefinito, non inventare FALSE/0).
 Se non sei sufficientemente sicuro di un valore, NON metterlo in columns/chiavi numeriche; se inserisci comunque una stima, segnalalo in "uncertain".
 Rispondi ESCLUSIVAMENTE con JSON valido, senza markdown, con:
-1) chiavi numeriche standard se presenti (ometti se assenti): ${EXTRACT_KEYS.join(', ')}
-2) oggetto "columns" con chiavi = nomi colonna ESATTI del database e valori estratti. Ometti le colonne non trovate.
+1) oggetto "columns" OBBLIGATORIO: ogni dato estratto deve comparire qui con chiave = nome colonna ESATTO del database. Ometti le colonne non trovate.
+2) opzionalmente anche chiavi numeriche standard se presenti (ometti se assenti): ${EXTRACT_KEYS.join(', ')}
 3) array "uncertain": elementi {"column":"NOME_COLONNA_ESATTO","value":<valore>,"reason":"motivo breve in italiano"} per ogni valore inserito di cui NON sei sicuro. Se sei sicuro, non includere il campo in uncertain.
 
 Esempio: {"ph":7.28,"columns":{"ACEi":true},"uncertain":[{"column":"ACEi","value":true,"reason":"checkbox poco leggibile"}]}`
@@ -58,7 +58,7 @@ async function callGemini(apiKey, parts, model = DEFAULT_MODEL) {
   const json = await res.json()
   if (!res.ok) {
     const msg = json?.error?.message ?? JSON.stringify(json)
-    throw new Error(`Gemini API: ${msg}`)
+    throw new Error(`Gemini API (${resolved}): ${msg}`)
   }
   return json?.candidates?.[0]?.content?.parts?.[0]?.text ?? '{}'
 }

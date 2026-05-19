@@ -22,6 +22,7 @@ import {
 } from '../lib/geminiClient'
 import { loadExtractCommand, saveExtractCommand } from '../lib/extractCommand'
 import {
+  combineGeminiExtractColumns,
   mergeGeminiColumnsForSheet,
   sheetContextLabel,
   uncertainFieldsForAppliedKeys,
@@ -183,7 +184,13 @@ export function SheetWorkbench({ study, sheet }: Props) {
         const v = cells[k]
         if (v !== undefined && v !== '') draft.set(k, v)
       }
-      mergeGeminiColumnsForSheet(study, sheet, gemini.columns, draft, true)
+      mergeGeminiColumnsForSheet(
+        study,
+        sheet,
+        combineGeminiExtractColumns(study, sheet, gemini),
+        draft,
+        true,
+      )
       const onlyNew = new Map<string, SheetCellValue>()
       for (const col of columns) {
         const k = cellKey(study, sheet, col)

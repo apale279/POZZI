@@ -1,6 +1,8 @@
 import { getSheetColumnsList } from './completion'
 import { normalizeYesNoCellValue, type SheetCellValue } from './cellValueFormat'
 import type { GeminiUncertainField } from './geminiUncertainty'
+import { PARSE_COLUMN_MAP } from './ingestConfig'
+import { getParseTargetId } from './sheetTargets'
 import { cellKey } from './workSession'
 
 function findSheetColumn(sheetCols: string[], name: string): string | undefined {
@@ -12,6 +14,39 @@ function findSheetColumn(sheetCols: string[], name: string): string | undefined 
 export function sheetContextLabel(study: 'ecmo' | 'acc', sheet: string, ecmoRun?: number): string {
   const prefix = study === 'ecmo' ? 'ECMO' : 'ACC'
   return ecmoRun !== undefined ? `${prefix} → ${sheet} (RUN ${ecmoRun})` : `${prefix} → ${sheet}`
+}
+
+/**
+ * Unisce columns + chiavi numeriche standard (ph, pao2, …) mappate sul foglio corrente.
+ * Gemini spesso riempie solo values; senza questa conversione l’UI non compila celle.
+ */
+export function combineGeminiExtractColumns(
+  study: 'ecmo' | 'acc',
+  sheet: string,
+  gemini: {
+    values?: Record<string, number>
+    columns?: Record<string, string | number | boolean | undefined>
+  },
+): Record<string, string | number | boolean | undefined> {
+  const parseId = getParseTargetId(study, sheet)
+  const merged: Record<string, string | number | boolean | undefined> = {}
+
+  if (gemini.values) {
+    for (const [key, val] of Object.entries(gemini.values)) {
+      if (val === undefined || val === null || !Number.isFinite(Number(val))) continue
+      const col = PARSE_COLUMN_MAP[key]?.[parseId]
+      if (col) merged[col] = Number(val)
+    }
+  }
+
+  if (gemini.columns) {
+    for (const [k, v] of Object.entries(gemini.columns)) {
+      if (v === undefined || v === null || v === '') continue
+      merged[k] = v
+    }
+  }
+
+  return merged
 }
 
 /** Unisce l’oggetto columns di Gemini nei valori del foglio corrente (solo celle ancora vuote). */

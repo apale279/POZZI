@@ -3,6 +3,7 @@ import type { DestinationRow, ExtractionPreview } from '../types/ingest'
 import { normalizeYesNoCellValue } from './cellValueFormat'
 import { getSheetColumnsList } from './completion'
 import { getTargetById, PARSE_COLUMN_MAP, PARSE_KEY_LABELS } from './ingestConfig'
+import { combineGeminiExtractColumns } from './sheetExtract'
 import { parseClinicalText } from './textParse'
 import { resolveWrites, type ResolvedWrite } from './targetWrites'
 
@@ -227,10 +228,20 @@ export function buildGeminiExtractionPreview(
   record: PatientRecord,
   ecmoRun?: number,
 ): ExtractionPreview | { error: string } {
+  const target = getTargetById(targetId)
+  const mergedColumns =
+    target != null
+      ? combineGeminiExtractColumns(target.study, target.sheet, { values, columns })
+      : { ...(columns ?? {}) }
   const base = buildExtractionPreview(targetId, valuesToText(values), record, ecmoRun, 'gemini')
   if ('error' in base) return base
-  if (columns && Object.keys(columns).length > 0) {
-    return appendGeminiColumnsToPreview(base, columns, targetId, ecmoRun)
+  if (Object.keys(mergedColumns).length > 0) {
+    return appendGeminiColumnsToPreview(
+      base,
+      mergedColumns as Record<string, string | number>,
+      targetId,
+      ecmoRun,
+    )
   }
   return base
 }

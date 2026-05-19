@@ -217,6 +217,8 @@ export function buildFieldHintsPromptBlockForSheet(
       lines.push(`- Colonna "${column}": ${hint}${allowedPart} Se non trovato nel testo: ometti (lascia vuoto).`)
     } else if (allowed.length) {
       lines.push(`- Colonna "${column}":${allowedPart} Se non trovato: ometti.`)
+    } else {
+      lines.push(`- Colonna "${column}": estrai solo se esplicitamente nel documento.`)
     }
   }
   if (!lines.length) return ''
