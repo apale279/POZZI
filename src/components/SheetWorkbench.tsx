@@ -12,6 +12,7 @@ import {
   fieldHintKey,
   formatAllowedValuesList,
   getAllowedValues,
+  getFieldAiInterpretation,
   getStoredConvention,
   loadFieldHints,
 } from '../lib/fieldHints'
@@ -117,13 +118,24 @@ export function SheetWorkbench({ study, sheet }: Props) {
     return m
   }, [cells, columns, study, sheet])
 
+  const [fieldHintsTick, setFieldHintsTick] = useState(0)
+  useEffect(() => {
+    const refresh = () => setFieldHintsTick((t) => t + 1)
+    window.addEventListener('pozzi:field-hints-updated', refresh)
+    window.addEventListener('storage', (e) => {
+      if (e.key === 'pozzi:field-hints') refresh()
+    })
+    return () => window.removeEventListener('pozzi:field-hints-updated', refresh)
+  }, [])
+  const fieldHintsStore = useMemo(() => loadFieldHints(), [fieldHintsTick])
+
   const tableRows: SheetColumnRow[] = useMemo(
     () =>
       columns.map((column) => {
         const key = cellKey(study, sheet, column)
         const value = cells[key]
         const filled = value !== undefined && value !== null && value !== ''
-        const hintsStore = loadFieldHints()
+        const hintsStore = fieldHintsStore
         const entryKey = fieldHintKey(study, sheet, column)
         const storedConv = getStoredConvention(hintsStore, {
           key: entryKey,
@@ -149,9 +161,10 @@ export function SheetWorkbench({ study, sheet }: Props) {
           allowedValuesHint: allowed.length ? formatAllowedValuesList(allowed) : undefined,
           aiUncertain: filled && Boolean(uncertainReason),
           aiUncertainReason: uncertainReason,
+          fieldAiInterpretation: getFieldAiInterpretation(hintsStore, study, sheet, column),
         }
       }),
-    [columns, cells, sources, study, sheet, uncertainByKey],
+    [columns, cells, fieldHintsStore, sources, study, sheet, uncertainByKey],
   )
 
   const missingCount = tableRows.filter((r) => r.value === undefined || r.value === '').length

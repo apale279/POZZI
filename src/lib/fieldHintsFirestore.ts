@@ -2,7 +2,7 @@ import { doc, getDoc, setDoc } from 'firebase/firestore'
 import { conventionsToColumnMap } from './dbMetadataImport'
 import { mergeColumnConventions } from './excelColumnAnalysis'
 import { ensureFirebase, formatFirebaseError } from './firebase'
-import type { FieldHintsStore } from './fieldHints'
+import { mergeHintRecords, normalizeFieldHintsStore, type FieldHintsStore } from './fieldHints'
 
 const DOC_PATH = ['config', 'fieldHints'] as const
 
@@ -52,8 +52,8 @@ export function mergeFirebaseFieldHints(
   const remoteTs = new Date(remote.updatedAt).getTime()
   const localTs = new Date(local.updatedAt).getTime()
   if (remoteTs >= localTs) {
-    return {
-      hints: { ...local.hints, ...remote.hints },
+    return normalizeFieldHintsStore({
+      hints: mergeHintRecords(local.hints, remote.hints),
       defaults: { ...local.defaults, ...remote.defaults },
       aiGenerated: { ...local.aiGenerated, ...remote.aiGenerated },
       defaultsAiGenerated: {
@@ -63,9 +63,9 @@ export function mergeFirebaseFieldHints(
       allowedValues: { ...local.allowedValues, ...remote.allowedValues },
       conventions: { ...local.conventions, ...remote.conventions },
       updatedAt: remote.updatedAt,
-    }
+    })
   }
-  return local
+  return normalizeFieldHintsStore(local)
 }
 
 /** Allinea localStorage convenzioni colonne con quanto salvato su Firebase. */

@@ -20,6 +20,8 @@ export interface SheetColumnRow {
   /** Valore inserito dall’IA con bassa confidenza. */
   aiUncertain?: boolean
   aiUncertainReason?: string
+  /** Significato / istruzioni IA da Impostazioni. */
+  fieldAiInterpretation?: string
 }
 
 type CrossDbItemState = 'pending' | 'confirmed' | 'skipped'
@@ -82,6 +84,7 @@ export function SheetFieldsTable({
           <tr>
             <th>Stato</th>
             <th>Colonna</th>
+            <th className="col-ai-interpretation">Cosa capisce l’IA (Impostazioni)</th>
             <th>Valore</th>
             <th>Utile anche in — conferma obbligatoria</th>
           </tr>
@@ -132,6 +135,11 @@ export function SheetFieldsTable({
                       Valori ammessi: {r.allowedValuesHint}
                     </p>
                   )}
+                </td>
+                <td className="ai-interpretation-cell">
+                  <p className="ai-interpretation-text" title={r.fieldAiInterpretation}>
+                    {r.fieldAiInterpretation ?? '—'}
+                  </p>
                 </td>
                 <td>
                   <input

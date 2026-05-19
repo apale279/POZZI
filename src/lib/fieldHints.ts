@@ -1,6 +1,6 @@
 import { getTargetById } from './ingestConfig'
 import { getSheetColumnsList } from './completion'
-import type { AbsentValueConvention } from './excelColumnAnalysis'
+import { absentConventionLabel, type AbsentValueConvention } from './excelColumnAnalysis'
 import { orderedSheets } from './sheetSchema'
 import { resolveWrites } from './targetWrites'
 
@@ -81,9 +81,29 @@ export function buildFieldCatalog(): FieldCatalogEntry[] {
   return out
 }
 
-function normalizeStore(parsed: Partial<FieldHintsStore>): FieldHintsStore {
+/** Unisce hint senza cancellare testi locali con stringhe vuote da Firebase. */
+export function mergeHintRecords(
+  local: Record<string, string>,
+  remote: Record<string, string> | undefined,
+): Record<string, string> {
+  const out = { ...local }
+  if (!remote) return out
+  for (const [k, v] of Object.entries(remote)) {
+    const t = String(v ?? '').trim()
+    if (t) out[k] = t
+  }
+  return out
+}
+
+export function normalizeFieldHintsStore(parsed: Partial<FieldHintsStore>): FieldHintsStore {
+  const hints: Record<string, string> = { ...DEFAULT_HINTS }
+  for (const [k, v] of Object.entries(parsed.hints ?? {})) {
+    const t = String(v ?? '').trim()
+    if (t) hints[k] = t
+    else if (!(k in DEFAULT_HINTS)) hints[k] = ''
+  }
   return {
-    hints: { ...DEFAULT_HINTS, ...parsed.hints },
+    hints,
     defaults: { ...parsed.defaults },
     aiGenerated: { ...parsed.aiGenerated },
     defaultsAiGenerated: { ...parsed.defaultsAiGenerated },
@@ -97,29 +117,52 @@ export function loadFieldHints(): FieldHintsStore {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
     if (raw) {
-      return normalizeStore(JSON.parse(raw) as FieldHintsStore)
+      return normalizeFieldHintsStore(JSON.parse(raw) as FieldHintsStore)
     }
   } catch {
     /* ignore */
   }
-  return normalizeStore({})
+  return normalizeFieldHintsStore({})
 }
 
 export function saveFieldHints(store: FieldHintsStore): void {
-  const payload: FieldHintsStore = {
-    hints: store.hints,
-    defaults: store.defaults,
-    aiGenerated: store.aiGenerated,
-    defaultsAiGenerated: store.defaultsAiGenerated,
-    allowedValues: store.allowedValues,
-    conventions: store.conventions,
+  const payload = normalizeFieldHintsStore({
+    ...store,
     updatedAt: new Date().toISOString(),
-  }
+  })
   localStorage.setItem(STORAGE_KEY, JSON.stringify(payload))
+  if (typeof window !== 'undefined') {
+    window.dispatchEvent(new CustomEvent('pozzi:field-hints-updated'))
+  }
 }
 
 export function getHint(store: FieldHintsStore, entry: FieldCatalogEntry): string {
   return store.hints[entry.key] ?? ''
+}
+
+/** Testo mostrato in tabella / Impostazioni: cosa l’IA è istruita a capire per la colonna. */
+export function getFieldAiInterpretation(
+  store: FieldHintsStore,
+  study: 'ecmo' | 'acc',
+  sheet: string,
+  column: string,
+): string {
+  const entry: FieldCatalogEntry = { key: fieldHintKey(study, sheet, column), study, sheet, column }
+  const hint = getHint(store, entry).trim()
+  if (hint) return hint
+
+  const allowed = getAllowedValues(store, entry)
+  if (allowed.length) {
+    return `Valori ammessi (DB / TENDINE SLIM): ${formatAllowedValuesList(allowed)}. Estrarre solo se presenti nel documento.`
+  }
+
+  const conv = getStoredConvention(store, entry)
+  if (conv) {
+    const reason = conv.reason?.trim()
+    return `Se assente nel documento: ${absentConventionLabel(conv.convention)}.${reason ? ` ${reason}` : ''}`
+  }
+
+  return 'Nessuna definizione in Impostazioni — l’IA usa solo il nome colonna e le regole generali di estrazione.'
 }
 
 export function getDefault(store: FieldHintsStore, entry: FieldCatalogEntry): string {
