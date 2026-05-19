@@ -21,7 +21,6 @@ import {
   analyzeTextWithGemini,
 } from '../lib/geminiClient'
 import { loadExtractCommand, saveExtractCommand } from '../lib/extractCommand'
-import { loadGeminiModel, saveGeminiModel, type GeminiModelId } from '../lib/geminiModel'
 import {
   mergeGeminiColumnsForSheet,
   sheetContextLabel,
@@ -73,7 +72,6 @@ export function SheetWorkbench({ study, sheet }: Props) {
   const [tableFilter, setTableFilter] = useState<'all' | 'missing' | 'filled'>('all')
   const [ecmoRun, setEcmoRun] = useState(1)
   const [extractCommand, setExtractCommand] = useState(() => loadExtractCommand(study, sheet))
-  const [geminiModel, setGeminiModel] = useState<GeminiModelId>(loadGeminiModel)
   const [skippedPropagations, setSkippedPropagations] = useState(loadSkippedPropagations)
   const [confirmedPropagations, setConfirmedPropagations] = useState(loadConfirmedPropagations)
   const [uncertainByKey, setUncertainByKey] = useState<Record<string, string>>({})
@@ -92,9 +90,8 @@ export function SheetWorkbench({ study, sheet }: Props) {
     () => ({
       fieldHintsPrompt: fieldHintsBlock,
       extractCommand,
-      model: geminiModel,
     }),
-    [fieldHintsBlock, extractCommand, geminiModel],
+    [fieldHintsBlock, extractCommand],
   )
 
   useEffect(() => {
@@ -105,10 +102,6 @@ export function SheetWorkbench({ study, sheet }: Props) {
   useEffect(() => {
     saveExtractCommand(study, sheet, extractCommand)
   }, [study, sheet, extractCommand])
-
-  useEffect(() => {
-    saveGeminiModel(geminiModel)
-  }, [geminiModel])
 
   useEffect(() => {
     saveWorkCells(cells)
@@ -423,8 +416,6 @@ export function SheetWorkbench({ study, sheet }: Props) {
         loading={loading}
         extractCommand={extractCommand}
         onExtractCommandChange={setExtractCommand}
-        geminiModel={geminiModel}
-        onGeminiModelChange={setGeminiModel}
       />
 
       {error && <p className="error-msg">{error}</p>}

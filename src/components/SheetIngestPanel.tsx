@@ -8,8 +8,6 @@ import {
   formatFileSize,
   isDocumentFile,
 } from '../lib/documentExtract'
-import { GEMINI_MODEL_OPTIONS, type GeminiModelId } from '../lib/geminiModel'
-
 export type TextItem = { id: string; text: string }
 export type ImageItem = { id: string; file: File; preview: string }
 export type DocumentItem = { id: string; file: File }
@@ -27,8 +25,6 @@ type Props = {
   loading: boolean
   extractCommand: string
   onExtractCommandChange: (value: string) => void
-  geminiModel: GeminiModelId
-  onGeminiModelChange: (model: GeminiModelId) => void
 }
 
 function fileInputChange(
@@ -52,8 +48,6 @@ export function SheetIngestPanel({
   loading,
   extractCommand,
   onExtractCommandChange,
-  geminiModel,
-  onGeminiModelChange,
 }: Props) {
   const [pasteHint, setPasteHint] = useState<string | null>(null)
   const imageItemsRef = useRef(imageItems)
@@ -115,20 +109,6 @@ export function SheetIngestPanel({
           <strong>Word (.docx)</strong>. I file non vengono salvati nel cloud.
         </p>
       </header>
-
-      <div className="ingest-model-picker" role="group" aria-label="Modello Gemini per l'estrazione">
-        {GEMINI_MODEL_OPTIONS.map((opt) => (
-          <button
-            key={opt.id}
-            type="button"
-            className={`ingest-model-btn${geminiModel === opt.id ? ' ingest-model-btn--active' : ''}`}
-            aria-pressed={geminiModel === opt.id}
-            onClick={() => onGeminiModelChange(opt.id)}
-          >
-            {opt.label}
-          </button>
-        ))}
-      </div>
 
       <label className="ingest-command">
         <span className="ingest-command-label">Comando facoltativo prima dell’estrazione</span>

@@ -1455,40 +1455,6 @@ code.db-target {
   text-align: left;
 }
 
-.ingest-model-picker {
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 0.75rem 0 1rem;
-}
-
-.ingest-model-btn {
-  min-width: 7.5rem;
-  padding: 0.5rem 1.1rem;
-  border: 1px solid #cbd5e1;
-  border-radius: 999px;
-  background: #fff;
-  color: #334155;
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition:
-    background 0.15s,
-    border-color 0.15s,
-    color 0.15s;
-}
-
-.ingest-model-btn:hover {
-  border-color: #0284c7;
-  color: #0369a1;
-}
-
-.ingest-model-btn--active {
-  border-color: #0284c7;
-  background: linear-gradient(180deg, #0284c7 0%, #0369a1 100%);
-  color: #fff;
-}
-
 .ingest-command {
   display: flex;
   flex-direction: column;

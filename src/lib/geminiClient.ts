@@ -1,4 +1,3 @@
-import type { GeminiModelId } from './geminiModel'
 import type { GeminiUncertainField } from './geminiUncertainty'
 
 const API_BASE = import.meta.env.VITE_API_URL ?? ''
@@ -14,7 +13,6 @@ export interface GeminiExtractResult {
 export type GeminiAnalyzeOptions = {
   fieldHintsPrompt?: string
   extractCommand?: string
-  model?: GeminiModelId
 }
 
 export async function analyzeImageWithGemini(
@@ -27,7 +25,6 @@ export async function analyzeImageWithGemini(
   form.append('context', contextLabel)
   if (options.fieldHintsPrompt) form.append('fieldHints', options.fieldHintsPrompt)
   if (options.extractCommand?.trim()) form.append('extractCommand', options.extractCommand.trim())
-  if (options.model) form.append('model', options.model)
 
   const res = await fetch(`${API_BASE}/api/analyze-image`, {
     method: 'POST',
@@ -52,7 +49,6 @@ export async function analyzeDocumentWithGemini(
   form.append('context', contextLabel)
   if (options.fieldHintsPrompt) form.append('fieldHints', options.fieldHintsPrompt)
   if (options.extractCommand?.trim()) form.append('extractCommand', options.extractCommand.trim())
-  if (options.model) form.append('model', options.model)
 
   const res = await fetch(`${API_BASE}/api/analyze-document`, {
     method: 'POST',
@@ -79,7 +75,6 @@ export async function analyzeTextWithGemini(
       context: contextLabel,
       fieldHintsPrompt: options.fieldHintsPrompt ?? '',
       extractCommand: options.extractCommand?.trim() ?? '',
-      model: options.model ?? '',
     }),
   })
 

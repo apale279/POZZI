@@ -9,7 +9,6 @@ import {
   loadExtractCommandScoped,
   saveExtractCommandScoped,
 } from '../lib/extractCommand'
-import { loadGeminiModel, saveGeminiModel, type GeminiModelId } from '../lib/geminiModel'
 import {
   clearUncertainKey,
   mergeUncertainKeyMap,
@@ -99,7 +98,6 @@ export function SheetEditorWindow({
   const [extractCommand, setExtractCommand] = useState(() =>
     loadExtractCommandScoped(`target:${targetId}`),
   )
-  const [geminiModel, setGeminiModel] = useState<GeminiModelId>(loadGeminiModel)
   const [uncertainByKey, setUncertainByKey] = useState<Record<string, string>>({})
   const localEditAt = useRef(0)
   const dirtyRef = useRef(false)
@@ -294,9 +292,8 @@ export function SheetEditorWindow({
     () => ({
       fieldHintsPrompt: fieldHintsBlock,
       extractCommand,
-      model: geminiModel,
     }),
-    [fieldHintsBlock, extractCommand, geminiModel],
+    [fieldHintsBlock, extractCommand],
   )
 
   useEffect(() => {
@@ -306,10 +303,6 @@ export function SheetEditorWindow({
   useEffect(() => {
     saveExtractCommandScoped(`target:${targetId}`, extractCommand)
   }, [targetId, extractCommand])
-
-  useEffect(() => {
-    saveGeminiModel(geminiModel)
-  }, [geminiModel])
 
   const runTextAnalysis = async () => {
     if (!record || !target) return
@@ -584,8 +577,6 @@ export function SheetEditorWindow({
         loading={loading}
         extractCommand={extractCommand}
         onExtractCommandChange={setExtractCommand}
-        geminiModel={geminiModel}
-        onGeminiModelChange={setGeminiModel}
       />
 
       <div className="calc-row sheet-editor-tools">
