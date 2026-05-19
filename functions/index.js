@@ -23,14 +23,16 @@ const EXTRACT_KEYS = [
 const PROMPT_BASE = `Sei un assistente per estrazione dati clinici da screenshot, PDF, referti Word, gasometria e monitoraggio (terapia intensiva, ECMO, arresto cardiaco).
 Contesto valutazione: {{CONTEXT}}
 
-Estrai SOLO i dati esplicitamente presenti nel documento. Se un campo non è indicato, NON includerlo (nessun valore predefinito, non inventare FALSE/0).
-Se non sei sufficientemente sicuro di un valore, NON metterlo in columns/chiavi numeriche; se inserisci comunque una stima, segnalalo in "uncertain".
+Estrai i dati del documento utili per il foglio nel contesto. Interpretazione clinica ragionevole: non serve certezza al 100%.
+Inserisci in "columns" i valori con nome colonna ESATTO del database. Se probabile ma non certo, inserisci comunque e segnala in "uncertain".
+Evita valori inventati senza indizi nel testo (non FALSE/0 a caso).
+Per sì/no: deduci dal contesto; se ambiguo, migliore ipotesi + "uncertain".
 Rispondi ESCLUSIVAMENTE con JSON valido, senza markdown, con:
-1) oggetto "columns" OBBLIGATORIO: ogni dato estratto deve comparire qui con chiave = nome colonna ESATTO del database. Ometti le colonne non trovate.
-2) opzionalmente anche chiavi numeriche standard se presenti (ometti se assenti): ${EXTRACT_KEYS.join(', ')}
-3) array "uncertain": elementi {"column":"NOME_COLONNA_ESATTO","value":<valore>,"reason":"motivo breve in italiano"} per ogni valore inserito di cui NON sei sicuro. Se sei sicuro, non includere il campo in uncertain.
+1) oggetto "columns" OBBLIGATORIO
+2) opzionalmente chiavi numeriche standard: ${EXTRACT_KEYS.join(', ')}
+3) array "uncertain" per valori non pienamente sicuri
 
-Esempio: {"ph":7.28,"columns":{"ACEi":true},"uncertain":[{"column":"ACEi","value":true,"reason":"checkbox poco leggibile"}]}`
+Esempio: {"columns":{"pH":7.28,"IRC":true},"uncertain":[{"column":"IRC","value":true,"reason":"dedotto dal testo"}]}`
 
 function buildPrompt(context, fieldHintsBlock = '', extractCommand = '') {
   let prompt = PROMPT_BASE.replace('{{CONTEXT}}', context ?? '')

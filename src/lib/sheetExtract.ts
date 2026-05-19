@@ -49,6 +49,26 @@ export function combineGeminiExtractColumns(
   return merged
 }
 
+/** Quanti campi estratti dall’IA corrispondono alle colonne del foglio corrente. */
+export function summarizeGeminiSheetMatch(
+  study: 'ecmo' | 'acc',
+  sheet: string,
+  gemini: {
+    values?: Record<string, number>
+    columns?: Record<string, string | number | boolean | undefined>
+  },
+): { matched: number; unmatchedNames: string[] } {
+  const sheetCols = getSheetColumnsList(study, sheet)
+  const combined = combineGeminiExtractColumns(study, sheet, gemini)
+  const unmatchedNames: string[] = []
+  let matched = 0
+  for (const rawCol of Object.keys(combined)) {
+    if (findSheetColumn(sheetCols, rawCol)) matched++
+    else unmatchedNames.push(rawCol)
+  }
+  return { matched, unmatchedNames }
+}
+
 /** Unisce l’oggetto columns di Gemini nei valori del foglio corrente (solo celle ancora vuote). */
 export function mergeGeminiColumnsForSheet(
   study: 'ecmo' | 'acc',

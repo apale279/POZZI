@@ -25,6 +25,7 @@ import { loadExtractCommand, saveExtractCommand } from '../lib/extractCommand'
 import {
   combineGeminiExtractColumns,
   mergeGeminiColumnsForSheet,
+  summarizeGeminiSheetMatch,
   sheetContextLabel,
   uncertainFieldsForAppliedKeys,
 } from '../lib/sheetExtract'
@@ -190,7 +191,13 @@ export function SheetWorkbench({ study, sheet }: Props) {
   }, [])
 
   const mergeGemini = useCallback(
-    (gemini: { columns?: Record<string, string | number>; uncertain?: GeminiUncertainField[] }) => {
+    (
+      gemini: {
+        columns?: Record<string, string | number>
+        values?: Record<string, number>
+        uncertain?: GeminiUncertainField[]
+      },
+    ) => {
       const draft = new Map<string, SheetCellValue>()
       for (const col of columns) {
         const k = cellKey(study, sheet, col)
@@ -215,7 +222,8 @@ export function SheetWorkbench({ study, sheet }: Props) {
       }
       const count = applyExtracted(onlyNew)
       const uncertain = uncertainFieldsForAppliedKeys(study, sheet, gemini.uncertain, onlyNew.keys())
-      return { count, uncertain }
+      const { matched, unmatchedNames } = summarizeGeminiSheetMatch(study, sheet, gemini)
+      return { count, uncertain, matched, unmatchedNames }
     },
     [applyExtracted, cells, columns, sheet, study],
   )
@@ -294,8 +302,12 @@ export function SheetWorkbench({ study, sheet }: Props) {
     try {
       let total = 0
       const allUncertain: GeminiUncertainField[] = []
+      let lastUnmatched: string[] = []
+      let lastIaMatched = 0
       for (const item of documentItems) {
         const file = item.file
+        const isPdf =
+          file.name.toLowerCase().endsWith('.pdf') || file.type === 'application/pdf'
         let extracted: string | null = null
         try {
           extracted = (await extractTextFromDocument(file)).text
@@ -303,25 +315,47 @@ export function SheetWorkbench({ study, sheet }: Props) {
           extracted = null
         }
 
+        let merged = { count: 0, uncertain: [] as GeminiUncertainField[], matched: 0, unmatchedNames: [] as string[] }
+
         if (extracted && hasEnoughExtractedText(extracted)) {
           const gemini = await analyzeTextWithGemini(
-            extracted.slice(0, 12000),
+            extracted.slice(0, 28000),
             contextLabel,
             geminiOptions,
           )
-          const merged = mergeGemini(gemini)
-          total += merged.count
-          allUncertain.push(...merged.uncertain)
-        } else if (file.name.toLowerCase().endsWith('.pdf') || file.type === 'application/pdf') {
+          merged = mergeGemini(gemini)
+          if (merged.count === 0 && isPdf) {
+            const geminiPdf = await analyzeDocumentWithGemini(file, contextLabel, geminiOptions)
+            merged = mergeGemini(geminiPdf)
+          }
+        } else if (isPdf) {
           const gemini = await analyzeDocumentWithGemini(file, contextLabel, geminiOptions)
-          const merged = mergeGemini(gemini)
-          total += merged.count
-          allUncertain.push(...merged.uncertain)
+          merged = mergeGemini(gemini)
         } else {
-          throw new Error(`«${file.name}»: testo insufficiente.`)
+          throw new Error(`«${file.name}»: testo insufficiente. Prova PDF o .docx con testo selezionabile.`)
+        }
+
+        total += merged.count
+        allUncertain.push(...merged.uncertain)
+        lastUnmatched = merged.unmatchedNames
+        lastIaMatched = merged.matched
+      }
+      if (total === 0) {
+        if (lastIaMatched > 0) {
+          setError(
+            `L’IA ha riconosciuto ${lastIaMatched} campi per «${sheet}» ma le celle erano già compilate. Svuota i campi interessati o usa «Svuota dati sessione» e riprova.`,
+          )
+        } else if (lastUnmatched.length > 0) {
+          const sample = lastUnmatched.slice(0, 4).join(', ')
+          setError(
+            `L’IA ha estratto dati (es. ${sample}) che non corrispondono al foglio «${sheet}». Per la lettera di dimissione apri spesso Anamnesi, Outcome o il foglio giusto.`,
+          )
+        } else {
+          setError(
+            'Nessun valore estratto dai documenti per questo foglio. Verifica il foglio attivo (es. Anamnesi per la lettera di dimissione) e le istruzioni IA in Impostazioni.',
+          )
         }
       }
-      if (total === 0) setError('Nessun valore estratto dai documenti.')
       else {
         markUncertainExtracted(allUncertain)
         const warn =

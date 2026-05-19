@@ -17,8 +17,7 @@ export function isYesNoLiteral(v: unknown): boolean {
     s === 'no' ||
     s === 'yes' ||
     s === 'y' ||
-    s === 'n' ||
-    s === 'x'
+    s === 'n'
   )
 }
 
@@ -34,7 +33,8 @@ export function normalizeYesNoCellValue(
   }
   const s = String(val).trim()
   const lower = s.toLowerCase()
-  if (['true', 'vero', 'sì', 'si', 'yes', 'y', '1', 'x'].includes(lower)) return true
+  if (['true', 'vero', 'sì', 'si', 'yes', 'y', '1'].includes(lower)) return true
+  if (lower === 'x') return true
   if (['false', 'falso', 'no', 'n', '0'].includes(lower)) return false
   const n = Number(s.replace(',', '.'))
   if (Number.isFinite(n) && /^-?\d+([.,]\d+)?$/.test(s)) {

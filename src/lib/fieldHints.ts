@@ -43,10 +43,10 @@ const DEFAULT_HINTS: Record<string, string> = {
   'acc:Anamnesi:IMMUNOSOP': 'Terapia immunosoppressiva? (TRUE=sì, FALSE=no)',
   'acc:Anamnesi:PRIOR MI': 'Pregresso infarto miocardico? (TRUE=sì, FALSE=no)',
   'acc:Anamnesi:CHF': 'Scompenso cardiaco congestizio in anamnesi? (TRUE=sì, FALSE=no)',
-  'acc:Anamnesi:IRC': 'Insufficienza renale cronica? (TRUE=sì, FALSE=no)',
+  'acc:Anamnesi:IRC': 'Insufficienza renale cronica? (TRUE=sì, FALSE=no; deduci dal testo se possibile)',
   'acc:Anamnesi:DIABETE': 'Diabete mellito? (TRUE=sì, FALSE=no)',
   'acc:Anamnesi:COPD': 'BPCO / malattia polmonare ostruttiva cronica? (TRUE=sì, FALSE=no)',
-  'acc:Anamnesi:SMOKE': 'Fumatore attivo o ex-fumatore? (TRUE=sì, FALSE=no)',
+  'acc:Anamnesi:SMOKE': 'Fumatore attivo o ex-fumatore? (TRUE=sì, FALSE=no; deduci dal testo se possibile)',
   'acc:Anamnesi:ILLICIT DRUG': 'Uso di sostanze stupefacenti? (TRUE=sì, FALSE=no)',
   'acc:Anamnesi:LIVE ALONE': 'Vive da solo/a? (TRUE=sì, FALSE=no)',
 }
@@ -242,13 +242,33 @@ export function allHintsWithText(store: FieldHintsStore): { key: string; column:
     .filter((x) => x.hint.length > 0)
 }
 
+const ANAMNESIS_YES_NO_COLUMNS = new Set([
+  'ACEi',
+  'ARB',
+  'BETABLOCK',
+  'AED',
+  'P2Y12',
+  'IMMUNOSOP',
+  'PRIOR MI',
+  'CHF',
+  'IRC',
+  'DIABETE',
+  'COPD',
+  'SMOKE',
+  'ILLICIT DRUG',
+  'LIVE ALONE',
+])
+
 export function buildFieldHintsPromptBlockForSheet(
   study: 'ecmo' | 'acc',
   sheet: string,
   store: FieldHintsStore,
 ): string {
+  const sheetCols = getSheetColumnsList(study, sheet)
   const lines: string[] = []
-  for (const column of getSheetColumnsList(study, sheet)) {
+  const listed = new Set<string>()
+
+  for (const column of sheetCols) {
     const key = fieldHintKey(study, sheet, column)
     const entry = { key, study, sheet, column }
     const hint = store.hints[key]?.trim()
@@ -257,20 +277,37 @@ export function buildFieldHintsPromptBlockForSheet(
       ? ` Valori ammessi (TENDINE SLIM / DB): ${formatAllowedValuesList(allowed)}.`
       : ''
     if (hint) {
-      lines.push(`- Colonna "${column}": ${hint}${allowedPart} Se non trovato nel testo: ometti (lascia vuoto).`)
+      lines.push(`- Colonna "${column}": ${hint}${allowedPart}`)
+      listed.add(column)
     } else if (allowed.length) {
-      lines.push(`- Colonna "${column}":${allowedPart} Se non trovato: ometti.`)
-    } else {
-      lines.push(`- Colonna "${column}": estrai solo se esplicitamente nel documento.`)
+      lines.push(`- Colonna "${column}":${allowedPart}`)
+      listed.add(column)
     }
   }
+
+  if (study === 'acc' && sheet === 'Anamnesi') {
+    const yesNo = sheetCols.filter((c) => ANAMNESIS_YES_NO_COLUMNS.has(c) && !listed.has(c))
+    if (yesNo.length) {
+      lines.push(
+        `- Colonne sì/no anamnesi (${yesNo.join(', ')}): deduci true/false dal testo; se incerto, inserisci la migliore ipotesi e marca "uncertain".`,
+      )
+    }
+  }
+
+  const otherCols = sheetCols.filter((c) => !listed.has(c))
+  if (otherCols.length) {
+    lines.push(
+      `- Altre colonne di questo foglio (nomi esatti se presenti nel documento): ${otherCols.join(', ')}.`,
+    )
+  }
+
   if (!lines.length) return ''
   return `
 
 DEFINIZIONE COLONNE del foglio ${study.toUpperCase()} → ${sheet} (usa nomi colonna ESATTI nell'oggetto JSON "columns"):
 ${lines.join('\n')}
 
-Per colonne sì/no usa true o false (come TRUE/FALSE in Excel); non usare 0 o 1; ometti se non menzionato.`
+Per colonne sì/no usa true/false (come Excel); se deduci con incertezza, inserisci e usa "uncertain". Non usare 0 o 1.`
 }
 
 export function buildFieldHintsPromptBlock(
@@ -298,6 +335,6 @@ export function buildFieldHintsPromptBlock(
 DEFINIZIONE COLONNE (interpreta il testo/documento secondo queste istruzioni; usa i nomi colonna ESATTI nell'oggetto JSON "columns"):
 ${lines.join('\n')}
 
-Per colonne sì/no usa i valori booleani JSON true o false (come TRUE/FALSE in Excel); non usare 0 o 1; ometti se non menzionato.
+Per colonne sì/no usa true o false (come TRUE/FALSE in Excel); se incerto, inserisci e marca "uncertain". Non usare 0 o 1.
 Includi nell'JSON anche le chiavi numeriche abituali (ph, pao2, …) se presenti.`
 }

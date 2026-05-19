@@ -52,7 +52,13 @@ export function inferDefaultFromSamples(
       best = v
     }
   }
-  if (bestN >= 2 && bestN / samples.length >= 0.5) return best
+  if (bestN >= 2 && bestN / samples.length >= 0.5) {
+    const norm = best.trim().toUpperCase()
+    if (norm === 'TRUE' || norm === 'FALSE' || norm === 'X' || norm === '0' || norm === '1') {
+      return ''
+    }
+    return best
+  }
   return ''
 }
 
