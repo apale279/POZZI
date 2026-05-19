@@ -1369,6 +1369,20 @@ code.db-target {
   color: #0f766e;
 }
 
+.status-cell .status-ok-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.status-warn-icon {
+  color: #d97706;
+  font-size: 0.85rem;
+  line-height: 1;
+  cursor: help;
+  font-weight: 700;
+}
+
 .tag-extract {
   font-size: 0.65rem;
   margin-left: 0.35rem;

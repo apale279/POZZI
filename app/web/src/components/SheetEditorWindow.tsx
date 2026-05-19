@@ -11,7 +11,8 @@ import {
 } from '../lib/extractCommand'
 import { loadGeminiModel, saveGeminiModel, type GeminiModelId } from '../lib/geminiModel'
 import {
-  formatExtractUncertaintyAlert,
+  clearUncertainKey,
+  mergeUncertainKeyMap,
   type GeminiUncertainField,
 } from '../lib/geminiUncertainty'
 import type { GeminiExtractResult } from '../lib/geminiClient'
@@ -99,6 +100,7 @@ export function SheetEditorWindow({
     loadExtractCommandScoped(`target:${targetId}`),
   )
   const [geminiModel, setGeminiModel] = useState<GeminiModelId>(loadGeminiModel)
+  const [uncertainByKey, setUncertainByKey] = useState<Record<string, string>>({})
   const localEditAt = useRef(0)
   const dirtyRef = useRef(false)
   const seededKeyRef = useRef<string | null>(null)
@@ -175,6 +177,19 @@ export function SheetEditorWindow({
   const crossDbForRow = useCallback(
     (row: SheetFieldRow) => findCrossDbTargets(row.studyId, row.sheet, row.column, bothStudies),
     [bothStudies],
+  )
+
+  const getUncertainReason = useCallback(
+    (row: SheetFieldRow) => uncertainByKey[fieldKey(row.studyId, row.sheet, row.column)],
+    [uncertainByKey],
+  )
+
+  const markUncertainExtracted = useCallback(
+    (items: GeminiUncertainField[]) => {
+      if (!target || !items.length) return
+      setUncertainByKey((prev) => mergeUncertainKeyMap(prev, target.study, target.sheet, items))
+    },
+    [target],
   )
 
   const refreshCalculated = useCallback(() => {
@@ -270,11 +285,6 @@ export function SheetEditorWindow({
     [applyMerge, ecmoRun, record, target, targetId],
   )
 
-  const alertUncertainExtracted = useCallback((items: GeminiUncertainField[], label: string) => {
-    if (!items.length) return
-    window.setTimeout(() => window.alert(formatExtractUncertaintyAlert(items, label)), 0)
-  }, [])
-
   const fieldHintsBlock = useMemo(
     () => buildFieldHintsPromptBlock(targetId, loadFieldHints()),
     [targetId],
@@ -330,7 +340,7 @@ export function SheetEditorWindow({
           geminiFailed = true
         }
       }
-      if (merged > 0) alertUncertainExtracted(allUncertain, target.label)
+      if (merged > 0) markUncertainExtracted(allUncertain)
       if (merged === 0 && geminiFailed) {
         setError('Analisi IA non disponibile. Avvia l’app con npm run dev (serve API su porta 3001).')
       } else if (merged === 0) {
@@ -359,7 +369,7 @@ export function SheetEditorWindow({
           setOptimizeMsg(`${filled} valori proposti in tabella — verifica e Salva.`)
         }
       }
-      alertUncertainExtracted(allUncertain, target.label)
+      markUncertainExtracted(allUncertain)
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Errore analisi immagini')
     } finally {
@@ -406,7 +416,7 @@ export function SheetEditorWindow({
           )
         }
       }
-      alertUncertainExtracted(docUncertain, target.label)
+      markUncertainExtracted(docUncertain)
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Errore analisi documenti')
     } finally {
@@ -445,6 +455,7 @@ export function SheetEditorWindow({
   const handleEdit = (key: string, value: string) => {
     dirtyRef.current = true
     localEditAt.current = Date.now()
+    setUncertainByKey((prev) => clearUncertainKey(prev, key))
     setProposed((prev) => {
       const next = new Map(prev)
       const parsed = parseCellValueFromUi(value)
@@ -626,6 +637,7 @@ export function SheetEditorWindow({
           onEdit={handleEdit}
           crossDbForRow={crossDbForRow}
           bothStudies={bothStudies}
+          getUncertainReason={getUncertainReason}
         />
       </section>
 

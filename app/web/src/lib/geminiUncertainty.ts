@@ -1,27 +1,47 @@
+import { cellKey } from './workSession'
+
 export type GeminiUncertainField = {
   column: string
   value?: string | number | boolean
   reason?: string
 }
 
-/** Messaggio per window.alert quando l’IA segnala bassa confidenza. */
-export function formatExtractUncertaintyAlert(
+export const DEFAULT_UNCERTAIN_REASON =
+  'L’IA non è sufficientemente sicura di questo valore: verifica manualmente.'
+
+export function uncertainReasonText(reason?: string): string {
+  const t = reason?.trim()
+  return t || DEFAULT_UNCERTAIN_REASON
+}
+
+/** Mappa chiave cella → motivo incertezza IA. */
+export function uncertainFieldsToKeyMap(
+  study: 'ecmo' | 'acc',
+  sheet: string,
   items: GeminiUncertainField[],
-  contextLabel: string,
-): string {
-  if (!items.length) return ''
-  const lines = items.map((u) => {
-    const val =
-      u.value === undefined || u.value === null || u.value === ''
-        ? '—'
-        : String(u.value)
-    const why = u.reason?.trim() ? `\n   Motivo: ${u.reason.trim()}` : ''
-    return `• ${u.column} = ${val}${why}`
-  })
-  return (
-    `ATTENZIONE — Verifica manuale richiesta (${contextLabel})\n\n` +
-    `L’IA non è sufficientemente sicura su ${items.length} valore/i inseriti:\n\n` +
-    `${lines.join('\n\n')}\n\n` +
-    `Controlla questi campi nella tabella prima di copiare la riga in Excel.`
-  )
+): Record<string, string> {
+  const map: Record<string, string> = {}
+  for (const u of items) {
+    map[cellKey(study, sheet, u.column)] = uncertainReasonText(u.reason)
+  }
+  return map
+}
+
+export function mergeUncertainKeyMap(
+  prev: Record<string, string>,
+  study: 'ecmo' | 'acc',
+  sheet: string,
+  items: GeminiUncertainField[],
+): Record<string, string> {
+  return { ...prev, ...uncertainFieldsToKeyMap(study, sheet, items) }
+}
+
+export function clearUncertainKey(
+  map: Record<string, string>,
+  key: string,
+): Record<string, string> {
+  if (!(key in map)) return map
+  const next = { ...map }
+  delete next[key]
+  return next
 }

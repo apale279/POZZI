@@ -17,6 +17,9 @@ export interface SheetColumnRow {
   absentConvention?: AbsentValueConvention
   absentReason?: string
   allowedValuesHint?: string
+  /** Valore inserito dall’IA con bassa confidenza. */
+  aiUncertain?: boolean
+  aiUncertainReason?: string
 }
 
 type CrossDbItemState = 'pending' | 'confirmed' | 'skipped'
@@ -99,9 +102,22 @@ export function SheetFieldsTable({
                   .filter(Boolean)
                   .join(' ')}
               >
-                <td>
+                <td className="status-cell">
                   {!filled && <span className="badge-missing">Da compilare</span>}
-                  {filled && <span className="badge-ok">OK</span>}
+                  {filled && (
+                    <span className="status-ok-group">
+                      <span className="badge-ok">OK</span>
+                      {r.aiUncertain && (
+                        <span
+                          className="status-warn-icon"
+                          title={r.aiUncertainReason}
+                          aria-label={r.aiUncertainReason}
+                        >
+                          ⚠
+                        </span>
+                      )}
+                    </span>
+                  )}
                   {!filled && hasCross && <span className="badge-linked">Condiviso</span>}
                 </td>
                 <td>

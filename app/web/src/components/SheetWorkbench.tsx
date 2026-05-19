@@ -28,7 +28,8 @@ import {
   uncertainFieldsForAppliedKeys,
 } from '../lib/sheetExtract'
 import {
-  formatExtractUncertaintyAlert,
+  clearUncertainKey,
+  mergeUncertainKeyMap,
   type GeminiUncertainField,
 } from '../lib/geminiUncertainty'
 import {
@@ -75,6 +76,7 @@ export function SheetWorkbench({ study, sheet }: Props) {
   const [geminiModel, setGeminiModel] = useState<GeminiModelId>(loadGeminiModel)
   const [skippedPropagations, setSkippedPropagations] = useState(loadSkippedPropagations)
   const [confirmedPropagations, setConfirmedPropagations] = useState(loadConfirmedPropagations)
+  const [uncertainByKey, setUncertainByKey] = useState<Record<string, string>>({})
   const editSnapshotRef = useRef<Record<string, string>>({})
 
   const columns = useMemo(() => getSheetColumnsList(study, sheet), [study, sheet])
@@ -97,6 +99,7 @@ export function SheetWorkbench({ study, sheet }: Props) {
 
   useEffect(() => {
     setExtractCommand(loadExtractCommand(study, sheet))
+    setUncertainByKey({})
   }, [study, sheet])
 
   useEffect(() => {
@@ -141,6 +144,7 @@ export function SheetWorkbench({ study, sheet }: Props) {
           sheet,
           column,
         })
+        const uncertainReason = uncertainByKey[key]
         return {
           column,
           value: filled ? value : undefined,
@@ -149,9 +153,11 @@ export function SheetWorkbench({ study, sheet }: Props) {
           absentConvention: conv?.convention,
           absentReason: 'reason' in (conv ?? {}) ? (conv as { reason?: string }).reason : undefined,
           allowedValuesHint: allowed.length ? formatAllowedValuesList(allowed) : undefined,
+          aiUncertain: filled && Boolean(uncertainReason),
+          aiUncertainReason: uncertainReason,
         }
       }),
-    [columns, cells, sources, study, sheet],
+    [columns, cells, sources, study, sheet, uncertainByKey],
   )
 
   const missingCount = tableRows.filter((r) => r.value === undefined || r.value === '').length
@@ -201,13 +207,12 @@ export function SheetWorkbench({ study, sheet }: Props) {
     [applyExtracted, cells, columns, sheet, study],
   )
 
-  const alertUncertainExtracted = useCallback(
+  const markUncertainExtracted = useCallback(
     (items: GeminiUncertainField[]) => {
       if (!items.length) return
-      const msg = formatExtractUncertaintyAlert(items, contextLabel)
-      window.setTimeout(() => window.alert(msg), 0)
+      setUncertainByKey((prev) => mergeUncertainKeyMap(prev, study, sheet, items))
     },
-    [contextLabel],
+    [study, sheet],
   )
 
   const runTextAnalysis = async () => {
@@ -230,9 +235,11 @@ export function SheetWorkbench({ study, sheet }: Props) {
       if (total === 0) {
         setError('Nessun valore riconosciuto per questo foglio. Controlla le istruzioni IA in Impostazioni.')
       } else {
-        setMsg(`${total} campi compilati dall’analisi testo.`)
+        markUncertainExtracted(allUncertain)
+        const warn =
+          allUncertain.length > 0 ? ` · ${allUncertain.length} da verificare (⚠ in Stato)` : ''
+        setMsg(`${total} campi compilati dall’analisi testo${warn}.`)
         setTimeout(() => setMsg(null), 6000)
-        alertUncertainExtracted(allUncertain)
       }
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Errore analisi testo')
@@ -255,9 +262,11 @@ export function SheetWorkbench({ study, sheet }: Props) {
       }
       if (total === 0) setError('Nessun valore estratto dalle immagini.')
       else {
-        setMsg(`${total} campi da immagini.`)
+        markUncertainExtracted(allUncertain)
+        const warn =
+          allUncertain.length > 0 ? ` · ${allUncertain.length} da verificare (⚠ in Stato)` : ''
+        setMsg(`${total} campi da immagini${warn}.`)
         setTimeout(() => setMsg(null), 6000)
-        alertUncertainExtracted(allUncertain)
       }
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Errore analisi immagini')
@@ -301,9 +310,11 @@ export function SheetWorkbench({ study, sheet }: Props) {
       }
       if (total === 0) setError('Nessun valore estratto dai documenti.')
       else {
-        setMsg(`${total} campi da documenti.`)
+        markUncertainExtracted(allUncertain)
+        const warn =
+          allUncertain.length > 0 ? ` · ${allUncertain.length} da verificare (⚠ in Stato)` : ''
+        setMsg(`${total} campi da documenti${warn}.`)
         setTimeout(() => setMsg(null), 6000)
-        alertUncertainExtracted(allUncertain)
       }
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Errore analisi documenti')
@@ -325,6 +336,7 @@ export function SheetWorkbench({ study, sheet }: Props) {
       else next[key] = 'manual'
       return next
     })
+    setUncertainByKey((prev) => clearUncertainKey(prev, key))
   }
 
   const handleEditFocus = (column: string) => {

@@ -8,6 +8,7 @@ type Props = {
   filter?: 'all' | 'missing' | 'filled'
   crossDbForRow?: (row: SheetFieldRow) => CrossDbTarget[]
   bothStudies?: boolean
+  getUncertainReason?: (row: SheetFieldRow) => string | undefined
 }
 
 function rowKey(r: SheetFieldRow): string {
@@ -20,6 +21,7 @@ export function FullSheetTable({
   filter = 'all',
   crossDbForRow,
   bothStudies,
+  getUncertainReason,
 }: Props) {
   const filtered = rows.filter((r) => {
     const filled =
@@ -55,6 +57,7 @@ export function FullSheetTable({
             const cross = crossDbForRow?.(r) ?? []
             const hasCross = cross.length > 0
             const crossActive = hasCross && filled
+            const uncertainReason = getUncertainReason?.(r)
 
             return (
               <tr
@@ -69,10 +72,23 @@ export function FullSheetTable({
                   .filter(Boolean)
                   .join(' ')}
               >
-                <td>
+                <td className="status-cell">
                   {!filled && <span className="badge-missing">Vuoto</span>}
                   {filled && changed && <span className="badge-changed">Modificato</span>}
-                  {filled && !changed && <span className="badge-ok">OK</span>}
+                  {filled && !changed && (
+                    <span className="status-ok-group">
+                      <span className="badge-ok">OK</span>
+                      {uncertainReason && (
+                        <span
+                          className="status-warn-icon"
+                          title={uncertainReason}
+                          aria-label={uncertainReason}
+                        >
+                          ⚠
+                        </span>
+                      )}
+                    </span>
+                  )}
                   {hasCross && <span className="badge-linked">Comune</span>}
                 </td>
                 <td>
