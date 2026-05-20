@@ -170,14 +170,21 @@ export function SheetWorkbench({ study, sheet }: Props) {
 
   const missingCount = tableRows.filter((r) => r.value === undefined || r.value === '').length
 
-  const applyExtracted = useCallback((incoming: Map<string, SheetCellValue>) => {
+  const applyExtracted = useCallback(
+    (incoming: Map<string, SheetCellValue>, overwriteExisting = true) => {
     if (!incoming.size) return 0
     setCells((prev) => {
       let next = { ...prev }
       for (const [key, val] of incoming) {
         const loc = parseCellKey(key)
         if (!loc) continue
-        if (next[key] !== undefined && next[key] !== '') continue
+        if (
+          !overwriteExisting &&
+          next[key] !== undefined &&
+          next[key] !== ''
+        ) {
+          continue
+        }
         next = setWorkCell(next, loc.study, loc.sheet, loc.column, val, { propagate: false })
       }
       return next
@@ -188,7 +195,9 @@ export function SheetWorkbench({ study, sheet }: Props) {
       return nextSources
     })
     return incoming.size
-  }, [])
+  },
+  [],
+)
 
   const mergeGemini = useCallback(
     (
@@ -211,17 +220,14 @@ export function SheetWorkbench({ study, sheet }: Props) {
         draft,
         true,
       )
-      const onlyNew = new Map<string, SheetCellValue>()
+      const toApply = new Map<string, SheetCellValue>()
       for (const col of columns) {
         const k = cellKey(study, sheet, col)
-        const before = cells[k]
         const after = draft.get(k)
-        if ((before === undefined || before === '') && after !== undefined) {
-          onlyNew.set(k, after)
-        }
+        if (after !== undefined) toApply.set(k, after)
       }
-      const count = applyExtracted(onlyNew)
-      const uncertain = uncertainFieldsForAppliedKeys(study, sheet, gemini.uncertain, onlyNew.keys())
+      const count = applyExtracted(toApply, true)
+      const uncertain = uncertainFieldsForAppliedKeys(study, sheet, gemini.uncertain, toApply.keys())
       const { matched, unmatchedNames } = summarizeGeminiSheetMatch(study, sheet, gemini)
       return { count, uncertain, matched, unmatchedNames }
     },
@@ -303,7 +309,6 @@ export function SheetWorkbench({ study, sheet }: Props) {
       let total = 0
       const allUncertain: GeminiUncertainField[] = []
       let lastUnmatched: string[] = []
-      let lastIaMatched = 0
       for (const item of documentItems) {
         const file = item.file
         const isPdf =
@@ -338,14 +343,9 @@ export function SheetWorkbench({ study, sheet }: Props) {
         total += merged.count
         allUncertain.push(...merged.uncertain)
         lastUnmatched = merged.unmatchedNames
-        lastIaMatched = merged.matched
       }
       if (total === 0) {
-        if (lastIaMatched > 0) {
-          setError(
-            `L’IA ha riconosciuto ${lastIaMatched} campi per «${sheet}» ma le celle erano già compilate. Svuota i campi interessati o usa «Svuota dati sessione» e riprova.`,
-          )
-        } else if (lastUnmatched.length > 0) {
+        if (lastUnmatched.length > 0) {
           const sample = lastUnmatched.slice(0, 4).join(', ')
           setError(
             `L’IA ha estratto dati (es. ${sample}) che non corrispondono al foglio «${sheet}». Per la lettera di dimissione apri spesso Anamnesi, Outcome o il foglio giusto.`,

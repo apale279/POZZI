@@ -6,6 +6,7 @@ import {
   buildFieldCatalog,
   getHint,
   loadFieldHints,
+  normalizeFieldHintsStore,
   saveFieldHints,
   type FieldCatalogEntry,
   type FieldHintsStore,
@@ -123,7 +124,12 @@ export function SettingsScreen() {
       saveSheetSchemaOverride(result.schema)
       mergeColumnConventions(result.conventions)
       setColumnSamples(result.samples)
-      const merged = mergeImportIntoFieldHints(store, catalog, result)
+      let base = store
+      if (isFirebaseConfigured()) {
+        const remote = await loadFieldHintsFromFirebase()
+        base = mergeFirebaseFieldHints(loadFieldHints(), remote)
+      }
+      const merged = mergeImportIntoFieldHints(base, catalog, result)
       const saved = await persistStore(merged, setSaveMsg)
       setStore(saved)
       setSchemaMsg(
@@ -141,16 +147,54 @@ export function SettingsScreen() {
     setSchemaMsg('Ripristinata struttura predefinita. Ricarica la pagina.')
   }
 
-  const handleGenerateHints = async () => {
-    const empty = catalog.filter((e) => !getHint(store, e).trim())
-    if (!empty.length) {
-      setGenProgress('Tutti i campi hanno già un significato IA.')
+  const handleReloadFromFirebase = async () => {
+    if (!isFirebaseConfigured()) {
+      setSaveMsg('Firebase non configurato.')
+      return
+    }
+    setLoading(true)
+    try {
+      const remote = await loadFieldHintsFromFirebase()
+      if (!remote) {
+        setSaveMsg('Nessun documento config/fieldHints su Firebase.')
+        return
+      }
+      const merged = normalizeFieldHintsStore(remote)
+      const saved = await persistStore(merged, setSaveMsg)
+      setStore(saved)
+      applyFieldHintsConventionsLocally(saved)
+      setGenProgress(null)
+    } catch (e) {
+      setSaveMsg(formatFirebaseError(e))
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  const handleGenerateHints = async (overwriteAll = false) => {
+    const targets = overwriteAll
+      ? catalog
+      : catalog.filter((e) => !getHint(store, e).trim())
+    if (!targets.length) {
+      setGenProgress(
+        overwriteAll
+          ? 'Nessun campo nel catalogo.'
+          : 'Tutti i campi hanno già un testo. Usa «Rigenera tutti» per sovrascrivere.',
+      )
+      return
+    }
+    if (
+      overwriteAll &&
+      !window.confirm(
+        `Rigenerare i significati IA per ${targets.length} campi? I testi esistenti verranno sostituiti.`,
+      )
+    ) {
       return
     }
     setGenerating(true)
     setGenProgress('IA: analisi significato campi dal DB…')
     try {
-      const inputs = empty.map((e) => {
+      const inputs = targets.map((e) => {
         const sampleKey = `${e.sheet}:${e.column}`
         return {
           key: e.key,
@@ -246,11 +290,29 @@ export function SettingsScreen() {
           <button
             type="button"
             className="btn-primary"
-            disabled={generating}
-            onClick={handleGenerateHints}
+            disabled={generating || loading}
+            onClick={() => handleGenerateHints(false)}
           >
-            {generating ? 'Generazione…' : 'Genera significati campi (IA)'}
+            {generating ? 'Generazione…' : 'Genera significati (solo vuoti)'}
           </button>
+          <button
+            type="button"
+            className="btn-secondary"
+            disabled={generating || loading}
+            onClick={() => handleGenerateHints(true)}
+          >
+            Rigenera tutti (sovrascrive)
+          </button>
+          {isFirebaseConfigured() && (
+            <button
+              type="button"
+              className="btn-ghost"
+              disabled={loading}
+              onClick={handleReloadFromFirebase}
+            >
+              Ripristina da Firebase
+            </button>
+          )}
           {genProgress && <p className="hint settings-gen-progress">{genProgress}</p>}
         </div>
       </section>

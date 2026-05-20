@@ -95,6 +95,47 @@ export function mergeHintRecords(
   return out
 }
 
+/**
+ * Unisce hint locali e Firebase: non perde il salvataggio remoto se il browser ha timestamp più recente.
+ * Preferisce testi inseriti a mano (non aiGenerated) e, a parità, il testo più lungo/dettagliato.
+ */
+export function mergeHintsPreferRicher(
+  local: Record<string, string>,
+  remote: Record<string, string>,
+  localAi: Record<string, boolean> = {},
+  remoteAi: Record<string, boolean> = {},
+): Record<string, string> {
+  const out: Record<string, string> = {}
+  const keys = new Set([...Object.keys(local), ...Object.keys(remote)])
+
+  for (const k of keys) {
+    const l = (local[k] ?? '').trim()
+    const r = (remote[k] ?? '').trim()
+    if (!l && !r) continue
+    if (!l) {
+      out[k] = r
+      continue
+    }
+    if (!r) {
+      out[k] = l
+      continue
+    }
+    const localManual = !localAi[k]
+    const remoteManual = !remoteAi[k]
+    if (localManual && !remoteManual) {
+      out[k] = l
+      continue
+    }
+    if (remoteManual && !localManual) {
+      out[k] = r
+      continue
+    }
+    out[k] = l.length >= r.length ? l : r
+  }
+
+  return out
+}
+
 export function normalizeFieldHintsStore(parsed: Partial<FieldHintsStore>): FieldHintsStore {
   const hints: Record<string, string> = { ...DEFAULT_HINTS }
   for (const [k, v] of Object.entries(parsed.hints ?? {})) {

@@ -2,7 +2,11 @@ import { doc, getDoc, setDoc } from 'firebase/firestore'
 import { conventionsToColumnMap } from './dbMetadataImport'
 import { mergeColumnConventions } from './excelColumnAnalysis'
 import { ensureFirebase, formatFirebaseError } from './firebase'
-import { mergeHintRecords, normalizeFieldHintsStore, type FieldHintsStore } from './fieldHints'
+import {
+  mergeHintsPreferRicher,
+  normalizeFieldHintsStore,
+  type FieldHintsStore,
+} from './fieldHints'
 
 const DOC_PATH = ['config', 'fieldHints'] as const
 
@@ -48,24 +52,29 @@ export function mergeFirebaseFieldHints(
   local: FieldHintsStore,
   remote: FieldHintsStore | null,
 ): FieldHintsStore {
-  if (!remote) return local
+  if (!remote) return normalizeFieldHintsStore(local)
+
   const remoteTs = new Date(remote.updatedAt).getTime()
   const localTs = new Date(local.updatedAt).getTime()
-  if (remoteTs >= localTs) {
-    return normalizeFieldHintsStore({
-      hints: mergeHintRecords(local.hints, remote.hints),
-      defaults: { ...local.defaults, ...remote.defaults },
-      aiGenerated: { ...local.aiGenerated, ...remote.aiGenerated },
-      defaultsAiGenerated: {
-        ...local.defaultsAiGenerated,
-        ...remote.defaultsAiGenerated,
-      },
-      allowedValues: { ...local.allowedValues, ...remote.allowedValues },
-      conventions: { ...local.conventions, ...remote.conventions },
-      updatedAt: remote.updatedAt,
-    })
-  }
-  return normalizeFieldHintsStore(local)
+  const mergedHints = mergeHintsPreferRicher(
+    local.hints,
+    remote.hints,
+    local.aiGenerated,
+    remote.aiGenerated,
+  )
+
+  return normalizeFieldHintsStore({
+    hints: mergedHints,
+    defaults: { ...remote.defaults, ...local.defaults },
+    aiGenerated: { ...remote.aiGenerated, ...local.aiGenerated },
+    defaultsAiGenerated: {
+      ...remote.defaultsAiGenerated,
+      ...local.defaultsAiGenerated,
+    },
+    allowedValues: { ...remote.allowedValues, ...local.allowedValues },
+    conventions: { ...remote.conventions, ...local.conventions },
+    updatedAt: new Date(Math.max(localTs, remoteTs, Date.now())).toISOString(),
+  })
 }
 
 /** Allinea localStorage convenzioni colonne con quanto salvato su Firebase. */
