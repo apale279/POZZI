@@ -142,16 +142,17 @@ export function SettingsScreen() {
   }
 
   const handleGenerateHints = async () => {
-    const empty = catalog.filter((e) => !getHint(store, e).trim())
-    if (!empty.length) {
-      setGenProgress('Tutti i campi hanno già un significato IA.')
+    const toGenerate = catalog
+    if (!toGenerate.length) {
+      setGenProgress('Nessun campo nel catalogo.')
       return
     }
     setGenerating(true)
     setGenProgress('IA: analisi significato campi dal DB…')
     try {
-      const inputs = empty.map((e) => {
+      const inputs = toGenerate.map((e) => {
         const sampleKey = `${e.sheet}:${e.column}`
+        const conv = store.conventions[e.key]
         return {
           key: e.key,
           study: e.study,
@@ -159,6 +160,8 @@ export function SettingsScreen() {
           column: e.column,
           samples: columnSamples[sampleKey],
           allowedValues: store.allowedValues[e.key],
+          absentConvention: conv?.convention,
+          hint: store.hints[e.key]?.trim() || undefined,
         }
       })
       const results = await generateFieldHintsBatch(inputs, (done, total) => {

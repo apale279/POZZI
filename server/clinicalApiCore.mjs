@@ -328,13 +328,16 @@ confidence=high se il predefinito è chiaro; low se ambiguo.
 Campi:
 ${fieldLines}`
           : `Sei un esperto di database clinici ECMO e arresto cardiaco (ACC).
-Per ogni campo sotto, analizza il database già compilato (esempi, valori ammessi, regola se assente) e produci:
-1) hint: UNA breve istruzione in italiano per estrazione da referti (significato, formato, TRUE/FALSE per sì/no come Excel). Specifica che se il dato non è nel referto la colonna va lasciata vuota (omettere).
+Per ogni campo sotto, analizza i dati disponibili (nome colonna, foglio, esempi DB, valori ammessi, regola se assente) e produci per CIASCUN campo una descrizione DISTINTA e SPECIFICA:
+1) hint: breve istruzione in italiano (max 2 frasi) su COSA rappresenta quella specifica colonna e come estrarla da referti clinici. Usa il nome colonna e il foglio per dedurre il significato clinico. Per sì/no usa TRUE/FALSE come Excel. Se il dato non è nel referto, la colonna va omessa (lasciata vuota).
 
-Rispondi SOLO JSON valido:
-{"results":[{"key":"...","hint":"...","confidence":"high"|"low"}]}
+IMPORTANTE: ogni campo deve avere una descrizione DIVERSA e SPECIFICA per quella colonna — non usare testo generico uguale per tutti.
+Se è presente un "significato" già noto (campo hint), aggiornalo/miglioralo mantenendo il contenuto specifico.
 
-confidence=high se il significato è chiaro dai dati; low se ambiguo.
+Rispondi SOLO con JSON valido (nessun testo fuori dal JSON):
+{"results":[{"key":"chiave-esatta-del-campo","hint":"descrizione specifica","confidence":"high"|"low"}]}
+
+Restituisci UN risultato per OGNI campo nell'elenco, nell'ordine dato. confidence=high se il significato è chiaro, low se ambiguo.
 
 Campi:
 ${fieldLines}`
